@@ -2,7 +2,7 @@
 
 ----
 
-The wiki was recently (2015-04-04) converted from the [old Google Code Wiki](https://code.google.com/p/mdanalysis/w/list) and  broken links and other inaccuracies are still plentiful (see also #234). Please feel free to open new issues in the [Issue Tracker](https://github.com/MDAnalysis/mdanalysis/issues) or correct problems yourself (it's a public wiki after all).
+_The wiki was recently (2015-04-04) converted from the [old Google Code Wiki](https://code.google.com/p/mdanalysis/w/list) and  broken links and other inaccuracies are still plentiful (see also #234). Please feel free to open new issues in the [Issue Tracker](https://github.com/MDAnalysis/mdanalysis/issues) or correct problems yourself (it's a public wiki after all)._
 
 ----
 
@@ -63,7 +63,7 @@ The [MDAnalysis Tutorial](http://orbeckst.github.io/MDAnalysisTutorial/) serves 
 
 See the **[Online Documentation](https://pythonhosted.org/MDAnalysis/index.html)** for more information on how to use MDAnalysis and the [TableOfContents](TableOfContents) for a general overview of the available documentation on the Wiki. The [paper on MDAnalysis](#Citation) contains a high-level description of the structure and philosophy of the library together with examples of its use.
 
-MDAnalysis also comes with [example scripts](https://github.com/MDAnalysis/mdanalysis/tree/master/package/examples) and fairly general [analysis modules](https://github.com/MDAnalysis/mdanalysis/tree/master/package/MDAnalysis/analysis), available as [MDAnalysis.analysis](https://pythonhosted.org/MDAnalysis/documentation_pages/analysis_modules.html) � you can use this code as a starting point for your own analysis scripts.
+MDAnalysis also comes with [example scripts](https://github.com/MDAnalysis/mdanalysis/tree/master/package/examples) and fairly general [analysis modules](https://github.com/MDAnalysis/mdanalysis/tree/master/package/MDAnalysis/analysis), available as [MDAnalysis.analysis](https://pythonhosted.org/MDAnalysis/documentation_pages/analysis_modules.html) — you can use this code as a starting point for your own analysis scripts.
 
 Finally, you can also ask for advice or help on the [mdnalysis-discussion](http://groups.google.com/group/mdnalysis-discussion) mailing list. If you find **bugs** or want to **request enhancements** please [file a report](http://code.google.com/p/mdanalysis/wiki/ReportingProblems) in the [Issue Tracker](https://github.com/MDAnalysis/mdanalysis/issues).
 
@@ -84,7 +84,7 @@ If you use the helix analysis algorithm HELANAL in [MDAnalysis.analysis.helanal]
 
 If you use the GNM trajectory analysis code in [MDAnalysis.analysis.gnm](https://pythonhosted.org/MDAnalysis/documentation_pages/analysis/gnm.html) please cite
 
-* Benjamin A. Hall, Samantha L. Kaye, Andy Pang, Rafael Perera, and Philip C. Biggin. Characterization of Protein Conformational States by Normal-Mode Frequencies. JACS **129** (2007), 11394–11401.
+* Benjamin A. Hall, Samantha L. Kaye, Andy Pang, Rafael Perera, and Philip C. Biggin. Characterization of Protein Conformational States by Normal-Mode Frequencies. JACS **129** (2007), 11394â€“11401.
 
 Thanks!
 

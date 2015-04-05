@@ -1,3 +1,8 @@
+### Project Information       
+[GNU GPL v2 code license](http://www.gnu.org/licenses/old-licenses/gpl-2.0.html)  
+Labels: python, molecular dynamics, analysis, DCD, CHARMM, LAMMPS, NAMD, Gromacs, computer simulation, atoms, coordinates, trajectory, XTC, Library, object-oriented  
+[Core Developers](https://github.com/orgs/MDAnalysis/teams/coredevs)
+
 ### Featured ###
 [Applications](https://github.com/MDAnalysis/mdanalysis/wiki/Applications)  
 [Documentation](https://github.com/MDAnalysis/mdanalysis/wiki/Documentation)  

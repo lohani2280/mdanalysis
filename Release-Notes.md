@@ -1,4 +1,4 @@
-Release notes for each release of MDAnalysis are linked below.
+Release notes for each release of MDAnalysis are linked below:
 
 * [[0.9.1|ReleaseNotes091]]
 * [[0.9.0|ReleaseNotes090]]

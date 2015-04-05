@@ -11,13 +11,13 @@ We are also collecting any further errata (which correct errors or omissions in 
 ## Errata ##
 ### page 4 ###
 #### Writing the coordinates of a selection ####
-```
+```python
 universe.selectAtoms("byres (resname SOL and around 3.5 protein)").write("solvation-shell.pdb")
 ```
 ### page 5 ###
 #### Block average example ####
 The **PDF** version also contains a crucial indentation error.
-```
+```python
 def blocked(universe, nblocks, analyze): 
     size = universe.trajectory.numframes/nblocks
     blocks = [] 
@@ -33,13 +33,13 @@ def blocked(universe, nblocks, analyze):
 See [examples/blocks.py](http://code.google.com/p/mdanalysis/source/browse/package/examples/blocks.py) for a working example.
 
 #### Radius of gyration analysis function ####
-```
+```python
 def rgyr(universe): 
     return universe.selectAtoms("protein").radiusOfGyration()
 ```
 
 #### Time series analysis ####
-```
+```python
 MDAnalysis.collection.addTimeseries(\ 
     Timeseries.Dihedral(atomselection)) 
 data = universe.trajectory.correl(\

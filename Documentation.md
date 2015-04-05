@@ -2,7 +2,7 @@
 
 It is inspired by the Schulten Group's [MDtools](http://www.ks.uiuc.edu/Development/MDTools/) for python, and the source for the DCD reading code is derived from [VMD](http://www.ks.uiuc.edu/Research/vmd/). MDAnalysis is[GPL](http://www.gnu.org/licenses/gpl.html) licensed, except for the dcd reading code ([UIUC Open Source Licence](http://www.otm.illinois.edu/faculty/forms/opensource.asp)) which comes from VMD (and is GPL-compatible). Gromacs trajectories are utilizing the [Gromacs libxdrfile](http://www.gromacs.org/Developer_Zone/Programming_Guide/XTC_Library) library (GPL). MDAnalysis exposes trajectory data transparently as [NumPy](http://numpy.scipy.org/) arrays and as such it is easily extensible.
 
-The standard **[Online Documentation](http://mdanalysis.googlecode.com/git/package/doc/html/index.html)** is part of the distribution and can also be found in the source code repository. _It is more up-to-date and more comprehensive than this page_ (which mainly serves to showcase a few features and provide the general flavor of MDAnalysis).
+The standard **[Online Documentation](https://pythonhosted.org/MDAnalysis/)** is part of the distribution and can also be found in the source code repository. _It is more up-to-date and more comprehensive than this page_ (which mainly serves to showcase a few features and provide the general flavor of MDAnalysis).
 
 See the [Installation instructions](Install) on how to download and build the library.
 

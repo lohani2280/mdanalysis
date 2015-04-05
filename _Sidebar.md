@@ -6,3 +6,9 @@
 [PaperErrata](https://github.com/MDAnalysis/mdanalysis/wiki/PaperErrata)  
 [ReleaseNotes091](https://github.com/MDAnalysis/mdanalysis/wiki/ReleaseNotes091)  
 [TableOfContents](https://github.com/MDAnalysis/mdanalysis/wiki/TableOfContents)  
+
+### Links ###
+[mdanalysis on Twitter](https://twitter.com/mdanalysis)  
+[Documentation (0.9.1)](http://packages.python.org/MDAnalysis/)  
+[Tutorials](https://github.com/MDAnalysis/mdanalysis/wiki/Tutorials)  
+[Downloads (PyPi)](https://pypi.python.org/pypi/MDAnalysis)

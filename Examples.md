@@ -1,12 +1,9 @@
 Add your own examples either to the page itself or in the comments at the bottom of the page.
 
-**Contents**
-
-
 ## Frame-based analysis ##
 
 A typical usage pattern is to iterate through a trajectory and analyze coordinates for every frame. In the following example the end-to-end distance of a protein and the radius of gyration of the backbone atoms is calculated:
-```
+```python
 import MDAnalysis
 from MDAnalysis.tests.datafiles import PSF,DCD   # test trajectory
 import numpy.linalg
@@ -29,7 +26,7 @@ MDAnalysis also has rudimentary abilities for structure editing and extraction.
 
 Load a PDB, select what you want, and then write out the selection in PDB (or any other) [file format](http://mdanalysis.googlecode.com/git/doc/html/documentation_pages/coordinates/init.html#supported-coordinate-formats):
 
-```
+```python
 import MDAnalysis
 u = MDAnalysis.Universe('1ES7.pdb', permissive=False)    # permissive=False uses Bio.PDB (True will probably also work)
 A = u.selectAtoms('segid A')
@@ -44,7 +41,7 @@ Note:
 ## Interactive analysis of structures ##
 ### Residue charges in a PQR file ###
 PQR files contain the atomic partial charges. If you want to know the charge on each residue (e.g. in order to check the actual protonation state assigned by [pdb2pqr](http://www.poissonboltzmann.org/pdb2pqr)) then you can do this quickly (e.g. in the ipython shell):
-```
+```python
 u = MDAnalysis.Universe("protein.pqr")
 for r in u.residues:
   print("%s %d     %+4.2f" % (r.name, r.id, r.totalCharge())
@@ -52,7 +49,7 @@ for r in u.residues:
 This will print the residue and the total charge for all residues.
 
 You can also define a function that returns the data in a list, prints it to screen or alternatively to a file _filename_:
-```
+```python
 def rescharges(u, filename=None, epsilon=0.01):
     if filename is not None:
         out = open(filename, "w")
@@ -73,14 +70,14 @@ def rescharges(u, filename=None, epsilon=0.01):
 ## File format conversion ##
 
 Converting a **single frame** is straightforward: read it into a universe and write out the atoms. For instance, converting from PQR to PDB:
-```
+```python
 from MDAnalysis import Universe
 u = Universe("system.pqr")
 u.atoms.write("system.pdb")
 ```
 
 In order to **convert trajectories** you obtain a trajectory Writer for the desired output, loop through the input trajectory frame by frame, and write each frame to the output (see [dcd2xtc.py](http://code.google.com/p/mdanalysis/source/browse/package/examples/dcd2xtc.py) for the conversion from DCD to XTC. The core of this short script is:
-```
+```python
 from MDAnalysis import Universe, Writer
 u = Universe("system.psf", "system.dcd")
 w = Writer("system.xtc", u.trajectory.numatoms)
@@ -105,7 +102,7 @@ Note: These examples were all written using numpy version 1.0.2. Older versions 
 ## Analysis module ##
 
 Since MDAnalysis 0.6.2 there exists a collection of analysis modules. One can use them by importing the appropriate module
-```
+```python
 import MDAnalysis.analysis
 help(MDAnalysis.analysis)           # see what's available
 import MDAnalysis.analysis.contacts # use the native-contacts analysis

@@ -2,7 +2,9 @@
 
 ----
 
+The wiki was recently (2015-04-04) converted from the [old Google Code Wiki](https://code.google.com/p/mdanalysis/w/list) and  broken links and other inaccuracies are still plentiful (see also #234). Please feel free to open new issues in the [Issue Tracker](https://github.com/MDAnalysis/mdanalysis/issues) or correct problems yourself (it's a public wiki after all).
 
+----
 
 It allows one to read molecular dynamics trajectories and access the atomic coordinates through [numpy](http://numpy.scipy.org/) arrays. This provides a flexible and relatively fast framework for complex analysis tasks. In addition, [CHARMM-style](http://www.charmm.org/html/documentation/c34b1/select.html) atom [selection commands](https://pythonhosted.org/MDAnalysis/documentation_pages/selections.html#selection-commands) are implemented. Trajectories can also be manipulated (for instance, fit to a reference structure) and written out.
 

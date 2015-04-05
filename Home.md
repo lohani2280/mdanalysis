@@ -48,12 +48,10 @@ The package is also [listed on PyPI](http://pypi.python.org/pypi/MDAnalysis) (th
 
 ```
 easy_install -U MDAnalysis
-
 ```
 or
 ```
 pip install MDAnalysis
-
 ```
 
 

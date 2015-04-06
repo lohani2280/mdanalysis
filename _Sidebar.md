@@ -10,6 +10,7 @@ Labels: python, molecular dynamics, analysis, DCD, CHARMM, LAMMPS, NAMD, Gromacs
 [Install](https://github.com/MDAnalysis/mdanalysis/wiki/Install)  
 [PaperErrata](https://github.com/MDAnalysis/mdanalysis/wiki/PaperErrata)  
 [[Release Notes|Release Notes]]   
+[Guide for Developers](https://github.com/MDAnalysis/mdanalysis/wiki/Guide-for-Developers)  
 
 ### Links ###
 [mdanalysis on Twitter](https://twitter.com/mdanalysis)  

@@ -1,34 +1,36 @@
-Note about the source code management system used for MDAnalysis:
-> As of 2011-11-28, the MDAnalysis source code (and the wiki) is managed in a [git](http://gitscm.org/) repository.
-> The original [repository subversion repository](SubversionRepository) is hence deprecated and all code should be [converted to git](svn2gitConversion).
+The MDAnalysis source code is stored in a [[git]] repository at https://github.com/MDAnalysis/mdanalysis/.
 
 ## Git repository structure ##
 The full description of the git repository structure is available [here](RepositoryStructure).
 
-Follow the [source checkout instructions](http://code.google.com/p/mdanalysis/source/checkout) if you want to clone/download/checkout the repository.
+To clone/download/checkout the repository, use one of the following URLs:
+1. `git@github.com:MDAnalysis/mdanalysis.git`
+2. `https://github.com/MDAnalysis/mdanalysis.git`
+3. fork it on GitHub
+Option (1) requires that you have a username on GitHub.
 
 ### Stable source code ###
 Production-ready code is stored in the **[main branch](RepositoryStructure#The_main_branch)**.
 
-You can browse this code [here](http://code.google.com/p/mdanalysis/source/browse/?name=master).
+You can [browse the master branch](https://github.com/MDAnalysis/mdanalysis).
 
 Please note that main development is done using the **[develop branch](RepositoryStructure#The_develop_branch)**.
 
 ### Development source code ###
 Development code is stored in the **[develop branch](RepositoryStructure#The_develop_branch)**.
 
-You can browse this code [here](http://code.google.com/p/mdanalysis/source/browse/?name=develop).
+You can [browse the develop branch](https://github.com/MDAnalysis/mdanalysis/tree/develop).
 
 ## Source code organisation ##
-When you check out the source code you'll get a directory hierarchy that [looks like](http://code.google.com/p/mdanalysis/source/browse/)
+When you check out the source code you'll get a directory hierarchy that [looks like](https://github.com/MDAnalysis/mdanalysis/tree/develop)
 ```
 mdanalysis/README
            package/
            testsuite/
 ```
-  * [package](http://code.google.com/p/mdanalysis/source/browse/#git%2Fpackage) contains the _MDAnalysis toolkit_ source code.
-  * [testsuite](http://code.google.com/p/mdanalysis/source/browse/#git%2Ftestsuite) contains the code for the UnitTests and the datafiles
+  * [package](https://github.com/MDAnalysis/mdanalysis/tree/develop/package) contains the _MDAnalysis toolkit_ source code.
+  * [testsuite](https://github.com/MDAnalysis/mdanalysis/tree/develop/testsuite) contains the code for the [[UnitTests]] and the datafiles
 
-When you [add a new feature](ContributingCode) (in `package`) then you should also add a test case (see UnitTests) and possibly data files in `testsuite` and commit both together.
+When you [add a new feature](ContributingCode) (in `package`) then you should also add a test case (see [[UnitTests]]) and possibly data files in `testsuite` and commit both together.
 
-(See also [Issue 87](https://code.google.com/p/mdanalysis/issues/detail?id=87).)
+(See also [Issue 87](https://github.com/MDAnalysis/mdanalysis/issues/87).)

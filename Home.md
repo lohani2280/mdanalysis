@@ -76,15 +76,15 @@ When using MDAnalysis in published work, please cite
 If you use the [RMSD alignment code](https://pythonhosted.org/MDAnalysis/documentation_pages/analysis/align.html) that uses the [QCProt module](https://pythonhosted.org/MDAnalysis/documentation_pages/core/qcprot.html) please also cite
 
 * Douglas L. Theobald. Rapid calculation of RMSD using a quaternion-based characteristic polynomial. Acta Crystallographica A **61** (2005), 478-480.
-* Pu Liu, Dmitris K. Agrafiotis, and Douglas L. Theobald. Fast determination of the optimal rotational matrix for macromolecular superpositions. J. Comput. Chem. **31** (2010), 1561-1563.
+* Pu Liu, Dmitris K. Agrafiotis, and Douglas L. Theobald. Fast determination of the optimal rotational matrix for macromolecular superpositions. J. Comput. Chem. **31** (2010), 1561–1563.
 
 If you use the helix analysis algorithm HELANAL in [MDAnalysis.analysis.helanal](https://pythonhosted.org/MDAnalysis/documentation_pages/analysis/helanal.html) please cite
 
-* Bansal M, Kumar S, Velavan R. HELANAL - A program to characterise helix geometry in proteins. J. Biomol. Struct. Dyn. **17** (2000), 811-819
+* Bansal M, Kumar S, Velavan R. HELANAL - A program to characterise helix geometry in proteins. J. Biomol. Struct. Dyn. **17** (2000), 811–819
 
 If you use the GNM trajectory analysis code in [MDAnalysis.analysis.gnm](https://pythonhosted.org/MDAnalysis/documentation_pages/analysis/gnm.html) please cite
 
-* Benjamin A. Hall, Samantha L. Kaye, Andy Pang, Rafael Perera, and Philip C. Biggin. Characterization of Protein Conformational States by Normal-Mode Frequencies. JACS **129** (2007), 11394â€“11401.
+* Benjamin A. Hall, Samantha L. Kaye, Andy Pang, Rafael Perera, and Philip C. Biggin. Characterization of Protein Conformational States by Normal-Mode Frequencies. JACS **129** (2007), 11394–11401.
 
 Thanks!
 

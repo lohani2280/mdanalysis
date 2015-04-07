@@ -11,7 +11,7 @@ A quick overview over the latest additions to the development branch is provided
 
 # Getting the development branch #
 
-The following instructions are for a read-only version of the source code (see [[git] for further details on the `git clone` command and and [[DistributedDevelopment]] for more help):
+The following instructions are for a read-only version of the source code (see [[git]] for further details on the `git clone` command and and [[DistributedDevelopment]] for more help):
 ```
 git clone https://github.com/MDAnalysis/mdanalysis.git
 cd mdanalysis

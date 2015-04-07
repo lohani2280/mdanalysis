@@ -3,19 +3,19 @@
 Labels: python, molecular dynamics, analysis, DCD, CHARMM, LAMMPS, NAMD, Gromacs, computer simulation, atoms, coordinates, trajectory, XTC, Library, object-oriented  
 [Core Developers](https://github.com/orgs/MDAnalysis/teams/coredevs)
 
-### Featured ###
-[Applications](https://github.com/MDAnalysis/mdanalysis/wiki/Applications)  
-[Documentation](https://github.com/MDAnalysis/mdanalysis/wiki/Documentation)  
-[Downloads](https://github.com/MDAnalysis/mdanalysis/wiki/Downloads)  
-[Install](https://github.com/MDAnalysis/mdanalysis/wiki/Install)  
-[PaperErrata](https://github.com/MDAnalysis/mdanalysis/wiki/PaperErrata)  
+### Essentials ###
+[[Applications]]
+[[Documentation]]  
+[[Downloads]]
+[[Install]]
+[[PaperErrata]]
 [[Release Notes|Release Notes]]   
-[Guide for Developers](https://github.com/MDAnalysis/mdanalysis/wiki/Guide-for-Developers)  
+[[Guide for Developers|Guide-for-Developers]]
 
 ### Links ###
 [mdanalysis on Twitter](https://twitter.com/mdanalysis)  
 [Documentation (0.9.1)](http://packages.python.org/MDAnalysis/)  
-[Tutorials](https://github.com/MDAnalysis/mdanalysis/wiki/Tutorials)  
+[[Tutorials]]
 [Downloads (PyPi)](https://pypi.python.org/pypi/MDAnalysis)  
 Mailing Lists:  
 [User discussion group](https://groups.google.com/forum/#!forum/mdnalysis-discussion)  

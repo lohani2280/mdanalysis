@@ -68,7 +68,9 @@ Finally, you can also ask for advice or help on the [mdnalysis-discussion](http:
 ## Citation ##
 When using MDAnalysis in published work, please cite
 
-* N. Michaud-Agrawal, E. J. Denning, T. B. Woolf, and O. Beckstein. MDAnalysis: A Toolkit for the Analysis of Molecular Dynamics Simulations. _J. Comput. Chem._ **32** (2011), 2319-2327, doi:[10.1002/jcc.21787](http://dx.doi.org/10.1002/jcc.21787). PMCID:[PMC3144279](http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3144279/) (If you are reading the [HTML version of the paper](http://onlinelibrary.wiley.com/doi/10.1002/jcc.21787/full), have a look at the [PaperErrata](PaperErrata). The free PubmedCentral manuscript [PMC3144279](http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3144279/) has correct code, which can be copied and pasted.)
+* N. Michaud-Agrawal, E. J. Denning, T. B. Woolf, and O. Beckstein. MDAnalysis: A Toolkit for the Analysis of Molecular Dynamics Simulations. _J. Comput. Chem._ **32** (2011), 2319-2327, doi:[10.1002/jcc.21787](http://dx.doi.org/10.1002/jcc.21787). PMCID:[PMC3144279](http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3144279/) 
+
+  (If you are reading the [HTML version of the paper](http://onlinelibrary.wiley.com/doi/10.1002/jcc.21787/full), have a look at the [PaperErrata](PaperErrata). The free PubmedCentral manuscript [PMC3144279](http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3144279/) has correct code, which can be copied and pasted.)
 
 ### Included algorithms ###
 If you use the [RMSD alignment code](https://pythonhosted.org/MDAnalysis/documentation_pages/analysis/align.html) that uses the [QCProt module](https://pythonhosted.org/MDAnalysis/documentation_pages/core/qcprot.html) please also cite

@@ -4,9 +4,11 @@ The MDAnalysis source code is stored in a [[git]] repository at https://github.c
 The full description of the git repository structure is available [here](RepositoryStructure).
 
 To clone/download/checkout the repository, use one of the following URLs:
+
 1. `git@github.com:MDAnalysis/mdanalysis.git`
 2. `https://github.com/MDAnalysis/mdanalysis.git`
 3. fork it on GitHub
+
 Option (1) requires that you have a username on GitHub.
 
 ### Stable source code ###

@@ -4,19 +4,19 @@ Labels: python, molecular dynamics, analysis, DCD, CHARMM, LAMMPS, NAMD, Gromacs
 [Core Developers](https://github.com/orgs/MDAnalysis/teams/coredevs)
 
 ### Essentials ###
-[[Applications]]
+[[Applications]]  
 [[Documentation]]  
-[[Downloads]]
-[[Install]]
-[[PaperErrata]]
-[[Release Notes|Release Notes]]   
+[[Downloads]]  
+[[Install]]  
+[[PaperErrata]]  
+[[Release Notes|Release Notes]]  
 [[Guide for Developers|Guide-for-Developers]]
 
 ### Links ###
-[mdanalysis on Twitter](https://twitter.com/mdanalysis)  
+[@mdanalysis](https://twitter.com/mdanalysis) on Twitter  
 [Documentation (0.9.1)](http://packages.python.org/MDAnalysis/)  
-[[Tutorials]]
+[[Tutorials]]  
 [Downloads (PyPi)](https://pypi.python.org/pypi/MDAnalysis)  
 Mailing Lists:  
 [User discussion group](https://groups.google.com/forum/#!forum/mdnalysis-discussion)  
-[Developer mailing list](https://groups.google.com/forum/#!forum/mdnalysis-devel)
+[Developer mailing list](https://groups.google.com/forum/#!forum/mdnalysis-devel)  

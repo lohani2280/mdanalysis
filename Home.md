@@ -57,7 +57,7 @@ pip install MDAnalysis
 
 ## Learning MDAnalysis ##
 
-The [MDAnalysis Tutorial](http://orbeckst.github.io/MDAnalysisTutorial/) serves as an introduction to the library and there are other [Tutorials](Tutorials) available, too.
+The [MDAnalysis Tutorial](http://www.mdanalysis.org/MDAnalysisTutorial/) serves as an introduction to the library and there are other [Tutorials](Tutorials) available, too.
 
 See the **[Online Documentation](https://pythonhosted.org/MDAnalysis/index.html)** for more information on how to use MDAnalysis and the [TableOfContents](TableOfContents) for a general overview of the available documentation on the Wiki. The [paper on MDAnalysis](#Citation) contains a high-level description of the structure and philosophy of the library together with examples of its use.
 

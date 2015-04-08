@@ -92,6 +92,7 @@ Oliver can also use [Google Takeout](https://www.google.com/settings/takeout) to
   * All code **should** transfer cleanly to GitHub.
   * We will need to split off **applications** from the current repository
     * extract the commits from the history (or just start fresh if too difficult, will only affect RotamerConvolveMD at the moment)
+    * see [[Splitting off RotamerConvolveMD]]
   * There's a possibility of [mapping usernames to GitHub users during  the import process](https://code.google.com/p/support-tools/issues/detail?id=49) but it seems fragile. Not sure if it is needed.
 
 # Wiki #

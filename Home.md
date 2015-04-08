@@ -33,7 +33,7 @@ Find the latest source release
 * on the [python package index (MDAnalysis)](http://pypi.python.org/pypi/MDAnalysis) or
 * obtain the [development version from the git repository](https://github.com/MDAnalysis/mdanalysis/tree/develop/package).
 
-Note that that MDAnalysis is still considered experimental software (although a growing number of people have been using it successfully for published work). Please report problems through the [Issue Tracker](https://github.com/MDAnalysis/mdanalysis/issues).
+Note that that MDAnalysis is still considered experimental software (although a growing number of people have been [using it successfully for published work](http://scholar.google.com/scholar?cites=14957293613081676111&as_sdt=805&sciodt=0,3&hl=en)). Please report problems through the [Issue Tracker](https://github.com/MDAnalysis/mdanalysis/issues).
 
 The file [INSTALL](https://github.com/MDAnalysis/mdanalysis/blob/master/package/INSTALL) in the package itself and the wiki pages [Install](Install) and [InstallRecipes](InstallRecipes) should help you compiling and installing MDAnalysis.
 

@@ -6,7 +6,7 @@ _The wiki was recently (2015-04-04) converted from the [old Google Code Wiki](ht
 
 ----
 
-It allows one to read molecular dynamics trajectories and access the atomic coordinates through [numpy](http://numpy.scipy.org/) arrays. This provides a flexible and relatively fast framework for complex analysis tasks. In addition, [CHARMM-style](http://www.charmm.org/html/documentation/c34b1/select.html) atom [selection commands](https://pythonhosted.org/MDAnalysis/documentation_pages/selections.html#selection-commands) are implemented. Trajectories can also be manipulated (for instance, fit to a reference structure) and written out.
+**MDAnalysis** allows one to read molecular dynamics trajectories and access the atomic coordinates through [numpy](http://numpy.scipy.org/) arrays. This provides a flexible and relatively fast framework for complex analysis tasks. In addition, [CHARMM-style](http://www.charmm.org/html/documentation/c34b1/select.html) atom [selection commands](https://pythonhosted.org/MDAnalysis/documentation_pages/selections.html#selection-commands) are implemented. Trajectories can also be manipulated (for instance, fit to a reference structure) and written out.
 
 A typical usage pattern is to iterate through a trajectory and analyze coordinates for every frame. In the following [example](Examples) the end-to-end distance of a protein and the radius of gyration of the backbone atoms are calculated:
 

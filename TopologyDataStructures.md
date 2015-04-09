@@ -2,7 +2,7 @@ MDAnalysis primarily uses a list of Atoms to identify particles in the system. T
 
 Bond information can also be guessed from a distance search using `topology.core.guess_bonds()`.  Once bond information is in place, angles and torsions can be determined using `topology.core.guess_angles()` and `guess_torsions()`.
 
-This page together with the [Developer Notes on Topologies in the online docs](http://mdanalysis.googlecode.com/git-history/develop/package/doc/html/documentation_pages/topology/init.html#developer-notes) serves as a starting point for discussions and to spell out a number of implementation details that so far have not been explicitly defined.
+This page together with the [Developer Notes on Topologies in the online docs](https://pythonhosted.org/MDAnalysis/documentation_pages/topology/init.html#developer-notes) serves as a starting point for discussions and to spell out a number of implementation details that so far have not been explicitly defined.
 
 **Contents**
 

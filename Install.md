@@ -75,10 +75,10 @@ and download the tar files from there.
 
 #### Git repository ####
 Alternatively, you can check out the MDAnalysis directory from the [git](git)
-repository at http://mdanalysis.googlecode.com. See the [source checkout instructions](http://code.google.com/p/mdanalysis/source/checkout) for details. In most cases
+repository at https://github.com/MDAnalysis/mdanalysis. In most cases
 simply do
 ```
-git clone https://code.google.com/p/mdanalysis
+git clone https://github.com/MDAnalysis/mdanalysis
 cd mdanalysis
 ```
 

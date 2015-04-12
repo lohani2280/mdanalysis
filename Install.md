@@ -89,7 +89,7 @@ git pull
 to update your files.
 
 ### Standard installation from source ###
-Currently MDAnalysis is only distributed in source form. You will need
+If you want to install MDAnalysis from source you will need
 a [C compiler](http://en.wikipedia.org/wiki/List_of_compilers#C_compilers).
 
 We recommend (for python >= 2.6) the following way of installing in your home directory (a so called "user" installation) ::

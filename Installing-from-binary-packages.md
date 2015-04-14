@@ -44,3 +44,8 @@ On Fedora 20, add the following repository to your system:
 
 You can install from the software database:
 http://software.opensuse.org/package/python-MDAnalysis
+
+### Arch Linux ###
+
+MDAnalysis can be installed from the Arch User Repository (AUR):
+https://aur.archlinux.org/packages/python2-mdanalysis/

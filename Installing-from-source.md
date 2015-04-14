@@ -1,3 +1,7 @@
+MDAnalysis is *open source* and you can always build and install the package from source. This gives you the flexibility to use either the latest releases or, if you like living on the cutting edge, you can also use the current [development version of the code](DevelopmentBranch). This page contains notes on how to install from source.
+
+For alternative ways to install MDAnalysis, see the page [Install](Install).
+
 ## Installing from source ##
 **MDAnalysis** is also distributed in source form. In order to build the library some C code needs to be compiled. Thus you will need
   * python (>=2.6)

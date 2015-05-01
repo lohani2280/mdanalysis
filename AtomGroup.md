@@ -53,11 +53,11 @@ For a atom group `a`:
 <dl>
 <dt>a.coordinates()</dt>
 <dd>numpy array of all coordinates</dd>
-<dt>a.centerOfGeometry()</dt>
+<dt>a.centerOfGeometry(pbc=False)</dt>
 <dd>mean position of all atoms</dd>
-<dt>a.centerOfMass()</dt>
+<dt>a.centerOfMass(pbc=False)</dt>
 <dd>center of mass of the atoms; needs masses to be defined</dd>
-<dt>a.principalAxes()</dt>
+<dt>a.principalAxes(pbc=False)</dt>
 <dd>the three principal axes of the collection of atoms; needs the masses in order to calculate the moments of inertia. The eigenvectors are sorted by eigenvalue, with the first one corresponding to the highest eigenvalue.</dd>
 <dt>a.numberOfAtoms()</dt>
 <dd>number of atoms</dd>

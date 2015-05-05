@@ -79,8 +79,14 @@ Simply look at the detailed output at the end and ignore anything that contains 
 ```
 KnownFailureTest:  blabla
 ```
-It seems that paralle nosetests do not properly honour the "knownfailure" cases.
+It seems that parallel nosetests do not properly honour the "knownfailure" cases.
 
+**Update:**
+Parallel unit tests tend to behave much better when the `process-timeout` flag is used. For example, the following command produces an `OK` result using 8 processors:
+
+`nosetests --processes=8 --process-timeout=120`
+
+See also: [official docs](http://nose.readthedocs.org/en/latest/plugins/multiprocess.html#cmdoption--process-timeout) for the process timeout flag
 # Coverage #
 We test code coverage of the unit tests with the  [coverage](http://nedbatchelder.com/code/modules/rees-coverage.html) plugin of nose:
 ```

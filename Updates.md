@@ -1,4 +1,4 @@
-Google decided to [disable the Updates/Activity tab](http://code.google.com/p/support/issues/detail?id=24324) (see also our [Issue 98](https://code.google.com/p/mdanalysis/issues/detail?id=98)) so here is a temporary replacement using Wiki gadgets. (Code is hosted at [sorryrobot.com](http://sorryrobot.com) so you will need to allow js from that host.)
+Google decided to [disable the Updates/Activity tab](http://code.google.com/p/support/issues/detail?id=24324) (see also our [Issue 98](http://issues.mdanalysis.org/98)) so here is a temporary replacement using Wiki gadgets. (Code is hosted at [sorryrobot.com](http://sorryrobot.com) so you will need to allow js from that host.)
 
 # Recent Commits to trunk #
 

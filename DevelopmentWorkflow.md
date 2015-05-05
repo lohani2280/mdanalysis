@@ -3,7 +3,7 @@
 
 # Development workflow #
 
-As of 2012-02-21, the git repository structure was modified to reflect the development workflow described here (see [issue 96](https://code.google.com/p/mdanalysis/issues/detail?id=96) for discussion).
+As of 2012-02-21, the git repository structure was modified to reflect the development workflow described here (see [issue 96](http://issues.mdanalysis.org/96) for discussion).
 
 Please check [RepositoryStructure](RepositoryStructure) for details about the git repository structure.
 
@@ -156,7 +156,7 @@ git branch -d hotfix-0.7.6.1
 
 In addition to the standard requirements, a developer should probably also install [cython](http://cython.org). In some cases it might be necessary to have [SWIG](http://www.swig.org) as well.
 
-Developers should be aware of how the `setup.py` script handles Cython code (see [Issue 85](https://code.google.com/p/mdanalysis/issues/detail?id=85)):
+Developers should be aware of how the `setup.py` script handles Cython code (see [Issue 85](http://issues.mdanalysis.org/85)):
 
   * If **no Cython**, `setup.py` uses all the `.c` files that are included in the standard MDAnalysis distribution. If you _changed any `.pyx` files_ then it will _still use the old files_!
   * If **Cython is installed**, it is used to compile extension and `.pyx` source files are used instead of `.c` files.

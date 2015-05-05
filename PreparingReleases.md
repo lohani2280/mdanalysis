@@ -3,7 +3,7 @@ This document outlines how to manage the MDAnalysis sources and how to prepare d
 
 
 # Release policy and release numbering #
-We use a **MAJOR**.**MINOR**.**PATCH** scheme to label releases. We adhere to the idea of [semantic versioning](http://semver.org/) (semantic versioning was introduced with release 0.9, see [Issue 200](https://code.google.com/p/mdanalysis/issues/detail?id=200)): Given a version number **MAJOR.MINOR.PATCH**, we increment the:
+We use a **MAJOR**.**MINOR**.**PATCH** scheme to label releases. We adhere to the idea of [semantic versioning](http://semver.org/) (semantic versioning was introduced with release 0.9, see [Issue 200](http://issues.mdanalysis.org/200)): Given a version number **MAJOR.MINOR.PATCH**, we increment the:
 
   * **MAJOR** version when we make **incompatible API changes**,
   * **MINOR** version when we **add functionality** in a backwards-compatible manner, and
@@ -50,7 +50,7 @@ so that people using the [development branch](DevelopmentBranch) from the source
 > Fix code so that all tests are passed (except for known failures). Note that if you worked on any of the **[Cython](http://cython.org/)** code then you should check that the new code was also compiled (monitor the output from `python setup.py build`).
 
 > <font size='1'>
-<blockquote>Note on Cython code (see <a href='https://code.google.com/p/mdanalysis/issues/detail?id=85'>Issue 85</a> for details):<br>
+<blockquote>Note on Cython code (see <a href='http://issues.mdanalysis.org/85'>Issue 85</a> for details):<br>
 <ul><li>If no Cython, <code>setup.py</code> will use C-code that was previously generated; of you updated any <code>*.pyx</code> files then you <i>must</i> have <a href='http://cython.org/#download'>Cython</a> installed (but you probably new this already).<br>
 </li><li>If Cython if installed, it is used to compile extension and <code>.pyx</code> source files are used instead of <code>.c</code> files.<br>
 </li><li>From there, <code>.pyx</code> files are converted to <code>.c</code> files if they are newer than the already present <code>.c</code> files <i>or</i> if the <code>--force</code> flag is set (e.g <code>setup.py build --force</code>).</li></ul></blockquote>
@@ -132,6 +132,6 @@ Then _upload documentation_ (the file `pypidoc.zip`) via the [MDAnalysis: Edit](
 
 # Test data #
 
-UnitTests and test data are maintained in the same git repository as the MDAnalysis package. Tests are checked in together with code (for details see [Issue 87](https://code.google.com/p/mdanalysis/issues/detail?id=87), UnitTests and [MDAnalysisTests](MDAnalysisTests)).
+UnitTests and test data are maintained in the same git repository as the MDAnalysis package. Tests are checked in together with code (for details see [Issue 87](http://issues.mdanalysis.org/87), UnitTests and [MDAnalysisTests](MDAnalysisTests)).
 
 The library, **MDAnalysis** and the tests, **MDAnalysisTests** share the same release number: whenever there's a new MDAnalysis there will be a corresponding MDAnalysisTests. Therefore, the two packages are maintained and built together (see above).

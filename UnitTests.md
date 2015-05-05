@@ -99,7 +99,7 @@ nosetests-2.7 -v --with-id \
 ```
 Currently, this is done manually and the online **[coverage report](http://wiki.mdanalysis.googlecode.com/git/pages/quality_control/cover/index.html)** is also update manually.
 
-In the future, this is supposed to be done as part of a continuous integration process ([Issue 134](https://code.google.com/p/mdanalysis/issues/detail?id=134)).
+In the future, this is supposed to be done as part of a continuous integration process ([Issue 134](http://issues.mdanalysis.org/134)).
 
 # Details #
 We are using the NumPy testing frame work (v >= 1.3); thus, numpy **must** be installed for the tests to run at all.
@@ -201,7 +201,7 @@ The simulation data used in some tests are from Beckstein et al. (2009) (`adk.ps
 
 # Writing test cases #
 
-The tests are in a separate package, together with any data files required for running the tests (see [Issue 87](https://code.google.com/p/mdanalysis/issues/detail?id=87) for details). Whenever you _add a new feature_ to the code you _should also add a test case_ (ideally, in the same git commit so that the code and the test case are treated as one unit).
+The tests are in a separate package, together with any data files required for running the tests (see [Issue 87](http://issues.mdanalysis.org/87) for details). Whenever you _add a new feature_ to the code you _should also add a test case_ (ideally, in the same git commit so that the code and the test case are treated as one unit).
 
 The unit tests use the [unittest module](http://docs.python.org/library/unittest.html) together with [nose](http://somethingaboutorange.com/mrl/projects/nose/0.11.3/index.html). See the examples in the [MDAnalysisTests](http://code.google.com/p/mdanalysis/source/browse/#git%2Ftestsuite%2FMDAnalysisTests) package.
 
@@ -225,7 +225,7 @@ Conventions for MDAnalysis
 
 The way we organized the unit tests changed between releases. The procedure for the current release is detailed at the very top of the page. The following list is for historical reference and in case you ever want to go back to a previous release.
 
-  1. since **0.7.5**: tests _and_ data are together in package **MDAnalysisTests**. See [Issue 87](https://code.google.com/p/mdanalysis/issues/detail?id=87) for details.
+  1. since **0.7.5**: tests _and_ data are together in package **MDAnalysisTests**. See [Issue 87](http://issues.mdanalysis.org/87) for details.
   1. release **0.7.4**: tests are in **MDAnalysis** and data is in **MDAnalysisTestData** (for MDAnalysis == 0.7.4). To install [MDAnalysisTestData](MDAnalysisTestData) download the `MDAnalysisTestData-0.7.4.tar.gz` from the [Download](http://code.google.com/p/mdanalysis/downloads/list) section or try
 ```
 easy_install http://mdanalysis.googlecode.com/files/MDAnalysisTestData-0.7.4.tar.gz

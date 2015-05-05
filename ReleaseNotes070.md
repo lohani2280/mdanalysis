@@ -15,7 +15,7 @@ major release 0.7.0: (includes changes that can BREAK BACKWARDS COMPATIBILITY)
 
 ## Removed _all deprecated_ code ##
 In particular, the following methods are gone or are not found in the previous place anymore:
-  * `AtomGroup.principleAxes` ([Issue 33](https://code.google.com/p/mdanalysis/issues/detail?id=33))
+  * `AtomGroup.principleAxes` ([Issue 33](http://issues.mdanalysis.org/33))
   * `DCD.DCDReader.dcd_header()` and `DCD.DCDWriter.dcd_header()` (use `_dcd_header()`)
   * `Universe.dcd` (and `Universe.xtc`, `Universe.trr`...) --- from now on only `Universe.trajectory` is supported. **WILL BREAK LEGACY CODE!**
   * removed the following packages from top-level MDAnalysis  name space:
@@ -29,7 +29,7 @@ In particular, the following methods are gone or are not found in the previous p
     * `MDAnalysis.Writer()` factory function that provides an appropriate writer for the desired file format
     * `Writer.write()` accepts a `Universe` or a arbitrary `AtomGroup` (e.g. from a selection); this is much more flexible than `Writer.write_next_timestep()`; the DCD/XTC/TRR writer also accepts a `Timestep` for its `write()` method.
   * CHARMM CRD coordinate files
-    * CRDReader added (fixes [Issue 40](https://code.google.com/p/mdanalysis/issues/detail?id=40)) ... it will work for both standard and extended formats: NO special flags needed.
+    * CRDReader added (fixes [Issue 40](http://issues.mdanalysis.org/40)) ... it will work for both standard and extended formats: NO special flags needed.
     * CRDWriter will now write extended crd files: NO special flags needed.
   * PDB format:    By default, PDB files are read with the PrimitivePDBReader and not	  the Bio.PDB reader anymore because the latter can drop atoms when	  they have the same name in a residue (which happens for systems	  generated from MD simulations) The PrimitivePDBReader copes just fine 	  with those cases (but does not handle esoteric PDB features such as	  alternative atoms and insertion codes that are not needed for	  handling MD simulation data).
     * The default behaviour of MDAnalysis  can be set through the flag `MDAnalysis.core.flag['permissive_pdb_reader']`.  The default is True.
@@ -40,25 +40,25 @@ In particular, the following methods are gone or are not found in the previous p
     * Indexing is made consistent with the way lists behave:
       1. indexing with integers returns a single `Atom`
       1. slicing always returns a new `AtomGroup`
-      1. advanced slicing with a list or array returns a new `AtomGroup` (_NEW_, fixes [Issue 36](https://code.google.com/p/mdanalysis/issues/detail?id=36))
+      1. advanced slicing with a list or array returns a new `AtomGroup` (_NEW_, fixes [Issue 36](http://issues.mdanalysis.org/36))
     * `AtomGroup` coordinates can be manipulated (`translate()`, `rotate()` and `rotateby()` methods; when appropriate, these methods can take `AtomGroup`s or arrays to determine coordinates)
     * **new attributes** `residues` and `segments` for `AtomGroup` to give access to the list of residue/segment objects of the group
-    * new exception `NoDataError`; raised when creation of an empty `AtomGroup` is attempted (see also [Issue 12](https://code.google.com/p/mdanalysis/issues/detail?id=12))
+    * new exception `NoDataError`; raised when creation of an empty `AtomGroup` is attempted (see also [Issue 12](http://issues.mdanalysis.org/12))
     * **consistent representation of the Segment > Residue > Atom hierarchy** : all classes related to `AtomGroup` now expose the attributes `atoms`, `residues`, `segments` that provide access to groups of the corresponding objects
   * improvements to `Residue`, `ResidueGroup` and `Segment` classes; documented the _instant selector_ pseudo-attributes:
     * documented accessing residues from `Segment` as `Segment.r<resid>`; resid is 1-based -- _BREAKS OLD CODE_ that used the previous undocumented feature (which was 0-based)
     * added `SegmentGroup` class
-    * can write from `Residue`, `ResidueGroup` and `Segment` ([Issue 46](https://code.google.com/p/mdanalysis/issues/detail?id=46))
-    * residue name attribute of a `Segment` now consistently returns a `ResidueGroup` ([Issue 47](https://code.google.com/p/mdanalysis/issues/detail?id=47)) -- _MIGHT BREAK OLD CODE_
+    * can write from `Residue`, `ResidueGroup` and `Segment` ([Issue 46](http://issues.mdanalysis.org/46))
+    * residue name attribute of a `Segment` now consistently returns a `ResidueGroup` ([Issue 47](http://issues.mdanalysis.org/47)) -- _MIGHT BREAK OLD CODE_
     * added documentation and examples in the doc strings
     * new special dihedral angle selections defined for `Residue` class to simplify analysis of backbone torsions (_experimental_)
 
 
 ## Other changes ##
-  * whitespace is no longer required around parentheses for `selectAtoms()` strings but the old syntax with white space still works ([Issue 43](https://code.google.com/p/mdanalysis/issues/detail?id=43))
-  * new `contact_matrix` method for calculating contacts ([Issue 30](https://code.google.com/p/mdanalysis/issues/detail?id=30)); for large (N > ~10000) coordinate arrays automatically switches to a method using a sparse matrix (slower)
+  * whitespace is no longer required around parentheses for `selectAtoms()` strings but the old syntax with white space still works ([Issue 43](http://issues.mdanalysis.org/43))
+  * new `contact_matrix` method for calculating contacts ([Issue 30](http://issues.mdanalysis.org/30)); for large (N > ~10000) coordinate arrays automatically switches to a method using a sparse matrix (slower)
   * more example scripts (e.g. for membrane analysis, trajectory writing, coordinate transformations)
-  * fixed [Issue 51](https://code.google.com/p/mdanalysis/issues/detail?id=51) (distance\_array() did not properly check its input and wrong results could be returned if the input was a float64 and a float32 array)
+  * fixed [Issue 51](http://issues.mdanalysis.org/51) (distance\_array() did not properly check its input and wrong results could be returned if the input was a float64 and a float32 array)
 
 ## Experimental features ##
 

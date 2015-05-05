@@ -24,7 +24,7 @@ In `ipython` one can use the question mark operator
 ```
   MDAnalysis.Universe ?
 ```
-Interactive use is not always convenient, though, and hence [Issue 26](https://code.google.com/p/mdanalysis/issues/detail?id=26) called for proper documentation.
+Interactive use is not always convenient, though, and hence [Issue 26](http://issues.mdanalysis.org/26) called for proper documentation.
 
 As of Jan 2011, the **[Online Documentation](http://mdanalysis.googlecode.com/git/doc/html/index.html)** is available, too.
 
@@ -107,4 +107,4 @@ Serving of the current docs works because Google does some mime magic on "raw" u
   * provide the appropriate URL such as http://mdanalysis.googlecode.com/git/doc/html/index.html ,
   * and just name images, CSS, javascript etc with the correct file extension
 
-(See [Issue 86](https://code.google.com/p/mdanalysis/issues/detail?id=86) for a discussion.)
+(See [Issue 86](http://issues.mdanalysis.org/86) for a discussion.)

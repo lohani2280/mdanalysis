@@ -1,6 +1,6 @@
 # Git repository structure #
 
-As introduced by [issue 96](https://code.google.com/p/mdanalysis/issues/detail?id=96), the structure adopted for the MDAnalysis source code central repository is based on the model which is fully described here: http://nvie.com/posts/a-successful-git-branching-model/.
+As introduced by [issue 96](http://issues.mdanalysis.org/96), the structure adopted for the MDAnalysis source code central repository is based on the model which is fully described here: http://nvie.com/posts/a-successful-git-branching-model/.
 
 This model relies on two main branches:
   * a **master** branch containing _production-ready_ code.

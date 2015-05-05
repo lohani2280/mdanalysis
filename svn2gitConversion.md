@@ -1,4 +1,4 @@
-As described in [Issue 86](https://code.google.com/p/mdanalysis/issues/detail?id=86), we wanted to upgrade our source code management system from [subversion](subversion) to [git](git). The upgrade took place on 2011-11-28 and this page describes what was done.
+As described in [Issue 86](http://issues.mdanalysis.org/86), we wanted to upgrade our source code management system from [subversion](subversion) to [git](git). The upgrade took place on 2011-11-28 and this page describes what was done.
 
 orbeckst basically followed the [Convert your project from Subversion to Git](http://code.google.com/p/support/wiki/ConvertingSvnToGit) instructions with some additional steps described below.
 
@@ -46,7 +46,7 @@ The procedure did not create the _branches_ of the subversion repository in the 
 ```
 git branch -r
 ```
-We really only need the ''MDAnalysisTestData'' (see [Issue 87](https://code.google.com/p/mdanalysis/issues/detail?id=87)) so we check out that branch and then push it:
+We really only need the ''MDAnalysisTestData'' (see [Issue 87](http://issues.mdanalysis.org/87)) so we check out that branch and then push it:
 ```
 git checkout -b MDAnalysisTestData MDAnalysisTestData
 git push MDAnalysisTestData

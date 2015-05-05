@@ -8,7 +8,7 @@ Note: Please also check the [repository structure](RepositoryStructure) and the 
   1. Once the code in the clone is ready to be integrated in the main development line, **send a "pull" request** to the [mdnalysis-devel list](http://groups.google.com/group/mdnalysis-devel) so that one of the core developers can review the changes and integrate them.
 
 ## Example ##
-fullofgrace88 wants to tackle [Issue 2](https://code.google.com/p/mdanalysis/issues/detail?id=2) so they created the clone [fullofgrace88-mdanalysis-tpr-reader](http://code.google.com/r/fullofgrace88-mdanalysis-tpr-reader/). They will work on the clone.
+fullofgrace88 wants to tackle [Issue 2](http://issues.mdanalysis.org/2) so they created the clone [fullofgrace88-mdanalysis-tpr-reader](http://code.google.com/r/fullofgrace88-mdanalysis-tpr-reader/). They will work on the clone.
 
 A core developer can create a separate topic branch (here named "Issue/2") in their own local repository for testing anything that comes from the clone:
 

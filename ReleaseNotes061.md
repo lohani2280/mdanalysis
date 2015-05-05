@@ -23,8 +23,8 @@ MDAnalysis.tests.test()
 ## CHANGELOG ##
 
   * 0.6.1 release
-  * can build a simple Universe from a PDB file (FIXES [Issue 11](https://code.google.com/p/mdanalysis/issues/detail?id=11))
-  * can read Gromacs XTC and TRR files (FIXES [Issue 1](https://code.google.com/p/mdanalysis/issues/detail?id=1)) but no Timeseries or Collections yet for those formats
+  * can build a simple Universe from a PDB file (FIXES [Issue 11](http://issues.mdanalysis.org/11))
+  * can read Gromacs XTC and TRR files (FIXES [Issue 1](http://issues.mdanalysis.org/1)) but no Timeseries or Collections yet for those formats
   * removed `Universe.load_new_dcd()` and `Universe.load_new_pdb()` --- use the generic `Universe.load_new()` (_MIGHT BREAK OLD CODE_)
   * removed deprecated `Universe._dcd` attribute (_MIGHT BREAK OLD CODE_)
   * FIXED bug in PDB.PDBWriter and CRD.CRDWriter

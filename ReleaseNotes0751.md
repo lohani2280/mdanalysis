@@ -6,5 +6,5 @@ This is a minor fix to include additional documentation and examples that were a
 
 Fixes
 
-  * added: missing files ([Issue 95](https://code.google.com/p/mdanalysis/issues/detail?id=95))
+  * added: missing files ([Issue 95](http://issues.mdanalysis.org/95))
   * removed: unused delaunay-related files

@@ -14,7 +14,7 @@ See [Installing from source](Install#Installing_from_source) and InstallRecipes.
 ## Does it work under Python3k? ##
 No, not at the moment.
 
-We are looking for developers who want to try porting. See [Issue 132](https://code.google.com/p/mdanalysis/issues/detail?id=132).
+We are looking for developers who want to try porting. See [Issue 132](http://issues.mdanalysis.org/132).
 
 ## How do I install netCDF to make the Amber reader/writer work? ##
 See the page on [installing netcdf](netcdf).

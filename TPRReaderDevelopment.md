@@ -5,7 +5,7 @@ Gromacs combines structure and topology information into a binary tpr file. This
 The aim is to be able to read a tpr just like any other structure/topology file format. No write support is intended at this stage.
 
 # Current implementation in MDAnalysis #
-The implementation has been discussed in [Issue 2](https://code.google.com/p/mdanalysis/issues/detail?id=2).
+The implementation has been discussed in [Issue 2](http://issues.mdanalysis.org/2).
 
 [alfred532008's TPR reader](https://code.google.com/r/alfred532008-mdanalysis-tprreader/source/list?name=tprparser) is available as the [feature branch pyTPRparser](https://code.google.com/p/mdanalysis/source/browse/package?name=pyTPRparser) in the repository.
 

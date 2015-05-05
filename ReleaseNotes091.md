@@ -16,7 +16,7 @@ This is a minor new release of MDAnalysis, which contains a couple of [enhanceme
 
 ### Fixes ###
 
-  * TRR coordinate access via _y and_z now works properly ([Issue 224](https://code.google.com/p/mdanalysis/issues/detail?id=224))
+  * TRR coordinate access via _y and_z now works properly ([Issue 224](http://issues.mdanalysis.org/224))
 
 ## Authors ##
 manuel.nuno.melo, richardjgowers, comconadin

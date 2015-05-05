@@ -23,9 +23,9 @@
 ## Fixes ##
 
   * fixed [alignto()](http://mdanalysis.googlecode.com/git/doc/html/documentation_pages/analysis/align.html?highlight=alignto#MDAnalysis.analysis.align.alignto) (raised KeyError)
-  * fixed [Issue 57](https://code.google.com/p/mdanalysis/issues/detail?id=57) (check for illegal coordinates when writing PDB and GRO)
-  * use spaces everywhere and no TABs and tell emacs and vim to keep it that way ([Issue 69](https://code.google.com/p/mdanalysis/issues/detail?id=69))
-  * fixed [Issue 70](https://code.google.com/p/mdanalysis/issues/detail?id=70) (problems with instant atom selections)
+  * fixed [Issue 57](http://issues.mdanalysis.org/57) (check for illegal coordinates when writing PDB and GRO)
+  * use spaces everywhere and no TABs and tell emacs and vim to keep it that way ([Issue 69](http://issues.mdanalysis.org/69))
+  * fixed [Issue 70](http://issues.mdanalysis.org/70) (problems with instant atom selections)
 
 # Authors #
 orbeckst, jandom, Benjamin Hall, Paul Rigor,  dcaplan, Christian Beckstein (logo), denniej0

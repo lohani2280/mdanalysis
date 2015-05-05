@@ -1,4 +1,4 @@
-The AMBER NetCDF binary trajectory reader ([Issue 109](https://code.google.com/p/mdanalysis/issues/detail?id=109)) relies on the [netcdf4-python](https://github.com/Unidata/netcdf4-python) package, which in turns depends on
+The AMBER NetCDF binary trajectory reader ([Issue 109](http://issues.mdanalysis.org/109)) relies on the [netcdf4-python](https://github.com/Unidata/netcdf4-python) package, which in turns depends on
   * hdf5 >= 1.8.7
   * netcdf4 (>4.1)
 

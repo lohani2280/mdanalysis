@@ -16,4 +16,4 @@ MDAnalysis is also available in the repositories for
   * Gentoo: **https://packages.gentoo.org/package/sci-chemistry/mdanalysis**
 
 ## Old source releases ##
-Older releases are still available from the [Google Code download page](http://code.google.com/p/mdanalysis/downloads/list), which is not supported by Google anymore (see [Issue 155](https://code.google.com/p/mdanalysis/issues/detail?id=155) for details).
+Older releases are still available from the [Google Code download page](http://code.google.com/p/mdanalysis/downloads/list), which is not supported by Google anymore (see [Issue 155](http://issues.mdanalysis.org/155) for details).

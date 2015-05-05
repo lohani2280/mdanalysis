@@ -74,7 +74,7 @@ For a atom group `a`:
 One can also make a **sub-selection** using
 <dl>
 <dt>a.selectAtoms(<i>selection-string</i>)</dt>
-<dd>standard selection with the limitation that one can only access atoms that are part of the atom group (see <a href='https://code.google.com/p/mdanalysis/issues/detail?id=10'>Issue 10</a> and <a href='https://code.google.com/p/mdanalysis/issues/detail?id=42'>Issue 42</a>).</dd>
+<dd>standard selection with the limitation that one can only access atoms that are part of the atom group (see <a href='http://issues.mdanalysis.org/10'>Issue 10</a> and <a href='http://issues.mdanalysis.org/42'>Issue 42</a>).</dd>
 </dl>
 
 

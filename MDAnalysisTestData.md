@@ -1,6 +1,6 @@
 **The instructions below are outdated and do not apply anymore (since 2011-12-21)**. They are kept for historical purposes. See UnitTests for explanations.
 
-Notes on the test data are in the report for [Issue 87](https://code.google.com/p/mdanalysis/issues/detail?id=87) and [Source](Source).
+Notes on the test data are in the report for [Issue 87](http://issues.mdanalysis.org/87) and [Source](Source).
 
 
 ---

@@ -512,7 +512,7 @@ python
 This will take some time. If you are impatient see the [UnitTests](http://code.google.com/p/mdanalysis/wiki/UnitTests) page for ways of running on multiple cores or only running a subset of the tests.
 
 ## Lion Mac OS X 10.7.5 ##
-[Issue 142](https://code.google.com/p/mdanalysis/issues/detail?id=142) describes that on a Lion installation with MacPorts the Python 2.7 installation appears broken with the following error
+[Issue 142](http://issues.mdanalysis.org/142) describes that on a Lion installation with MacPorts the Python 2.7 installation appears broken with the following error
 ```
 ld: library not found for -lgomp
 clang: error: linker command failed with exit code 1 (use -v to see invocation)

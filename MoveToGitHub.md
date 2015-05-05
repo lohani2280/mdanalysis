@@ -1,4 +1,4 @@
-As oulined in [Issue 223](https://code.google.com/p/mdanalysis/issues/detail?id=223), Google Code is closing down and we need to move the MDAnalysis project. The (current) choice is GitHub. This page collects the issues we need to consider. Important documentation on the whole procedure can be found in the [GitHubExporterFAQ](https://code.google.com/p/support-tools/wiki/GitHubExporterFAQ).
+As oulined in [Issue 223](http://issues.mdanalysis.org/223), Google Code is closing down and we need to move the MDAnalysis project. The (current) choice is GitHub. This page collects the issues we need to consider. Important documentation on the whole procedure can be found in the [GitHubExporterFAQ](https://code.google.com/p/support-tools/wiki/GitHubExporterFAQ).
 
 # Transition #
 We'd like to do a **clean transition** where we
@@ -13,7 +13,7 @@ From reading the [issues for export](https://code.google.com/p/support-tools/iss
     1. check if there are any [open issues](https://code.google.com/p/mdanalysis/issues/list) that have attachments. If yes, then
     1. download the attachments from all open issues and store them in individual directories named _IssueNNN/CommentMM_ with the original file names (_NNN_ is the issue id number, eg 055 for [Issue 55](https://code.google.com/p/mdanalysis/issues/detail?id=55) and _MM_ is the comment number, eg 01 for comment [#1](https://code.google.com/p/mdanalysis/issues/detail?id=55#c1) or 00 for the initial issue report).
     1. prepare a zip file (and wait for further instructions until we figure out a way to put everything back together)
-  * team ([Issue 232](https://code.google.com/p/mdanalysis/issues/detail?id=232)): **orbeckst** (Oliver)
+  * team ([Issue 232](http://issues.mdanalysis.org/232)): **orbeckst** (Oliver)
     1. collect GitHub usernames from all current contributors
   * [Repository](#Repository_Organization) ([Issue 233](https://code.google.com/p/mdanalysis/issues/detail?id=233)): **orbeckst** (Oliver) will
     1. remove commit access to Google Code from everyone
@@ -25,9 +25,9 @@ From reading the [issues for export](https://code.google.com/p/support-tools/iss
     1. turn the wiki branch into a GitHub wiki (see [Wiki](#Wiki))
     1. manually fix up pages where necessary
     1. start filing issues re: wiki where community cleanup is needed
-  * Online docs (development branch) ([Issue 235](https://code.google.com/p/mdanalysis/issues/detail?id=235)): **TBN** will
+  * Online docs (development branch) ([Issue 235](http://issues.mdanalysis.org/235)): **TBN** will
     1. devise a workflow that allows us to publish the html docs as a gh-pages branch in the repository
-  * MDAnalysis home page ([Issue 236](https://code.google.com/p/mdanalysis/issues/detail?id=236)): **TBN**
+  * MDAnalysis home page ([Issue 236](http://issues.mdanalysis.org/236)): **TBN**
     1. Set up https://mdanalysis.github.io/ as a [GitHub pages](https://pages.github.com/) site using either pure html or Jekyll (see the preliminary notes on [web site development](https://github.com/MDAnalysis/MDAnalysis.github.io#mdanalysis-web-site)).
     1. populate and maintain the site
 
@@ -44,7 +44,7 @@ We will initially set up repositories for
     * branches:
       * master
       * develop
-      * gh-pages (will contain the docs and we will need to find a way to make this relatively painless to update – but see also [Issue 183](https://code.google.com/p/mdanalysis/issues/detail?id=183))
+      * gh-pages (will contain the docs and we will need to find a way to make this relatively painless to update – but see also [Issue 183](http://issues.mdanalysis.org/183))
       * feature branches that are still required for ongoing development
   * **applications**
     * split off from current repository by [detaching a subdirectory into a separate git repository](http://stackoverflow.com/questions/359424/detach-subdirectory-into-separate-git-repository/17864475#17864475)

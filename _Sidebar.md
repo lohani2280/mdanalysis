@@ -14,7 +14,7 @@ Labels: python, molecular dynamics, analysis, DCD, CHARMM, LAMMPS, NAMD, Gromacs
 
 ### Links ###
 [@mdanalysis](https://twitter.com/mdanalysis) on Twitter  
-[Documentation (0.9.1)](http:docs.mdanalysis.org/)  
+[Documentation](http:docs.mdanalysis.org/)  
 [[Tutorials]]  
 [Downloads (PyPi)](http://download.mdanalysis.org/)  
 Mailing Lists:  

@@ -22,7 +22,7 @@ MDAnalysis has a lot of documentation in the Python doc strings. In the Python i
 ```
 In `ipython` one can use the question mark operator
 ```
-  MDAnalysis.Universe ?
+  MDAnalysis.Universe?
 ```
 Interactive use is not always convenient, though, and hence [Issue 26](http://issues.mdanalysis.org/26) called for proper documentation.
 

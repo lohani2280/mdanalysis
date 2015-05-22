@@ -103,10 +103,10 @@ or else you will get problems with backslashes in unexpected places (see [Stacko
 
 # Serving documentation #
 ## Released versions ##
-When a new version is released, the docs on pythonhosted are updated as described under [[PreparingReleases#update-docs-on-pypi|Preparing Releases]]. They can be accessed from http://docs.mdanalysis.org
+When a new version is released, the [[docs on pythonhosted are updated|PreparingReleases#update-docs-on-pypi]] as part of the release procedure. They can be accessed from http://docs.mdanalysis.org
 
 ## Developer version ##
-The [developer docs](http://devdocs.mdanalysis.org) are generated from the develop branch but because they are served through gh-pages, a manual procedure needs to be carried out to make it work (perhaps run a webhook or something... – and no, readthedocs did not work for us, see [#183](https://github.com/MDAnalysis/mdanalysis/issues/183) and [#235](https://github.com/MDAnalysis/mdanalysis/issues/235)):
+The http://devdocs.mdanalysis.org are generated from the develop branch but because they are served through gh-pages, a manual procedure needs to be carried out to make it work (perhaps run a webhook or something... – and no, readthedocs did not work for us, see [#183](https://github.com/MDAnalysis/mdanalysis/issues/183) and [#235](https://github.com/MDAnalysis/mdanalysis/issues/235)):
 
 ```
 git checkout gh-pages

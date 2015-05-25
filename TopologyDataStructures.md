@@ -1,14 +1,12 @@
+# Overview #
+
 MDAnalysis primarily uses a list of Atoms to identify particles in the system. Topology information (i.e. connectivity through bonds and force-field relevant higher order connectivities such as angles (3) and torsions (dihedrals, 4)) is partially available. This depends on the topology parser (e.g. the PSFParser and TPRParser can read this information from the topology file).
 
 Bond information can also be guessed from a distance search using `topology.core.guess_bonds()`.  Once bond information is in place, angles and torsions can be determined using `topology.core.guess_angles()` and `guess_torsions()`.
 
 This page together with the [Developer Notes on Topologies in the online docs](https://pythonhosted.org/MDAnalysis/documentation_pages/topology/init.html#developer-notes) serves as a starting point for discussions and to spell out a number of implementation details that so far have not been explicitly defined.
 
-**Contents**
-
-
-
-# Overview #
+# The structure dict #
 Currently, the topology information is stored in an ad-hoc manner in the attribute **`Universe._topology`**. This is a dict with entries
   * `atoms`
   * `bonds`

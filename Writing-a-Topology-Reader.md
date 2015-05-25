@@ -81,6 +81,6 @@ Class MyParser(TopologyParser):
 
 ```
 
-For an example of a very minimalistic TopologyReader, see the XYZParser
+For an example of a very minimalistic TopologyReader, see the [XYZParser](https://github.com/MDAnalysis/mdanalysis/blob/develop/package/MDAnalysis/topology/XYZParser.py#L42)
 
-For an example of a TopologyReader populating many fields, see the PSFParser
+For an example of a TopologyReader populating many fields, see the [PSFParser](https://github.com/MDAnalysis/mdanalysis/blob/develop/package/MDAnalysis/topology/PSFParser.py#L49)

@@ -10,7 +10,7 @@ The parse method must return a dictionary of fields, as defined in [Topology Dat
 
 # Examples #
 
-```
+``` python
 Class MyParser(TopologyParser)
     def parse(self):
         struc = dict()

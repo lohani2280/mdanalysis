@@ -3,6 +3,18 @@
 The topology data defines the structure of the MDAnalysis Universe, and is the first structure generated on initialising the Universe.
 The generation of this structure is done by a TopologyReader object, which generally reads this information from a file.  The first argument in Universe `init` is the topology file.
 
+## Using a new parser
+
+It is possible to "inject" a new topology parser into MDAnalysis by supplying it as a keyword argument to
+the Universe.  This is done via the keyword `topology_format`.  
+This keyword is typically used to override the format detection based on file suffix, but if a subclass
+of `TopologyReader` is passed, this is used as the parser.
+This is designed to allow the development and testing of new parsers without having to edit the source
+of MDAnalysis.
+
+Of course, MDAnalysis prides itself on handling many formats, and so any new topology parser 
+would be a very welcome addition into the core of MDAnalysis!
+
 # Rules #
 
 A topology reader subclasses `MDAnalysis.topology.base.TopologyReader`, and then must define the method ``parse``.

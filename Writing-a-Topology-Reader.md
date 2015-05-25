@@ -12,6 +12,19 @@ of `TopologyReader` is passed, this is used as the parser.
 This is designed to allow the development and testing of new parsers without having to edit the source
 of MDAnalysis.
 
+For example:
+
+``` python
+import MDAnalysis as mda
+from MDAnalysis.topology.base import TopologyReader
+
+class MyParser(TopologyReader):
+    # hack hack hack
+
+u = mda.Universe(topologyfile, trajfile, topology_format=MyParser)
+```
+
+
 Of course, MDAnalysis prides itself on handling many formats, and so any new topology parser 
 would be a very welcome addition into the core of MDAnalysis!
 

@@ -142,7 +142,7 @@ cd /testsuite/MDAnalysisTests
 ```
 and invoke [nosetests](http://somethingaboutorange.com/mrl/projects/nose/0.11.2/usage.html) directly to run **all tests** on two processors in parallel ("`%`" is the shell prompt and should _not_ be typed):
 ```
-% nosetests-2.6 --processes=2
+% nosetests-2.6 --processes=2 --process-timeout=120
 ```
 (When the `-v` flag is added, more verbose output is produced.)
 

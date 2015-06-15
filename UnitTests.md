@@ -208,6 +208,7 @@ The unit tests use the [unittest module](http://docs.python.org/library/unittest
 The [SciPy testing guidelines](http://projects.scipy.org/numpy/wiki/TestingGuidelines#id11) are a good howto for writing test cases, especially as we are directly using this framework (imported from numpy).
 
 Conventions for MDAnalysis
+  * Relative import statements are now banned from unit testing modules (see [Issue 189](https://github.com/MDAnalysis/mdanalysis/issues/189) for details)
   * Test input data is stored in  [MDAnalysisTests/data](http://code.google.com/p/mdanalysis/source/browse/#git%2Ftestsuite%2FMDAnalysisTests%2Fdata).
     * Keep files small if possible; for trajectories 10 frames or less are sufficient.
     * Add the file name of test data files to [MDAnalysisTests/datafiles.py](http://code.google.com/p/mdanalysis/source/browse/testsuite/MDAnalysisTests/datafiles.py) (see the code for details).

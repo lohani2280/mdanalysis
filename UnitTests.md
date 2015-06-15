@@ -136,9 +136,9 @@ See [nose commandline options](http://somethingaboutorange.com/mrl/projects/nose
 
 Instead of running tests from within python, one can also run them via the [nosetests](http://somethingaboutorange.com/mrl/projects/nose/0.11.2/usage.html) script that is being installed as part of the `nose ` package.
 
-Go into the tests directory
+Go into the tests directory (or the package root)
 ```
-cd MDAnalysis/tests
+cd /testsuite/MDAnalysisTests
 ```
 and invoke [nosetests](http://somethingaboutorange.com/mrl/projects/nose/0.11.2/usage.html) directly to run **all tests** on two processors in parallel ("`%`" is the shell prompt and should _not_ be typed):
 ```

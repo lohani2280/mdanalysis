@@ -97,9 +97,8 @@ nosetests-2.7 -v --with-id \
    MDAnalysisTests/test_*.py  \
    2>&1 | tee testing.log
 ```
-Currently, this is done manually and the online **[coverage report](http://wiki.mdanalysis.googlecode.com/git/pages/quality_control/cover/index.html)** is also update manually.
 
-In the future, this is supposed to be done as part of a continuous integration process ([Issue 134](http://issues.mdanalysis.org/134)).
+Currently, this is done automatically as part of the Travis job on Python 2.7 and is viewable on **[coveralls](https://coveralls.io/r/MDAnalysis/mdanalysis?branch=develop)**.
 
 # Details #
 We are using the NumPy testing frame work (v >= 1.3); thus, numpy **must** be installed for the tests to run at all.

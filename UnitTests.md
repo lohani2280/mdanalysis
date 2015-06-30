@@ -1,25 +1,54 @@
 The unit tests and the test data are bundled together in the package **MDAnalyisTests-_release_**. In order to run the tests, this package must be installed in addition to MDAnalysis.
 
-Either install [MDAnalysisTests](MDAnalysisTests) via
+# Users 
+Install [MDAnalysisTests](MDAnalysisTests) via
 ```
 pip install --upgrade MDAnalysisTests
 ```
-or download the tar file, unpack, and run `python setup.py install`
-or use the tests from the [git source repository](Source), which are located in the [testsuite/MDAnalysisTests](http://code.google.com/p/mdanalysis/source/browse/#git%2Ftestsuite) directory.
+or download the tar file, unpack, and run `python setup.py install`.
 
-The tests require at least numpy 1.3.
+Run the tests with
+```
+nosetests -v --parallel-processes=4 --process-timeout=120 MDAnalysisTests
+```
+(You can increase the number of parallel processes depending on the number of cores available; with 12 cores, the test suite runs within ~90 seconds.)
 
+To run in serial mode (takes almost 30 mins)
+```
+nosetests -v MDAnalysisTests
+```
+
+All tests should pass (i.e. no **FAIL** or **ERROR**); *SKIPPED* or *KNOWNFAILURE* are ok. For anything that fails or gives an error [ask on the user mailing list](http://users.mdanalysis.org) or [raise an issue](/MDAnalysis/mdanalysis/issues).
+
+# Developers #
+
+All tests should pass (i.e. no **FAIL** or **ERROR**); *SKIPPED* or *KNOWNFAILURE* are ok. For anything that fails or gives an error **fix your code** (or *raise an issue*). 
+
+**Do not push code that fails to the development branch.** Instead, push it to a feature or issue branch. It will run automatically through the unit tests by travis-ci and it will be available for comment and discussion by other developers.
+
+## Recommended ##
+Use the tests from the [git source repository](Source), which are located in the [testsuite/MDAnalysisTests](https://github.com/MDAnalysis/mdanalysis/tree/develop/testsuite) directory:
+```
+cd testsuite/MDAnalysisTests
+nosetests -v --parallel-processes=4 --process-timeout=120
+```
+(Try increasing the number of processes; with 24 processes on 12 cores (+hyperthreading) this took ~40 seconds; in serial it takes ~30 min).
+
+Note that parallel tests do not properly honor the "knownfailure" cases so if you get errors, simply look at the detailed output at the end and ignore anything that contains lines such as
+```
+KnownFailureTest:  blabla
+```
+
+
+## Alternatives
+You can install `MDAnalysisTests` and then run the tests anywhere. 
 You can run all tests from the commandline
 ```
 python -c 'from MDAnalysis.tests import test; test(label="full", verbose=3, extra_argv=["--exe"])'
 ```
-or with the `nosetests` script (just make sure you are running the right version)
+or with the `nosetests` script in serial (just make sure you are running the right version)
 ```
-nosetests MDAnalysisTests
-```
-or with `nosetests` in parallel
-```
-nosetests -v --processes=24 --process-timeout=120 MDAnalysisTests
+nosetests -v MDAnalysisTests
 ```
 or from within the Python interpreter: start `python` or `ipython` and type (the `>>>` is the prompt and should not be typed!)
 ```
@@ -30,19 +59,10 @@ or from within the Python interpreter: start `python` or `ipython` and type (the
 
 Fore more details see below.
 
-**Contents**
+## Examples ##
+Examples for output in various modes. Note that here the "not verbose" mode is mostly used. For debugging, verbose mode is more useful as one can identify failing tests while they are running.
 
-
-
-# Quick start #
-Unit tests are stored in `MDAnalysis/tests/test_*.py`. Run all of them with
-```
-   import MDAnalysis.tests
-   MDAnalysis.tests.test(label="full")
-```
-and check that you only get ok (or known failures).
-
-## Serial testing ##
+### Serial testing ###
 For example, a successful test might look like the following
 ```
 >>> MDAnalysis.tests.test(label="full")
@@ -59,11 +79,11 @@ OK (KNOWNFAIL=4)
 <nose.result.TextTestResult run=50 errors=0 failures=0>
 ```
 
-## Parallel testing ##
+### Parallel testing ###
 Running tests in parallel is **much** faster, especially on an 8-core machine:
 ```
 import MDAnalysis.tests
-MDAnalysis.tests.test(label="full", extra_argv=["--processes=8"])
+MDAnalysis.tests.test(label="full", extra_argv=["--processes=8", "--process-timeout=120"])
 ```
 will throw a number of (known) errors
 ```
@@ -85,14 +105,16 @@ KnownFailureTest:  blabla
 ```
 It seems that parallel nosetests do not properly honour the "knownfailure" cases.
 
-**Update:**
 Parallel unit tests tend to behave much better when the `process-timeout` flag is used. For example, the following command produces an `OK` result using 8 processors:
 
 `nosetests --processes=8 --process-timeout=120`
 
 See also: [official docs](http://nose.readthedocs.org/en/latest/plugins/multiprocess.html#cmdoption--process-timeout) for the process timeout flag
-# Coverage #
-We test code coverage of the unit tests with the  [coverage](http://nedbatchelder.com/code/modules/rees-coverage.html) plugin of nose:
+
+### Coverage ###
+We test code coverage of the unit tests with the  [coverage](http://nedbatchelder.com/code/modules/rees-coverage.html) plugin of nose. Currently, this is done automatically as part of the Travis job on Python 2.7 and is viewable on **[coveralls](https://coveralls.io/r/MDAnalysis/mdanalysis?branch=develop)**.
+
+If you want to generate a coverage report manually you can run
 ```
 cd testsuite
 rm -f .coverage .noseids testing.log
@@ -102,10 +124,8 @@ nosetests-2.7 -v --with-id \
    2>&1 | tee testing.log
 ```
 
-Currently, this is done automatically as part of the Travis job on Python 2.7 and is viewable on **[coveralls](https://coveralls.io/r/MDAnalysis/mdanalysis?branch=develop)**.
-
 # Details #
-We are using the NumPy testing frame work (v >= 1.3); thus, numpy **must** be installed for the tests to run at all.
+We are using the NumPy testing frame work (v >= 1.3); thus, numpy **must** be installed for the tests to run at all. The tests require at least numpy 1.3.
 
 ## Running tests from within python ##
 Run all the tests with
@@ -149,7 +169,7 @@ and invoke [nosetests](http://somethingaboutorange.com/mrl/projects/nose/0.11.2/
 ```
 (When the `-v` flag is added, more verbose output is produced.)
 
-When you have written a **new unit test** it is helpful to check that it passes without running the entire suite. For example, in order to test everything in, say, [test\_selections.py](http://code.google.com/p/mdanalysis/source/browse/MDAnalysis/tests/test_selections.py) run
+When you have written a **new unit test** it is helpful to check that it passes without running the entire suite. For example, in order to test everything in, say, `test\_selections.py` run
 ```
 % nosetests-2.6 test_selections   
 ..............
@@ -167,7 +187,7 @@ Ran 4 tests in 0.486s
 
 OK
 ```
-where we are testing the class TestCompressedXYZReader which can be found in the module (file) [test\_coordinates.py](http://code.google.com/p/mdanalysis/source/browse/MDAnalysis/tests/test_coordinates.py#66)
+where we are testing the class `TestCompressedXYZReader` which can be found in the module (file) `test\_coordinates.py`.
 
 If you just installed the `MDAnalysisTests` package you can also simply run
 ```
@@ -186,18 +206,17 @@ If you have the [coverage](http://nedbatchelder.com/code/modules/rees-coverage.h
 python setup.py nosetests --with-coverage --cover-package=MDAnalysis --cover-erase --cover-tests
 ```
 
-
-
 ## Data ##
 
-The simulation data used in some tests are from Beckstein et al. (2009) (`adk.psf`,
-`adk_dims.dcd`) or unpublished simulations (O. Beckstein).
-
+The simulation data used in tests are all released under the same license as MDAnalysis or are in the Public Domain (such as PDBs from the Protein Databank). An incomplete list of sources: 
+* from Beckstein et al. (2009) (`adk.psf`,`adk_dims.dcd`)
   * _adk\_dims_      Trajectory of a macromolecular transition of the enzyme adenylate kinase between a closed and an open conformation. The simulation was run in [CHARMM](http://www.charmm.org) c35a1.
+* unpublished simulations (O. Beckstein)
   * _adk\_oplsaa_    Ten frames from the first 1 ns of a equilibrium trajectory of AdK in water with Na+ counter ions. The OPLS/AA forcefield is used with the TIP4P water model. The simulation was run with [Gromacs](http://www.gromacs.org) 4.0.2.
+* contributions from developers and users
+* Protein Databank
 
-
-## References ##
+### References ###
 
   * O. Beckstein, E.J. Denning, J.R. Perilla and T.B. Woolf, Zipping and Unzipping of Adenylate Kinase: Atomistic Insights into the Ensemble of Open-Closed Transitions. J Mol Biol 394 (2009), 160--176, doi:[10.1016/j.jmb.2009.09.009](http://dx.doi.org/10.1016/j.jmb.2009.09.009)
 
@@ -206,19 +225,19 @@ The simulation data used in some tests are from Beckstein et al. (2009) (`adk.ps
 
 The tests are in a separate package, together with any data files required for running the tests (see [Issue 87](http://issues.mdanalysis.org/87) for details). Whenever you _add a new feature_ to the code you _should also add a test case_ (ideally, in the same git commit so that the code and the test case are treated as one unit).
 
-The unit tests use the [unittest module](http://docs.python.org/library/unittest.html) together with [nose](http://somethingaboutorange.com/mrl/projects/nose/0.11.3/index.html). See the examples in the [MDAnalysisTests](http://code.google.com/p/mdanalysis/source/browse/#git%2Ftestsuite%2FMDAnalysisTests) package.
+The unit tests use the [unittest module](http://docs.python.org/library/unittest.html) together with [nose](http://somethingaboutorange.com/mrl/projects/nose/0.11.3/index.html). See the examples in the [MDAnalysisTests](https://github.com/MDAnalysis/mdanalysis/tree/develop/testsuite/MDAnalysisTests) package.
 
-The [SciPy testing guidelines](http://projects.scipy.org/numpy/wiki/TestingGuidelines#id11) are a good howto for writing test cases, especially as we are directly using this framework (imported from numpy).
+The [SciPy testing guidelines](http://projects.scipy.org/numpy/wiki/TestingGuidelines#id11) are a good howto for writing test cases, especially as we are directly using this framework (imported from `numpy`).
 
 Conventions for MDAnalysis
-  * Relative import statements are now banned from unit testing modules (see [Issue 189](https://github.com/MDAnalysis/mdanalysis/issues/189) for details)
-  * Test input data is stored in  [MDAnalysisTests/data](http://code.google.com/p/mdanalysis/source/browse/#git%2Ftestsuite%2FMDAnalysisTests%2Fdata).
+  * Relative import statements are now banned from unit testing modules (see [Issue #189](/MDAnalysis/mdanalysis/issues/189) for details)
+  * Test input data is stored in  [MDAnalysisTests/data](https://github.com/MDAnalysis/mdanalysis/tree/develop/testsuite/MDAnalysisTests/data).
     * Keep files small if possible; for trajectories 10 frames or less are sufficient.
-    * Add the file name of test data files to [MDAnalysisTests/datafiles.py](http://code.google.com/p/mdanalysis/source/browse/testsuite/MDAnalysisTests/datafiles.py) (see the code for details).
-    * Add the file(s) or a glob pattern to the `package_data` in [setup.py](http://code.google.com/p/mdanalysis/source/browse/package/setup.py); otherwise the file will not be included in the python package.
-    * If you use data from a published paper then add a reference to _this wiki page_ and the doc string in [MDAnalysisTests/\_\_init\_\_.py](http://code.google.com/p/mdanalysis/source/browse/testsuite/MDAnalysisTests/__init__.py).
+    * Add the file name of test data files to [MDAnalysisTests/datafiles.py](https://github.com/MDAnalysis/mdanalysis/blob/develop/testsuite/MDAnalysisTests/datafiles.py) (see the code for details).
+    * Add the file(s) or a glob pattern to the `package_data` in [setup.py](https://github.com/MDAnalysis/mdanalysis/blob/develop/testsuite/setup.py); otherwise the file will not be included in the python package.
+    * If you use data from a published paper then add a reference to _this wiki page_ and the doc string in [MDAnalysisTests/\_\_init\_\_.py](https://github.com/MDAnalysis/mdanalysis/blob/develop/testsuite/MDAnalysisTests/__init__.py).
   * Tests are currently organized by top-level module. Each file containing tests must start with `test_` by convention (this is how nose/unittest works). Tests itself also have to follow the appropriate naming conventions. See the docs above or the source.
-  * Tests that take longer than 3 seconds to run should be marked `@slow` (see e.g. the XTC tests in [MDAnalysisTests/test\_coordinates.py](http://code.google.com/p/mdanalysis/source/browse/testsuite/MDAnalysisTests/test_coordinates.py#1078). They will only be run if `labels="full"` is given as an argument to the `test()` function.
+  * Tests that take longer than 3 seconds to run should be marked `@slow` (see e.g. the XTC tests in [MDAnalysisTests/test\_coordinates.py](https://github.com/MDAnalysis/mdanalysis/blob/develop/testsuite/MDAnalysisTests/test_coordinates.py). They will only be run if `labels="full"` is given as an argument to the `test()` function.
   * Add a test for
     * new functionality
     * fixed issues (typically named `test_IssueXX` or referencing the issue in the doc string (to avoid regression)

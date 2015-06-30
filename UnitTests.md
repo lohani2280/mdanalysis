@@ -17,6 +17,10 @@ or with the `nosetests` script (just make sure you are running the right version
 ```
 nosetests MDAnalysisTests
 ```
+or with `nosetests` in parallel
+```
+nosetests -v --processes=24 --process-timeout=120 MDAnalysisTests
+```
 or from within the Python interpreter: start `python` or `ipython` and type (the `>>>` is the prompt and should not be typed!)
 ```
 >>> import MDAnalysis.tests

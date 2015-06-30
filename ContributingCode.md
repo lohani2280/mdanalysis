@@ -13,7 +13,7 @@ If you are not listed as a _committer_ under [Project People](https://github.com
 
   1. Ensure that you can publish your code under a **licence that is compatible with the GNU Public Licence 2 (or higher)**; otherwise we will not be able to incorporate the code into MDAnalysis.
   1. Read the [how MDAnalysis is developed](DevelopmentWorkflow)
-  1. **[Clone the MDAnalysis source](http://code.google.com/p/mdanalysis/source/clones)**. [Distributed development with git](DistributedDevelopment) describes in more detail how to do this.
+  1. **Clone the MDAnalysis source**. [Distributed development with git](DistributedDevelopment) describes in more detail how to do this.
   1. **Add your changes** to _your own clone_ of MDAnalysis. **Push** the changes so that they show up in the clone. (Also note the section on [Test cases](#TestCases) below.)
   1. File a **pull request** on the [Pull requests tracker](https://github.com/MDAnalysis/mdanalysis/pulls).
     * describe the nature of the code you're contributing

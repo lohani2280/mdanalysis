@@ -16,7 +16,7 @@ path_to_MDAnalysisTests/mda_nosetests -v --parallel-processes=4 --process-timeou
 (You can increase the number of parallel processes depending on the number of cores available; with 12 cores, the test suite runs within ~90 seconds.)
 The `mda_nosetests` test runner can be found under the MDAnalysisTests install directory. You can find it by runnning `python -c 'import MDAnalysisTests; print MDAnalysisTests.__path__'`.
 
-nose's own `nosetests` can be used instead of `mda_nosetests`, with some limited functionality (see [below] (#Compatibility with nosetests)).
+nose's own `nosetests` can be used instead of `mda_nosetests`, with some limited functionality (see [below] (#compatibility-with-nosetests)).
 
 To run in serial mode (takes almost 30 mins)
 ```
@@ -60,7 +60,7 @@ nose's `nosetests` script can also be used (just make sure you are running the r
 ```
 nosetests --exe -v MDAnalysisTests
 ```
-but you'll miss out on neat `knownfailure` output, `stderr` silencing, and the ability to test memleaks. See [below](#Compatibility with nosetests) for a detailed comparison of `nosetests` and `mda_nosetests`. Any flags accepted by `nosetests` can also be passed to `mda_nosetests` or to the `argv` argument of `MDAnalysis.tests.test()`.
+but you'll miss out on neat `knownfailure` output, `stderr` silencing, and the ability to test memleaks. See [below](#compatibility-with-nosetests) for a detailed comparison of `nosetests` and `mda_nosetests`. Any flags accepted by `nosetests` can also be passed to `mda_nosetests` or to the `argv` argument of `MDAnalysis.tests.test()`.
 
 (The flag `--exe`, or `argv=['--exe']` ensures that the tests also run on Linux, see below for [details](#Details).) The tests take a few minutes. Check that you only get _ok_ (shown as a dot, ".") or _known failures_ (letter "K"). "DeprecationWarning" and a "RuntimeWarning" are not a problem.  _Failures_ (letter "F"), _Errors_ (letter "E"), or _Memleaks_ (letter "M") are bad. If you cannot figure out for yourself where the problems come from, ask a question on the [discussion group](https://groups.google.com/forum/#!forum/mdnalysis-discussion), including your error output and notes on which version of MDAnalysis and operating system you're using.
 
@@ -109,7 +109,7 @@ rm -f .coverage .noseids testing.log
 ```
 
 # Details #
-We are borrowing some of NumPy's testing frame work (v >= 1.5); thus, numpy **must** be installed for the tests to run at all. The tests require at least numpy 1.5.
+We are borrowing some of NumPy's testing frame work; thus, numpy **must** be installed for the tests to run at all. The tests require at least numpy 1.5.
 
 ## Running tests from within python ##
 Run all the tests with
@@ -140,7 +140,7 @@ See [nose commandline options](http://somethingaboutorange.com/mrl/projects/nose
 ```
 
 ## Running tests from the command line ##
-Instead of running tests from within python, one can also run them via the `mda_nosetests` script that ships with MDAnalysisTests. With version 0.11 the test subsystem was overhauled to allow the incorporation of customized nose plugins. In order for them to work tests must be invoked via our own wrapper function `MDAnalysis.tests.test()`. This is what the `mda_nosetests` script does for you. Alternatively, you can call `MDAnalysis.tests.test()` from the interpreter. `mda_nosetests` strives to be compatible and interchangeable with nose's [nosetests](http://somethingaboutorange.com/mrl/projects/nose/0.11.2/usage.html) script, with added functionality (see [below](#Compatibility with nosetests))
+Instead of running tests from within python, one can also run them via the `mda_nosetests` script that ships with MDAnalysisTests. With version 0.11 the test subsystem was overhauled to allow the incorporation of customized nose plugins. In order for them to work tests must be invoked via our own wrapper function `MDAnalysis.tests.test()`. This is what the `mda_nosetests` script does for you. Alternatively, you can call `MDAnalysis.tests.test()` from the interpreter. `mda_nosetests` strives to be compatible and interchangeable with nose's [nosetests](http://somethingaboutorange.com/mrl/projects/nose/0.11.2/usage.html) script, with [added functionality](#compatibility-with-nosetests).
 
 Go into the tests directory (or the package root)
 ```

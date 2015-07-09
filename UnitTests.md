@@ -140,7 +140,7 @@ See [nose commandline options](http://somethingaboutorange.com/mrl/projects/nose
 ```
 
 ## Running tests from the command line ##
-Instead of running tests from within python, one can also run them via the `mda_nosetests` script that ships with MDAnalysisTests. With version 0.11 the test subsystem was overhauled to allow the incorporation of customized nose plugins. In order for them to work tests must be invoked via our own wrapper function `MDAnalysis.tests.test()`. This is what the `mda_nosetests` script does for you. Alternatively, you can call `MDAnalysis.tests.test()` from the interpreter. `mda_nosetests` strives to be compatible and interchangeable with nose's [nosetests](http://somethingaboutorange.com/mrl/projects/nose/0.11.2/usage.html) script, with [added functionality](#compatibility-with-nosetests).
+Instead of running tests from within python, one can also run them via the `mda_nosetests` script that ships with MDAnalysisTests. With version 0.11.0 the test subsystem was overhauled to allow the incorporation of customized nose plugins. In order for them to work tests must be invoked via our own wrapper function `MDAnalysis.tests.test()`. This is what the `mda_nosetests` script does for you. Alternatively, you can call `MDAnalysis.tests.test()` from the interpreter. `mda_nosetests` strives to be compatible and interchangeable with nose's [nosetests](http://somethingaboutorange.com/mrl/projects/nose/0.11.2/usage.html) script, with [added functionality](#compatibility-with-nosetests).
 
 Go into the tests directory (or the package root)
 ```
@@ -208,7 +208,7 @@ Finally, the default behavior of `mda_nosetests` when called without a target pa
 
 ## Compatibility with numpy's test wrapper ##
 
-Up to MDAnalysisTests version 0.11 numpy's wrapper was used to run tests when invoked through `MDAnalysis.tests.test()` (but not through `nosetests`). This is now replaced by our own wrapper.
+Up to MDAnalysisTests version 0.11.0 numpy's wrapper was used to run tests when invoked through `MDAnalysis.tests.test()` (but not through `nosetests`). This is now replaced by our own wrapper.
 
 Main differences are that numpy-specific arguments to `MDAnalysis.tests.test()` are now either emulated or simply not implemented. Here's a list of the ones most commonly used with MDAnalysisTests:
 
@@ -240,7 +240,7 @@ The tests are in a separate package, together with any data files required for r
 
 The unit tests use the [unittest module](http://docs.python.org/library/unittest.html) together with [nose](http://somethingaboutorange.com/mrl/projects/nose/0.11.3/index.html). See the examples in the [MDAnalysisTests](https://github.com/MDAnalysis/mdanalysis/tree/develop/testsuite/MDAnalysisTests) package.
 
-The [SciPy testing guidelines](http://projects.scipy.org/numpy/wiki/TestingGuidelines#id11) are a good howto for writing test cases, especially as we are directly using this framework (imported from `numpy`).
+The [SciPy testing guidelines](http://projects.scipy.org/numpy/wiki/TestingGuidelines#id11) are a good howto for writing test cases.
 
 Conventions for MDAnalysis
   * Relative import statements are now banned from unit testing modules (see [Issue #189](/MDAnalysis/mdanalysis/issues/189) for details)

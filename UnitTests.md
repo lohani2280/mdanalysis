@@ -1,5 +1,7 @@
 The unit tests and the test data are bundled together in the package **MDAnalyisTests-_release_**. In order to run the tests, this package must be installed in addition to MDAnalysis.
 
+The tests also rely on the `nose` and `numpy` packages, and requires both to run.
+
 # Users 
 Install [MDAnalysisTests](MDAnalysisTests) via
 ```
@@ -7,22 +9,25 @@ pip install --upgrade MDAnalysisTests
 ```
 or download the tar file, unpack, and run `python setup.py install`.
 
-Run the tests with
+Find the path to your MDAnalysisTests install and run the tests with
 ```
-nosetests -v --parallel-processes=4 --process-timeout=120 MDAnalysisTests
+path_to_MDAnalysisTests/mda_nosetests -v --parallel-processes=4 --process-timeout=120
 ```
 (You can increase the number of parallel processes depending on the number of cores available; with 12 cores, the test suite runs within ~90 seconds.)
+The `mda_nosetests` test runner can be found under the MDAnalysisTests install directory. You can find it by runnning `python -c 'import MDAnalysisTests; print MDAnalysisTests.__path__'`.
+
+nose's own `nosetests` can be used instead of `mda_nosetests`, with some limited functionality (see [below] (#Compatibility with nosetests)).
 
 To run in serial mode (takes almost 30 mins)
 ```
-nosetests -v MDAnalysisTests
+path_to_MDAnalysisTests/mda_nosetests -v
 ```
 
-All tests should pass (i.e. no **FAIL** or **ERROR**); *SKIPPED* or *KNOWNFAILURE* are ok. For anything that fails or gives an error [ask on the user mailing list](http://users.mdanalysis.org) or [raise an issue](/MDAnalysis/mdanalysis/issues).
+All tests should pass (i.e. no **FAIL**, **ERROR**, or **MEMLEAK**); *SKIPPED* or *KNOWNFAILURE* are ok. For anything that fails or gives an error [ask on the user mailing list](http://users.mdanalysis.org) or [raise an issue](/MDAnalysis/mdanalysis/issues).
 
 # Developers #
 
-All tests should pass (i.e. no **FAIL** or **ERROR**); *SKIPPED* or *KNOWNFAILURE* are ok. For anything that fails or gives an error **fix your code** (or *raise an issue*). 
+All tests should pass (i.e. no **FAIL**, **ERROR**, or **MEMLEAK**); *SKIPPED* or *KNOWNFAILURE* are ok. For anything that fails or gives an error **fix your code** (or *raise an issue*). 
 
 **Do not push code that fails to the development branch.** Instead, push it to a feature or issue branch. It will run automatically through the unit tests by travis-ci and it will be available for comment and discussion by other developers.
 
@@ -30,32 +35,34 @@ All tests should pass (i.e. no **FAIL** or **ERROR**); *SKIPPED* or *KNOWNFAILUR
 Use the tests from the [git source repository](Source), which are located in the [testsuite/MDAnalysisTests](https://github.com/MDAnalysis/mdanalysis/tree/develop/testsuite) directory:
 ```
 cd testsuite/MDAnalysisTests
-nosetests -v --parallel-processes=4 --process-timeout=120
+./mda_nosetests -v --parallel-processes=4 --process-timeout=120
 ```
 (Try increasing the number of processes; with 24 processes on 12 cores (+hyperthreading) this took ~40 seconds; in serial it takes ~30 min).
 
-Note that parallel tests do not properly honor the "knownfailure" cases so if you get errors, simply look at the detailed output at the end and ignore anything that contains lines such as
-```
-KnownFailureTest:  blabla
-```
-
-
 ## Alternatives
-You can install `MDAnalysisTests` and then run the tests anywhere. 
-You can run all tests from the commandline
+You can install `MDAnalysisTests` and then run the tests anywhere. Extra functionality, afforded by our nose plugins, is added only if the tests are run through the `mda_nosetests` script, or by directly invoking `MDAnalysis.tests.test()` (which is what the 3-line `mda_nosetests` script does under the hood).
+
+You can run all tests in serial from the commandline, like this
 ```
-python -c 'from MDAnalysis.tests import test; test(label="full", verbose=3, extra_argv=["--exe"])'
+python -c 'from MDAnalysis.tests import test; test(argv=["--exe", "-v"])'
 ```
-or with the `nosetests` script in serial (just make sure you are running the right version)
+or, equivalently (assuming `mda_nosetests` is in your path)
 ```
-nosetests -v MDAnalysisTests
+mda_nosetests --exe -v
 ```
 or from within the Python interpreter: start `python` or `ipython` and type (the `>>>` is the prompt and should not be typed!)
 ```
 >>> import MDAnalysis.tests
->>> MDAnalysis.tests.test(label="full", extra_argv=['--exe'])
+>>> MDAnalysis.tests.test(argv=['--exe', '-v'])
 ```
-(The `extra_argv=['--exe']` is to ensure that the test also run on Linux, see below for [details](#Details).) The tests take a few minutes. Check that you only get _ok_ (shown as a dot, ".") or _known failures_ (letter "K"). "DeprecationWarning" and a "RuntimeWarning" are not a problem.  _Failures_ (letter "F") or _Errors_ (letter "E") are bad. If you cannot figure out for yourself where the problems come from, ask a question on the [discussion group](https://groups.google.com/forum/#!forum/mdnalysis-discussion), including your error output and notes on which version of MDAnalysis and operating system you're using.
+
+nose's `nosetests` script can also be used (just make sure you are running the right version)
+```
+nosetests --exe -v MDAnalysisTests
+```
+but you'll miss out on neat `knownfailure` output, `stderr` silencing, and the ability to test memleaks. See [below](#Compatibility with nosetests) for a detailed comparison of `nosetests` and `mda_nosetests`. Any flags accepted by `nosetests` can also be passed to `mda_nosetests` or to the `argv` argument of `MDAnalysis.tests.test()`.
+
+(The flag `--exe`, or `argv=['--exe']` ensures that the tests also run on Linux, see below for [details](#Details).) The tests take a few minutes. Check that you only get _ok_ (shown as a dot, ".") or _known failures_ (letter "K"). "DeprecationWarning" and a "RuntimeWarning" are not a problem.  _Failures_ (letter "F"), _Errors_ (letter "E"), or _Memleaks_ (letter "M") are bad. If you cannot figure out for yourself where the problems come from, ask a question on the [discussion group](https://groups.google.com/forum/#!forum/mdnalysis-discussion), including your error output and notes on which version of MDAnalysis and operating system you're using.
 
 Fore more details see below.
 
@@ -65,49 +72,26 @@ Examples for output in various modes. Note that here the "not verbose" mode is m
 ### Serial testing ###
 For example, a successful test might look like the following
 ```
->>> MDAnalysis.tests.test(label="full")
-Running unit tests for MDAnalysis.tests
-NumPy version 1.4.0
-NumPy is installed in /opt/local/Library/Frameworks/Python.framework/Versions/2.6/lib/python2.6/site-packages/numpy
-Python version 2.6.5 (r265:79063, May  1 2010, 20:59:11) [GCC 4.2.1 (Apple Inc. build 5646) (dot 1)]
-nose version 0.11.1
-...........................KK....KK...............
+>>> MDAnalysis.tests.test()
+......S...S............................................................................................................................................................K.KK...........................................................................................................................................................................K...............................................................................................................................................................................................................K..............................................................K............................................................................................................................................................................................................................................................................................................................................................................K......K....................K.....................K...................K....................K...........................K...................K...................K.............................................................K...................K........................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
 ----------------------------------------------------------------------
-Ran 50 tests in 54.045s
+Ran 1772 tests in 266.341s
 
-OK (KNOWNFAIL=4)
-<nose.result.TextTestResult run=50 errors=0 failures=0>
+OK (KNOWNFAIL=17, SKIP=2)
 ```
 
 ### Parallel testing ###
-Running tests in parallel is **much** faster, especially on an 8-core machine:
+Running tests in parallel is **much** faster, especially on an multi-core machine. As an example for a 12-core machine:
 ```
 import MDAnalysis.tests
-MDAnalysis.tests.test(label="full", extra_argv=["--processes=8", "--process-timeout=120"])
-```
-will throw a number of (known) errors
-```
-Running unit tests for numpy
-NumPy version 1.3.0
-NumPy is installed in /sw/lib/python2.6/site-packages/numpy
-Python version 2.6.5 (r265:79063, May 18 2010, 17:13:04) [GCC 4.0.1 (Apple Inc. build 5493)]
-nose version 0.11.3
-...................EE.EEE............E..E.....................................................................E............E.............................................
-
-<snip>detailed output for known failures</snip>
-
+>>> MDAnalysis.tests.test(argv=["--processes=12", "--process-timeout=120"])
+S.S...........................................................................................................................................................................................................................................................................................................................................K.........................................................................................K..........................................................................K.....................................................................................................................................................................................................................................................K.KK...................................................................................................................................K..................K.....................K...................K..........................K............................K..................K.............................K.................................................................................K...................K.................................................................................................................K................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
 ----------------------------------------------------------------------
-Ran 169 tests in 20.425s
-```
-Simply look at the detailed output at the end and ignore anything that contains lines such as
-```
-KnownFailureTest:  blabla
-```
-It seems that parallel nosetests do not properly honour the "knownfailure" cases.
+Ran 1791 tests in 44.828s
 
-Parallel unit tests tend to behave much better when the `process-timeout` flag is used. For example, the following command produces an `OK` result using 8 processors:
-
-`nosetests --processes=8 --process-timeout=120`
+OK (KNOWNFAIL=17, SKIP=2)
+```
+Beware that parallel unit tests tend to fail due to timeouts unless the `process-timeout` flag is used.
 
 See also: [official docs](http://nose.readthedocs.org/en/latest/plugins/multiprocess.html#cmdoption--process-timeout) for the process timeout flag
 
@@ -118,20 +102,20 @@ If you want to generate a coverage report manually you can run
 ```
 cd testsuite
 rm -f .coverage .noseids testing.log
-nosetests-2.7 -v --with-id \
+./mda_nosetests -v --with-id \
    --with-coverage --cover-erase --cover-html-dir=htmlcov --cover-html --cover-package=MDAnalysis \
    MDAnalysisTests/test_*.py  \
    2>&1 | tee testing.log
 ```
 
 # Details #
-We are using the NumPy testing frame work (v >= 1.3); thus, numpy **must** be installed for the tests to run at all. The tests require at least numpy 1.3.
+We are borrowing some of NumPy's testing frame work (v >= 1.5); thus, numpy **must** be installed for the tests to run at all. The tests require at least numpy 1.5.
 
 ## Running tests from within python ##
 Run all the tests with
 ```
    import MDAnalysis.tests
-   MDAnalysis.tests.test(label='full')
+   MDAnalysis.tests.test()
 ```
 Some tests can take a few seconds; in order to skip the slow tests run
 ```
@@ -140,38 +124,38 @@ Some tests can take a few seconds; in order to skip the slow tests run
 Additional information is displayed at a higher verbosity level (the default is
 0):
 ```
-   MDAnalysis.tests.test(label='fast', verbose=1)
+   MDAnalysis.tests.test(label='fast', argv=['--verbosity=1'])
 ```
 
 Note that if no tests are being run then one might have to run the
 tests with the `--exe` flag
 ```
-   MDAnalysis.tests.test(label='fast', extra_argv=['--exe'])
+   MDAnalysis.tests.test(label='fast', argv=['--exe'])
 ```
 (This happens when python files are installed with the executable bit set. By default the [nose testing framework](http://somethingaboutorange.com/mrl/projects/nose) refuses to use those files and must be encouraged to do so with the `--exe` switch.)
 
 See [nose commandline options](http://somethingaboutorange.com/mrl/projects/nose/0.11.3/usage.html#extended-usage) for additional options that can be used; for instance, code coverage can also be checked:
 ```
-  MDAnalysis.tests.test(label='full', extra_argv=['--exe', '--with-coverage'])
+  MDAnalysis.tests.test(argv=['--exe', '--with-coverage'])
 ```
 
 ## Running tests from the command line ##
-
-Instead of running tests from within python, one can also run them via the [nosetests](http://somethingaboutorange.com/mrl/projects/nose/0.11.2/usage.html) script that is being installed as part of the `nose ` package.
+Instead of running tests from within python, one can also run them via the `mda_nosetests` script that ships with MDAnalysisTests. With version 0.11 the test subsystem was overhauled to allow the incorporation of customized nose plugins. In order for them to work tests must be invoked via our own wrapper function `MDAnalysis.tests.test()`. This is what the `mda_nosetests` script does for you. Alternatively, you can call `MDAnalysis.tests.test()` from the interpreter. `mda_nosetests` strives to be compatible and interchangeable with nose's [nosetests](http://somethingaboutorange.com/mrl/projects/nose/0.11.2/usage.html) script, with added functionality (see [below](#Compatibility with nosetests))
 
 Go into the tests directory (or the package root)
 ```
 cd /testsuite/MDAnalysisTests
 ```
-and invoke [nosetests](http://somethingaboutorange.com/mrl/projects/nose/0.11.2/usage.html) directly to run **all tests** on two processors in parallel ("`%`" is the shell prompt and should _not_ be typed):
+and invoke ./mda_nosetests directly to run **all tests** on two processors in parallel ("`%`" is the shell prompt and should _not_ be typed):
 ```
-% nosetests-2.6 --processes=2 --process-timeout=120
+% ./mda_nosetests --processes=2 --process-timeout=120
 ```
 (When the `-v` flag is added, more verbose output is produced.)
+The `mda_nosetests` script can be run from anywhere. It will default to testing the MDAnalysisTest package, if no other target is given.
 
 When you have written a **new unit test** it is helpful to check that it passes without running the entire suite. For example, in order to test everything in, say, `test\_selections.py` run
 ```
-% nosetests-2.6 test_selections   
+% ./mda_nosetests test_selections   
 ..............
 ----------------------------------------------------------------------
 Ran 14 tests in 3.421s
@@ -180,7 +164,7 @@ OK
 ```
 One can also test individual test classes. For instance, after working on the XYZReader one can check just the TestCompressedXYZReader tests with
 ```
-% nosetests-2.6 test_coordinates:TestCompressedXYZReader
+% ./mda_nosetests test_coordinates:TestCompressedXYZReader
 ....
 ----------------------------------------------------------------------
 Ran 4 tests in 0.486s
@@ -191,7 +175,7 @@ where we are testing the class `TestCompressedXYZReader` which can be found in t
 
 If you just installed the `MDAnalysisTests` package you can also simply run
 ```
-nosetests -v MDAnalysisTests
+% path/to/MDAnalysisTests/mda_nosetests -v
 ```
 
 ### Running tests with setuptools ###
@@ -206,8 +190,37 @@ If you have the [coverage](http://nedbatchelder.com/code/modules/rees-coverage.h
 python setup.py nosetests --with-coverage --cover-package=MDAnalysis --cover-erase --cover-tests
 ```
 
-## Data ##
+## Compatibility with nosetests ##
 
+`mda_nosetests` and `MDAnalysis.tests.test()` were designed to blend as much as possible with the standard use of nose's `nosetests` script.  Any flags accepted by `nosetests` can also be passed to `mda_nosetests` or to the `argv` argument of `MDAnalysis.tests.test()`.
+
+Extra flags are available for the plugins:
+
+* `--with-memleak`: enable test-by-test memleak checking;
+* `--no-errorcapture`: disable stderr silencing;
+* `--no-knownfail`: disable special treatment of `KnownFailureTest` exceptions, which will then be reported as regular failures.
+
+Additionally, `MDAnalysis.tests.test()` no longer calls numpy's test wrapper, the default of which was to request all stdout to be printed (resulting in quite noisy tests). To enable stdout output with `mda_nosetests` use the standard nose flag `-s`.
+
+Tests can still be run with nose's `nosetests`. In this case the above plugins are disabled (`knownfailure` will then default to skipping a test; it won't make it fail). Other than that lack of functionality and output testing should behave the same.
+
+Finally, the default behavior of `mda_nosetests` when called without a target package/test is to test the MDAnalysisTest package. This, of course, differs from the behavior of `nosetests`.
+
+## Compatibility with numpy's test wrapper ##
+
+Up to MDAnalysisTests version 0.11 numpy's wrapper was used to run tests when invoked through `MDAnalysis.tests.test()` (but not through `nosetests`). This is now replaced by our own wrapper.
+
+Main differences are that numpy-specific arguments to `MDAnalysis.tests.test()` are now either emulated or simply not implemented. Here's a list of the ones most commonly used with MDAnalysisTests:
+
+* `label`: this allows the selection of tests based on whether or not they were decorated with the `@dec.slow` decorator. Current behavior recognizes only `label='fast'`. Any other label (or its absence) defaults to running all tests.
+* `verbose`: this argument is no longer accepted. Pass one of `-v`, `--verbose`, or `--verbosity=n` in `argv`;
+* `extra_argv`: this argument allows an extra list of flags to be passed to nose. It is still accepted, but deprecated in favor of nose's identical `argv` argument.
+
+Any other numpy-specific arguments will not be accepted and will cause the test run to fail.
+
+Under numpy the behavior was not to silence any test stdout output. The behavior now is to silence it; this can be reversed with the `-s` flag.
+
+## Data ##
 The simulation data used in tests are all released under the same license as MDAnalysis or are in the Public Domain (such as PDBs from the Protein Databank). An incomplete list of sources: 
 * from Beckstein et al. (2009) (`adk.psf`,`adk_dims.dcd`)
   * _adk\_dims_      Trajectory of a macromolecular transition of the enzyme adenylate kinase between a closed and an open conformation. The simulation was run in [CHARMM](http://www.charmm.org) c35a1.
@@ -248,10 +261,8 @@ Conventions for MDAnalysis
 
 The way we organized the unit tests changed between releases. The procedure for the current release is detailed at the very top of the page. The following list is for historical reference and in case you ever want to go back to a previous release.
 
+  1. since **0.11.0**: the testing subsystem was overhauled to allow the use of plugins external to nose. We also no longer use numpy's `test()` wrapper. `mda_nosetests` is now the preferred way to run the tests from the command-line in a mostly backward-compatible way with the usage of `nosetests`. Most numpy-specific arguments to `test()` are now deprecated in favor of nose flags.
   1. since **0.7.5**: tests _and_ data are together in package **MDAnalysisTests**. See [Issue 87](http://issues.mdanalysis.org/87) for details.
-  1. release **0.7.4**: tests are in **MDAnalysis** and data is in **MDAnalysisTestData** (for MDAnalysis == 0.7.4). To install [MDAnalysisTestData](MDAnalysisTestData) download the `MDAnalysisTestData-0.7.4.tar.gz` from the [Download](http://code.google.com/p/mdanalysis/downloads/list) section or try
-```
-easy_install http://mdanalysis.googlecode.com/files/MDAnalysisTestData-0.7.4.tar.gz
-```
+  1. release **0.7.4**: tests are in **MDAnalysis** and data is in **MDAnalysisTestData** (for MDAnalysis == 0.7.4). To install [MDAnalysisTestData](MDAnalysisTestData) download the `MDAnalysisTestData-0.7.4.tar.gz` from the [Download](http://code.google.com/p/mdanalysis/downloads/list) section or try ```easy_install http://mdanalysis.googlecode.com/files/MDAnalysisTestData-0.7.4.tar.gz```
   1. release **0.6.1** to **0.7.3**: tests and data were included with **MDAnalysis**
   1. release **0.4** to **0.6.0**: no tests included

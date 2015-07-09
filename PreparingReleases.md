@@ -92,7 +92,7 @@ The above should work at least on Linux and Mac OS X. If it fails then go back a
 
 If everything works then we are now reasonably confident that a user can also compile and use the package so we push the source code for the release to the master repository. Push it to the master with
 ```
-git push googlecode master
+git push origin master
 ```
 (or similar command).
 
@@ -107,22 +107,22 @@ git push --tags googlecode master
 The **tag format** is the string **release-** followed by **major.minor.patch**.
 
 ## Upload to PyPi ##
-  * upload the source distribution tar balls of MDAnalysis and MDAnalysisTests to the python package index (e.g. using `python setup.py sdist bdist bdist_egg upload`)
-  * [build the docs and upload to PyPi](#Update_docs_on_PyPI)
-  * make the new tar ball a _featured_ release so that it shows up on the front page (and _unfeature_ any older releases).
-  * provide a short description (a condensed version of the `CHANGELOG`)
+* upload the source distribution tar balls of MDAnalysis and MDAnalysisTests to the python package index (e.g. using 
+```
+python setup.py sdist bdist bdist_egg upload
+```
+(you need to have run `python setup.py register` at least once before).
+* [build the docs and upload to PyPi](#Update_docs_on_PyPI)
+* make the new tar ball a _featured_ release so that it shows up on the front page (and _unfeature_ any older releases).
+* provide a short description (a condensed version of the `CHANGELOG`)
 
 ## Update/create a release page on the wiki ##
-Create a ReleaseXYZ wiki page, modelled after e.g. [Release062](Release062) (using the [CHANGELOG](http://code.google.com/p/mdanalysis/source/browse/CHANGELOG) as a reference). Also add it to the [TableOfContents](TableOfContents).
+Create a ReleaseXYZ wiki page, modelled after e.g. [Release062](Release062) (using the [CHANGELOG](https://github.com/MDAnalysis/mdanalysis/blob/develop/package/CHANGELOG) as a reference). Also add it to the [Release Notes](Release-Notes).
 
 ## Update docs on PyPI ##
-Since 0.7.4 there's also a [MDAnalysis page on PyPi](http://pypi.python.org/pypi/MDAnalysis/) (the Python Package Index). The download page points to the Googlecode page but the metadata needs to be updated:
-```
-python setup.py register
-```
-will do this (although you need to be the PyPI package owner or a maintainer—contact orbeckst in order to be added).
+Since 0.7.4 there's also a [MDAnalysis page on PyPi](http://pypi.python.org/pypi/MDAnalysis/) (the Python Package Index).
 
-For full releases we can also have the documentation at http://packages.python.org/MDAnalysis/ . It is updated by _zipping_ the html docs and uploading manually:
+For full releases we have the documentation at http://packages.python.org/MDAnalysis/ . It is updated by _zipping_ the html docs and uploading manually:
 ```
 cd doc/html
 zip -r ../pypidoc.zip *

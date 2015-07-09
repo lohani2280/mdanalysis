@@ -16,7 +16,7 @@ path_to_MDAnalysisTests/mda_nosetests -v --parallel-processes=4 --process-timeou
 (You can increase the number of parallel processes depending on the number of cores available; with 12 cores, the test suite runs within ~90 seconds.)
 The `mda_nosetests` test runner can be found under the MDAnalysisTests install directory. You can find it by runnning `python -c 'import MDAnalysisTests; print MDAnalysisTests.__path__'`.
 
-nose's own `nosetests` can be used instead of `mda_nosetests`, with some limited functionality (see [below] (#compatibility-with-nosetests)).
+nose's own `nosetests` can be used instead of `mda_nosetests`, with some [limited functionality](#compatibility-with-nosetests).
 
 To run in serial mode (takes almost 30 mins)
 ```
@@ -200,7 +200,7 @@ Extra flags are available for the plugins:
 * `--no-errorcapture`: disable stderr silencing;
 * `--no-knownfail`: disable special treatment of `KnownFailureTest` exceptions, which will then be reported as regular failures.
 
-Additionally, `MDAnalysis.tests.test()` no longer calls numpy's test wrapper, the default of which was to request all stdout to be printed (resulting in quite noisy tests). To enable stdout output with `mda_nosetests` use the standard nose flag `-s`.
+Additionally, `MDAnalysis.tests.test()` [no longer calls numpy's test wrapper](#compatibility-with-numpy's-test-wrapper), the default of which was to request all stdout to be printed (resulting in quite noisy tests). To enable stdout output with `mda_nosetests` use the standard nose flag `-s`.
 
 Tests can still be run with nose's `nosetests`. In this case the above plugins are disabled (`knownfailure` will then default to skipping a test; it won't make it fail). Other than that lack of functionality and output testing should behave the same.
 

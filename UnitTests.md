@@ -1,6 +1,6 @@
 The unit tests and the test data are bundled together in the package **MDAnalyisTests-_release_**. In order to run the tests, this package must be installed in addition to MDAnalysis.
 
-The tests also rely on the `nose` and `numpy` packages, and requires both to run.
+The tests also rely on the `nose` and `numpy` packages, and require both to run.
 
 # Users 
 Install [MDAnalysisTests](MDAnalysisTests) via

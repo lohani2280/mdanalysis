@@ -1,4 +1,4 @@
-This is a minor new release of MDAnalysis, which contains a couple of [enhancements](#Enhancements).
+This is a patch release of MDAnalysis, which contains a couple of small [enhancements](#Enhancements).
 
 ## CHANGELOG ##
 

@@ -1,7 +1,8 @@
-MDAnalysis 0.11 is a substantial release that unifies much of the code base at the cost of some necessary changes to the user API. The key points for adjusting your code accordingly are outlined below.
+MDAnalysis 0.11.0 is a substantial release that unifies much of the code base at the cost of some necessary changes to the user API. The key points for adjusting your code accordingly are outlined below. The details are in the [Release Notes for 0.11.0](ReleaseNotes0110).
 
+## How to change your code
 ### Suppressing contact matrix progress meter (new `quiet` keyword)
-```
+```python
 import MDAnalysis
 import MDAnalysis.analysis.distances
 import numpy as np

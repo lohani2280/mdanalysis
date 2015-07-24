@@ -1,0 +1,1 @@
+Needs to be written when release 0.11.0 is final. For right now see the [CHANGELOG](https://raw.githubusercontent.com/MDAnalysis/mdanalysis/develop/package/CHANGELOG) on the develop branch.

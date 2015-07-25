@@ -10,7 +10,7 @@ import numpy as np
 random_array_coords = np.float32(np.random.rand(300,3)) 
 
 #before 0.11 release:
-#contact_matrix = MDAnalysis.analysis.distances.contact_matrix(random_array_coords, suppress_progmet=False) 
+#contact_matrix = MDAnalysis.analysis.distances.contact_matrix(random_array_coords, returntype = "sparse", progress_meter_freq=10, suppress_progmet=True) 
 #after 0.11 release:
-contact_matrix = MDAnalysis.analysis.distances.contact_matrix(random_array_coords, quiet=False) 
+contact_matrix = MDAnalysis.analysis.distances.contact_matrix(random_array_coords, returntype = "sparse", progress_meter_freq=10, quiet=True) 
 ```

@@ -416,7 +416,7 @@ easy_install-2.6 --script-dir ~/bin --install-dir ~/.local/lib/python2.6/site-pa
 ```
 (but this will take a little bit longer to download at ~18 MB). However, once we have both we can run the UnitTests to check that everything is working. Just first make sure you have `nose` installed:
 ```
-easy_install-2.6 -U --script-dir ~/bin --install-dir ~/.local/lib/python2.6/site-packages 'nose>=0.10.0'
+easy_install-2.6 -U --script-dir ~/bin --install-dir ~/.local/lib/python2.6/site-packages 'nose>=1.3.7'
 ```
 Run the UnitTests suite from the command line:
 ```

@@ -131,7 +131,7 @@ See the operating system specific notes below for hints how to get the necessary
 
 ## Required python packages ##
 In order to make _full use_ of the library in your own python code you will need at least
-  * [numpy](http://numpy.scipy.org/) of version 1.0.3 or greater
+  * [numpy](http://numpy.scipy.org/) of version 1.5 or greater
   * [scipy](http://www.scipy.org/)
   * [matplotlib](http://matplotlib.sourceforge.net/)
   * [BioPython](http://biopython.org/)'s Bio.PDB (MDAnalysis will complain if you don't have Biopython installed (even though it is not used by default anymore))
@@ -144,8 +144,8 @@ In order to make _full use_ of the library in your own python code you will need
 ## Optional python packages ##
 
 In order to run the [UnitTests](UnitTests) you will need
-  * numpy >=1.3
-  * nose >= 0.10
+  * numpy >=1.5
+  * nose >= 1.3.7
 
 # OS specific notes #
 

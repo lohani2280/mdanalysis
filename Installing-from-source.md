@@ -144,7 +144,7 @@ In order to make _full use_ of the library in your own python code you will need
 ## Optional python packages ##
 
 In order to run the [UnitTests](UnitTests) you will need
-  * numpy >=1.5
+  * numpy >= 1.5
   * nose >= 1.3.7
 
 # OS specific notes #

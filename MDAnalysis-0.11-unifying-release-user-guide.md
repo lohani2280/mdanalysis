@@ -14,3 +14,25 @@ random_array_coords = np.float32(np.random.rand(300,3))
 #after 0.11 release:
 contact_matrix = MDAnalysis.analysis.distances.contact_matrix(random_array_coords, returntype = "sparse", progress_meter_freq=10, quiet=True) 
 ```
+
+### New Timestep behaviour
+
+Previously, Timesteps could be initiated with either
+ - integer (allocated to this size)
+ - another Timestep (copied it)
+ - coordinates (created a Timestep of this size and filled it)
+
+Now Timesteps can **only** be initiated with an integer argument.
+
+To create a Timestep from another Timestep, or from an array of coordinates, use the new `from_timestep` and `from_coordinates` class methods
+
+``` python
+from MDAnalysis.coordinates.base import Timestep
+
+ts = Timestep(10)
+
+ts = Timestep.from_timestep(other_ts)
+
+ts = Timestep.from_coordinates(coords [, velocities=velos, forces=forces])
+
+```

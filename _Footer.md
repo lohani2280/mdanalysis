@@ -1,0 +1,2 @@
+----
+**[Releases](Release-Notes)** | **Docs**: [develop](http://devdocs.mdanalysis.org) / [release](http://docs.mdanalysis.org) | **[Issues](/MDAnalysis/mdanalysis/issues)** | [mdanalysis.org](http://www.mdanalysis.org) | **mailing lists**: [developers](http://developers.mdanalysis.org/) / [users](http://users.mdanalysis.org)

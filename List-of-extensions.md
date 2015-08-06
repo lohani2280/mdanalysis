@@ -9,5 +9,5 @@ MDAnalysis uses lots of extensions, below is a list of them and their readiness 
 | lib.parallel.distances    | More parallel distances      | Cython     | Yes??                    |
 | lib.qcprot                | RMSD via QCP                 | Cython     | Yes?                     |
 | lib._transformations      | Coordinate transformations   | C/CPython  | No (Rewrite interface)   |
-| lib.KDTree._KDTree        | KDTree for distance searches | CPP/SWIG   | No                       |
-| coordinates.xdrfile       | Gromacs format reader        | C/Swig     | ???                      |
+| lib.KDTree._KDTree        | KDTree for distance searches | CPP/SWIG   | No (#383)                |
+| coordinates.xdrfile       | Gromacs format reader        | C/Swig     | No (#211)                |

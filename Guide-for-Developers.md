@@ -16,6 +16,7 @@
 * [Writing a new topology reader](https://github.com/MDAnalysis/mdanalysis/wiki/Writing-a-Topology-Reader)
 * [Topology data structures](https://github.com/MDAnalysis/mdanalysis/wiki/TopologyDataStructures)  
 * [Semantic Versioning](https://github.com/MDAnalysis/mdanalysis/wiki/SemanticVersioning)  
+* [Extensions and Python 3](https://github.com/MDAnalysis/mdanalysis/wiki/List-of-extensions)
 
 ## Website and repository management ##
 * [Moving the Project to GitHub](https://github.com/MDAnalysis/mdanalysis/wiki/MoveToGitHub)  

@@ -60,3 +60,18 @@ all_selection.residues
 #after 0.11:
 all_selection.charges
 ```
+
+### `Atom.number` renamed to `Atom.index`
+```python
+import MDAnalysis
+from MDAnalysis.tests.datafiles import GRO, XTC
+universe = MDAnalysis.Universe(GRO, XTC)
+
+atomgroup = universe.select_atoms('all')
+first_atom = atomgroup[0]
+
+#before 0.11:
+#first_atom.number
+#after 0.11:
+first_atom.index
+```

@@ -92,3 +92,5 @@ random_coord_array_2 = numpy.float32(numpy.random.rand(20,3))
 import MDAnalysis.lib.distances
 distance_array = MDAnalysis.lib.distances.distance_array(random_coord_array_1, random_coord_array_2)
 ```
+
+### `Timestep._x` `_y` and `_z` are now read only

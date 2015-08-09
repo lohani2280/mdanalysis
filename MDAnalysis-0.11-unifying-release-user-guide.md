@@ -37,3 +37,26 @@ ts = Timestep.from_coordinates(coordinates)
 # with optional velocities and/or forces
 ts = Timestep.from_coordinates(coordinates, velocities=velocities, forces=forces)
 ```
+
+### atomgroup methods to properties and select_atoms replacing selectAtoms
+
+```python
+import MDAnalysis
+from MDAnalysis.tests.datafiles import GRO, XTC
+universe = MDAnalysis.Universe(GRO, XTC)
+
+#before 0.11
+#all_selection = universe.selectAtoms('all')
+#after 0.11
+all_selection = universe.select_atoms('all')
+
+#before 0.11:
+#all_selection.residues()
+#after 0.11:
+all_selection.residues
+
+#before 0.11:
+#all_selection.charges()
+#after 0.11:
+all_selection.charges
+```

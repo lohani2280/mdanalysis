@@ -75,3 +75,20 @@ first_atom = atomgroup[0]
 #after 0.11:
 first_atom.index
 ```
+
+### Migration of some code to `MDAnalysis.lib`
+
+```python
+import MDAnalysis
+import numpy
+
+random_coord_array_1 = numpy.float32(numpy.random.rand(20,3))
+random_coord_array_2 = numpy.float32(numpy.random.rand(20,3))
+
+#before 0.11:
+#import MDAnalysis.core.distances
+#distance_array = MDAnalysis.core.distances.distance_array(random_coord_array_1, random_coord_array_2)
+#after 0.11: 
+import MDAnalysis.lib.distances
+distance_array = MDAnalysis.lib.distances.distance_array(random_coord_array_1, random_coord_array_2)
+```

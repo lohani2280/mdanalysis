@@ -98,11 +98,39 @@ distance_array = MDAnalysis.lib.distances.distance_array(random_coord_array_1, r
 ### The `fullgroup` selection keyword is now deprecated
 0.11 introduces the `global` selection modifier keyword, which, among other cases, can be used to replace `fullgroup` when combined with `group`. You need only change `fullgroup` to `global group` in your selections:
 
-```
+```python
 #before 0.11:
 solvent = universe.selectAtoms("name SOL")
 solvating = solvent.selectAtoms("around 5 fullgroup ref", ref=some_complex_selection)
 #after 0.11: 
 solvent = universe.select_atoms("name SOL")
 solvating = solvent.select_atoms("around 5 global group ref", ref=some_complex_selection)
+```
+
+### `numberOfAtoms()` to `n_atoms` and others
+```python
+import MDAnalysis
+from MDAnalysis.tests.datafiles import GRO, XTC
+universe = MDAnalysis.Universe(GRO, XTC)
+all_selection = universe.select_atoms('all')
+
+#before 0.11:
+#atom_count = all_selection.numberOfAtoms()
+#after 0.11:
+atom_count = all_selection.n_atoms
+
+#before 0.11:
+#residue_count = all_selection.numberOfResidues()
+#after 0.11:
+residue_count = all_selection.n_residues
+
+#before 0.11:
+#segment_count = all_selection.numberOfSegments()
+#after 0.11:
+segment_count = all_selection.n_segments
+
+#before 0.11:
+#frame_count = universe.trajectory.numframes
+#after 0.11:
+frame_count = universe.trajectory.n_frames
 ```

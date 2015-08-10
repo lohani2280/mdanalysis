@@ -134,3 +134,5 @@ segment_count = all_selection.n_segments
 #after 0.11:
 frame_count = universe.trajectory.n_frames
 ```
+
+### Renamed topology methods

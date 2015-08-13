@@ -136,3 +136,5 @@ frame_count = universe.trajectory.n_frames
 ```
 
 ### Renamed topology methods
+
+### Frame numbering is now 0-based

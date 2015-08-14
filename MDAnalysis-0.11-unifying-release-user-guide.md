@@ -138,3 +138,16 @@ frame_count = universe.trajectory.n_frames
 ### Renamed topology methods
 
 ### Frame numbering is now 0-based
+```python
+import MDAnalysis
+from MDAnalysis.tests.datafiles import GRO, XTC
+universe = MDAnalysis.Universe(GRO, XTC)
+
+#before 0.11:
+if 1 == universe.trajectory.frame:
+    print 'currently on first frame'
+
+#after 0.11:
+if 0 == universe.trajectory.frame:
+    print 'currently on first frame'
+```

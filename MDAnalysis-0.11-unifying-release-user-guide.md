@@ -173,6 +173,35 @@ tg.values()  # returns the length between each of the three pairs of atoms
 
 The above is identical for `angle` `dihedral` and `improper_dihedral`
 
+Working with dihedrals
+
+``` python
+# Previously
+ag = u.atoms[:4]  # make a size 4 AtomGroup
+ag.dihedral()  # returned the angle
+
+# Now
+ag = u.atoms[:4]  # select 4 atoms as usual
+di = ag.dihedral  # convert the AtomGroup to a Dihedral object
+di.value()  # returns the size of the angle
+```
+
+#### Torsions are now called dihedrals throughout MDAnalysis
+
+To avoid confusion between the names dihedral and torsion, the term dihedral is used throughout the package.
+
+``` python
+# Previously
+ag = u.atoms[:100]
+tg = ag.torsions  # returned a TopologyGroup of all dihedrals/torsions
+
+# Now
+ag = u.atoms[:100]
+tg = ag.dihedrals  # returns a TopologyGroup of all dihedrals/torsions
+
+
+```
+
 ### Frame numbering is now 0-based
 ```python
 import MDAnalysis

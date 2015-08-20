@@ -148,6 +148,8 @@ frame_count = universe.trajectory.n_frames
 
 ### Renamed topology methods
 
+#### Working with topology from AtomGroups
+
 Manipulating AtomGroups as items of topology (bonds, angles or torsions) has been reworked.  `AtomGroup.bond` is now a property which returns a `Bond` object.
 
 ``` python
@@ -199,6 +201,19 @@ tg = ag.torsions  # returned a TopologyGroup of all dihedrals/torsions
 ag = u.atoms[:100]
 tg = ag.dihedrals  # returns a TopologyGroup of all dihedrals/torsions
 
+
+```
+
+Also, the function "calc_torsions" was deprecated and renamed to "calc_dihedrals"
+
+``` python
+# Previously
+from MDAnalysis.lib.distances import calc_torsions
+t = calc_torsions(ag1.positions, ag2.positions, ag3.positions, ag4.positions)
+
+# Now
+from MDAnalysis.lib.distances import calc_dihedrals
+t = calc_dihedrals(ag1.positions, ag2.positions, ag3.positions, ag4.positions)
 
 ```
 

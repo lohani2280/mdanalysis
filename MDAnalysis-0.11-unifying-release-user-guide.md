@@ -95,6 +95,17 @@ distance_array = MDAnalysis.lib.distances.distance_array(random_coord_array_1, r
 
 ### `Timestep._x` `_y` and `_z` are now read only
 
+`Timestep._x` cannot be assigned to, but can be changed in place.  This is to ensure that `_x` remains strictly a view of the x coordinate of the position data.
+
+``` python
+# previously:
+ts._x = stuff  # would break view onto `_pos`
+
+ts._x[:] = stuff  # still works to assign in place
+ts._pos[:,0] = stuff
+```
+
+
 ### The `fullgroup` selection keyword is now deprecated
 0.11 introduces the `global` selection modifier keyword, which, among other cases, can be used to replace `fullgroup` when combined with `group`. You need only change `fullgroup` to `global group` in your selections:
 

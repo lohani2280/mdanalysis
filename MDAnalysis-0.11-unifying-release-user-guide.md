@@ -137,6 +137,31 @@ frame_count = universe.trajectory.n_frames
 
 ### Renamed topology methods
 
+Manipulating AtomGroups as items of topology (bonds, angles or torsions) has been reworked.  `AtomGroup.bond` is now a property which returns a `Bond` object.
+
+``` python
+ag = u.atoms[:2]  # 2 size AtomGroup
+
+## Before!
+# ag.bond()  # returned the length of the bond
+## Now!
+ag.bond.value()
+
+```
+
+This now allows for groups of `Bond`s to be collected together in a `TopologyGroup`
+
+``` python
+ag1 = u.atoms[0] + u.atoms[10]
+ag2 = u.atoms[11] + u.atoms[20]
+ag3 = u.atoms[21] + u.atoms[30]
+
+tg = ag1.bond + ag2.bond + ag3.bond
+tg.values()  # returns the length between each of the three pairs of atoms
+```
+
+The above is identical for `angle` `dihedral` and `improper_dihedral`
+
 ### Frame numbering is now 0-based
 ```python
 import MDAnalysis

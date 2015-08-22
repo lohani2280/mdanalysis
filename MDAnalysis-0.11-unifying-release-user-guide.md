@@ -38,17 +38,18 @@ ts = Timestep.from_coordinates(coordinates)
 ts = Timestep.from_coordinates(coordinates, velocities=velocities, forces=forces)
 ```
 
-### atomgroup methods to properties and select_atoms replacing selectAtoms
+### Changes to AtomGroup methods and properties
+
+#### AtomGroup information moved to properties
+
+Information about the Atoms contained within an AtomGroup is now available as a property rather than a method.  In general this means that many methods now don't require the redundant "()" following them
 
 ```python
 import MDAnalysis
 from MDAnalysis.tests.datafiles import GRO, XTC
 universe = MDAnalysis.Universe(GRO, XTC)
 
-#before 0.11
-#all_selection = universe.selectAtoms('all')
-#after 0.11
-all_selection = universe.select_atoms('all')
+all_selection = universe.atoms
 
 #before 0.11:
 #all_selection.residues()
@@ -59,6 +60,21 @@ all_selection.residues
 #all_selection.charges()
 #after 0.11:
 all_selection.charges
+```
+
+#### AtomGroup methods are now all single_underscore style
+
+AtomGroup methods previously had a mix of camelCase and single_underscore style naming.  This has
+been unified, so all methods are single_underscore style.
+
+``` python
+# previously universe.selectAtoms('name Ca')
+atomgroup = universe.select_atoms('name Ca')
+
+# previously atomgroup.centerOfMass()
+atomgroup.center_of_mass()
+# previously atomgroup.radiusOfGyration
+atomgroup.radius_of_gyration()
 ```
 
 ### `Atom.number` renamed to `Atom.index`

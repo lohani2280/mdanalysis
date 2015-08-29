@@ -9,6 +9,7 @@
 * [Source Code Management](https://github.com/MDAnalysis/mdanalysis/wiki/Source)  
 * [Writing documentation](https://github.com/MDAnalysis/mdanalysis/wiki/WritingDocumentation)  
 * [Trying the development branch](https://github.com/MDAnalysis/mdanalysis/wiki/DevelopmentBranch)  
+* [Style Guide](https://github.com/MDAnalysis/mdanalysis/wiki/Style-Guide)
 
 ## Developer docs:  ##
 * [Online docs (development branch)](http://www.mdanalysis.org/mdanalysis/package/doc/html/)

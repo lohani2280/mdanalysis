@@ -1,6 +1,6 @@
 MDAnalysis 0.11.0 is a substantial release that unifies much of the code base at the cost of some necessary changes to the user API. The key points for adjusting your code accordingly are outlined below. The details are in the [Release Notes for 0.11.0](ReleaseNotes0110).
 
-Note that we also plan to have a conversion script `ten2eleven.py` available (see [#377](/MDAnalysis/mdanalysis/issues/377)) that should do some of the necessary changes.
+We also provide conversion script `ten2eleven.py` available (see [#377](/MDAnalysis/mdanalysis/issues/377)) that automates some of the changes in your code. Please see [migrating MDAnalysis code with ten2eleven.py](Migrating-MDAnalysis-code-with-ten2eleven.py) for how to use it.
 
 ## How to change your code
 ### Removed contact matrix progress meter

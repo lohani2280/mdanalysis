@@ -247,3 +247,20 @@ if 1 == universe.trajectory.frame:
 if 0 == universe.trajectory.frame:
     print 'currently on first frame'
 ```
+
+### AtomGroup property setters now plural instead of singular
+To match property names of AtomGroups, which are all plural, the corresponding setters have also been made plural. The singular names will still work, but they are marked for deprecation in a future release.
+```python
+import MDAnalysis as mda
+from MDAnalysis.tests.datafiles import GRO, XTC
+
+u = mda.Universe(GRO, XTC)
+ag = u.select_atoms('protein')
+
+# for example
+# before 0.11:
+ag.set_resid(9)
+
+# after 0.11:
+ag.set_resids(9)
+```

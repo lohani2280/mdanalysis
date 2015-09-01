@@ -264,3 +264,27 @@ ag.set_resid(9)
 # after 0.11:
 ag.set_resids(9)
 ```
+
+### AtomGroup.[resids,segids] return arrays of length len(AtomGroup)
+All AtomGroup properties now yield arrays of length equal to the number of atoms in the group. Likewise, ResidueGroup.segids yields an array of equal length to len(ResidueGroup).
+
+```python
+import MDAnalysis as mda
+from MDAnalysis.tests.datafiles import GRO, XTC
+
+u = mda.Universe(GRO, XTC)
+ag = u.select_atoms('protein')
+rg = ag.residues
+
+# these now return arrays of len(ag)
+ag.resids          # new behavior
+ag.resnames        # new behavior
+ag.resnums         # new behavior
+ag.segids          # new behavior
+
+# these return arrays of len(rg)
+rg.resids          # same as before
+rg.resnames        # same as before
+rg.resnums         # same as before
+rg.segids          # new behavior
+```

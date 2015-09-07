@@ -18,7 +18,7 @@ random_array_coords = np.float32(np.random.rand(300,3))
 contact_matrix = MDAnalysis.analysis.distances.contact_matrix(random_array_coords, returntype = "sparse") 
 ```
 
-### New Timestep behaviour
+### New Timestep creation behaviour
 Previously, Timesteps could be initiated with either
  - integer (allocated to this size)
  - another Timestep (copied it)
@@ -42,7 +42,7 @@ ts = Timestep.from_coordinates(coordinates, velocities=velocities, forces=forces
 
 #### AtomGroup information moved to properties
 
-Information about the Atoms contained within an AtomGroup is now available as a property rather than a method.  In general this means that many methods now don't require the redundant "()" following them
+Information about the Atoms contained within an AtomGroup is now available as a property rather than a method.  This covers the following properties: indices, masses, charges, names, types, radii, resids, resnames, resnums, segids, altLocs and serials.  In general this means that many methods now don't require the redundant "()" following them
 
 ```python
 import MDAnalysis
@@ -52,14 +52,51 @@ universe = MDAnalysis.Universe(GRO, XTC)
 all_selection = universe.atoms
 
 #before 0.11:
-#all_selection.residues()
-#after 0.11:
-all_selection.residues
-
-#before 0.11:
 #all_selection.charges()
 #after 0.11:
 all_selection.charges
+```
+
+### AtomGroup property setters now plural instead of singular
+To match property names of AtomGroups, which are all plural, the corresponding setters have also been made plural. The singular names will still work, but they are marked for deprecation in a future release.
+```python
+import MDAnalysis as mda
+from MDAnalysis.tests.datafiles import GRO, XTC
+
+u = mda.Universe(GRO, XTC)
+ag = u.select_atoms('protein')
+
+# for example
+# before 0.11:
+ag.set_resid(9)
+
+# after 0.11:
+ag.set_resids(9)
+```
+
+### AtomGroup.[resids,segids] return arrays of length len(AtomGroup)
+
+All AtomGroup properties now yield arrays of length equal to the number of atoms in the group. Likewise, ResidueGroup.segids yields an array of equal length to len(ResidueGroup).
+
+```python
+import MDAnalysis as mda
+from MDAnalysis.tests.datafiles import GRO, XTC
+
+u = mda.Universe(GRO, XTC)
+ag = u.select_atoms('protein')
+rg = ag.residues
+
+# these now return arrays of len(ag)
+ag.resids          # new behavior
+ag.resnames        # new behavior
+ag.resnums         # new behavior
+ag.segids          # new behavior
+
+# these return arrays of len(rg)
+rg.resids          # same as before
+rg.resnames        # same as before
+rg.resnums         # same as before
+rg.segids          # new behavior
 ```
 
 #### AtomGroup methods are now all single_underscore style
@@ -248,43 +285,3 @@ if 0 == universe.trajectory.frame:
     print 'currently on first frame'
 ```
 
-### AtomGroup property setters now plural instead of singular
-To match property names of AtomGroups, which are all plural, the corresponding setters have also been made plural. The singular names will still work, but they are marked for deprecation in a future release.
-```python
-import MDAnalysis as mda
-from MDAnalysis.tests.datafiles import GRO, XTC
-
-u = mda.Universe(GRO, XTC)
-ag = u.select_atoms('protein')
-
-# for example
-# before 0.11:
-ag.set_resid(9)
-
-# after 0.11:
-ag.set_resids(9)
-```
-
-### AtomGroup.[resids,segids] return arrays of length len(AtomGroup)
-All AtomGroup properties now yield arrays of length equal to the number of atoms in the group. Likewise, ResidueGroup.segids yields an array of equal length to len(ResidueGroup).
-
-```python
-import MDAnalysis as mda
-from MDAnalysis.tests.datafiles import GRO, XTC
-
-u = mda.Universe(GRO, XTC)
-ag = u.select_atoms('protein')
-rg = ag.residues
-
-# these now return arrays of len(ag)
-ag.resids          # new behavior
-ag.resnames        # new behavior
-ag.resnums         # new behavior
-ag.segids          # new behavior
-
-# these return arrays of len(rg)
-rg.resids          # same as before
-rg.resnames        # same as before
-rg.resnums         # same as before
-rg.segids          # new behavior
-```

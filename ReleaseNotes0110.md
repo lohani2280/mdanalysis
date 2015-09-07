@@ -71,7 +71,7 @@ The [MDAnalysis 0.11 unifying release user guide](MDAnalysis-0.11-unifying-relea
   * AtomGroup setters `set_<property>` now plural for consistency with
     property names (Issue #385)
   * DCDReader no longer supports the "skip" keyword.  Use slicing
-    on reader iteration to achieve same affect. (Issue #350)
+    on reader iteration to achieve same effect. (Issue #350)
   * All Readers have a default "dt" of 1.0 ps.  This applies also to
     single frame readers, these would previously raise an error on
     accessing dt. (Issue #350)

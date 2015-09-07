@@ -13,11 +13,11 @@ However, as long as the **MAJOR** number is **0** (i.e. the API has not stabiliz
 
 Additional labels for pre-release and build metadata are available as extensions to the MAJOR.MINOR.PATCH format.
 
-The [CHANGELOG](http://code.google.com/p/mdanalysis/source/browse/CHANGELOG) lists important changes for each release.
+The [CHANGELOG](https://github.com/MDAnalysis/mdanalysis/blob/develop/package/CHANGELOG) lists important changes for each release.
 
 _MAJOR_,  _MINOR_, _PATCH_  number are integers that increase monotonically. Pre-releases are labeled with the postfix -rc1, -rc2, etc.
 
-The **release number** is set in [setup.py](http://code.google.com/p/mdanalysis/source/browse/setup.py) _and_ in `MDAnalysis.__version__` (MDAnalysis/init.py), e.g.
+The **release number** is set in [setup.py](https://github.com/MDAnalysis/mdanalysis/blob/develop/package/setup.py) _and_ in `MDAnalysis.__version__` (MDAnalysis/init.py), e.g.
 ```
 RELEASE = '0.7.5'
 ```
@@ -36,9 +36,9 @@ so that people using the [development branch](DevelopmentBranch) from the source
 # Preparing distribution tar balls #
 ## Preparing ##
   * Update local repository (`git pull`) and make sure that there are no conflicts.
-  * Update [CHANGELOG](http://code.google.com/p/mdanalysis/source/browse/CHANGELOG) with the release number and summarize important changes. Add all authors that contributed to this release. See the file itself for guidelines and formatting.
+  * Update [CHANGELOG](https://github.com/MDAnalysis/mdanalysis/blob/develop/package/CHANGELOG) with the release number and summarize important changes. Add all authors that contributed to this release. See the file itself for guidelines and formatting.
   * Commit updated tree `git commit`
-  * Set `RELEASE` in `setup.py`  and `MDAnalysis.__version__` (MDAnalysis/init.py); note that there is a `setup.py` in the MDAnalysis package _and_ the [MDAnalysisTests](MDAnalysisTests) testsuite!). There's a script `maintain/change_release.sh` that typically does the job:
+  * Set `RELEASE` in `setup.py`  and `MDAnalysis.__version__` (MDAnalysis/version.py); note that there is a `setup.py` in the MDAnalysis package _and_ the [MDAnalysisTests](MDAnalysisTests) testsuite!). There's a script `maintain/change_release.sh` that typically does the job:
 ```
 ./maintainer/change_release.sh 0.9.0
 ```
@@ -102,7 +102,7 @@ git push origin master
 The distribution is now ready. Tag it in [git](git):
 ```
 git tag -m 'release 0.7.5 of MDAnalysis and MDAnalysisTests' release-0.7.5
-git push --tags googlecode master
+git push --tags origin master
 ```
 The **tag format** is the string **release-** followed by **major.minor.patch**.
 

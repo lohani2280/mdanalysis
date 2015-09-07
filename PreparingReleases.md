@@ -17,7 +17,7 @@ The [CHANGELOG](https://github.com/MDAnalysis/mdanalysis/blob/develop/package/CH
 
 _MAJOR_,  _MINOR_, _PATCH_  number are integers that increase monotonically. Pre-releases are labeled with the postfix -rc1, -rc2, etc.
 
-The **release number** is set in [setup.py](https://github.com/MDAnalysis/mdanalysis/blob/develop/package/setup.py) _and_ in `MDAnalysis.__version__` (MDAnalysis/init.py), e.g.
+The **release number** is set in [setup.py](https://github.com/MDAnalysis/mdanalysis/blob/develop/package/setup.py) _and_ in `MDAnalysis.__version__` (MDAnalysis/version.py), e.g.
 ```
 RELEASE = '0.7.5'
 ```

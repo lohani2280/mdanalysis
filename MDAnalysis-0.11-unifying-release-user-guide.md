@@ -2,23 +2,11 @@ MDAnalysis 0.11.0 is a substantial release that unifies much of the code base at
 
 We also provide conversion script `ten2eleven.py` available (see [#377](/MDAnalysis/mdanalysis/issues/377)) that automates some of the changes in your code. Please see [migrating MDAnalysis code with ten2eleven.py](Migrating-MDAnalysis-code-with-ten2eleven.py) for how to use it.
 
-## How to change your code
-### Removed contact matrix progress meter
-The `MDAnalysis.analysis.distances.contact_matrix` function does not show progress anymore. Remove the keywords `progress_meter_freq` and `suppress_progmet` from your code:
-```python
-import MDAnalysis
-import MDAnalysis.analysis.distances
-import numpy as np
-#300 rows of random xyz array data, to simulate coordinates:
-random_array_coords = np.float32(np.random.rand(300,3)) 
+## Changes to the API and how to update your code
 
-#before 0.11 release:
-#contact_matrix = MDAnalysis.analysis.distances.contact_matrix(random_array_coords, returntype = "sparse", progress_meter_freq=10, suppress_progmet=True) 
-#after 0.11 release:
-contact_matrix = MDAnalysis.analysis.distances.contact_matrix(random_array_coords, returntype = "sparse") 
-```
+### Changes to Timesteps
 
-### New Timestep creation behaviour
+#### New Timestep creation behaviour
 Previously, Timesteps could be initiated with either
  - integer (allocated to this size)
  - another Timestep (copied it)
@@ -36,6 +24,33 @@ ts = Timestep.from_timestep(other_ts)
 ts = Timestep.from_coordinates(coordinates)
 # with optional velocities and/or forces
 ts = Timestep.from_coordinates(coordinates, velocities=velocities, forces=forces)
+```
+
+#### Frame numbering is now 0-based
+```python
+import MDAnalysis
+from MDAnalysis.tests.datafiles import GRO, XTC
+universe = MDAnalysis.Universe(GRO, XTC)
+
+#before 0.11:
+if 1 == universe.trajectory.frame:
+    print 'currently on first frame'
+
+#after 0.11:
+if 0 == universe.trajectory.frame:
+    print 'currently on first frame'
+```
+
+#### `Timestep._x` `_y` and `_z` are now read only
+
+`Timestep._x` cannot be assigned to, but can be changed in place.  This is to ensure that `_x` remains strictly a view of the x coordinate of the position data.
+
+``` python
+# previously:
+ts._x = stuff  # would break view onto `_pos`
+
+ts._x[:] = stuff  # still works to assign in place
+ts._pos[:,0] = stuff
 ```
 
 ### Changes to AtomGroup methods and properties
@@ -57,7 +72,7 @@ all_selection = universe.atoms
 all_selection.charges
 ```
 
-### AtomGroup property setters now plural instead of singular
+#### AtomGroup property setters now plural instead of singular
 To match property names of AtomGroups, which are all plural, the corresponding setters have also been made plural. The singular names will still work, but they are marked for deprecation in a future release.
 ```python
 import MDAnalysis as mda
@@ -74,7 +89,7 @@ ag.set_resid(9)
 ag.set_resids(9)
 ```
 
-### AtomGroup.[resids,segids] return arrays of length len(AtomGroup)
+#### AtomGroup.[resids,segids] return arrays of length len(AtomGroup)
 
 All AtomGroup properties now yield arrays of length equal to the number of atoms in the group. Likewise, ResidueGroup.segids yields an array of equal length to len(ResidueGroup).
 
@@ -145,19 +160,6 @@ random_coord_array_2 = numpy.float32(numpy.random.rand(20,3))
 import MDAnalysis.lib.distances
 distance_array = MDAnalysis.lib.distances.distance_array(random_coord_array_1, random_coord_array_2)
 ```
-
-### `Timestep._x` `_y` and `_z` are now read only
-
-`Timestep._x` cannot be assigned to, but can be changed in place.  This is to ensure that `_x` remains strictly a view of the x coordinate of the position data.
-
-``` python
-# previously:
-ts._x = stuff  # would break view onto `_pos`
-
-ts._x[:] = stuff  # still works to assign in place
-ts._pos[:,0] = stuff
-```
-
 
 ### The `fullgroup` selection keyword is now deprecated
 0.11 introduces the `global` selection modifier keyword, which, among other cases, can be used to replace `fullgroup` when combined with `group`. You need only change `fullgroup` to `global group` in your selections:
@@ -270,18 +272,19 @@ t = calc_dihedrals(ag1.positions, ag2.positions, ag3.positions, ag4.positions)
 
 ```
 
-### Frame numbering is now 0-based
+
+### Removed contact matrix progress meter
+The `MDAnalysis.analysis.distances.contact_matrix` function does not show progress anymore. Remove the keywords `pr
+ogress_meter_freq` and `suppress_progmet` from your code:
 ```python
 import MDAnalysis
-from MDAnalysis.tests.datafiles import GRO, XTC
-universe = MDAnalysis.Universe(GRO, XTC)
+import MDAnalysis.analysis.distances
+import numpy as np
+#300 rows of random xyz array data, to simulate coordinates:
+random_array_coords = np.float32(np.random.rand(300,3)) 
 
-#before 0.11:
-if 1 == universe.trajectory.frame:
-    print 'currently on first frame'
-
-#after 0.11:
-if 0 == universe.trajectory.frame:
-    print 'currently on first frame'
+#before 0.11 release:
+#contact_matrix = MDAnalysis.analysis.distances.contact_matrix(random_array_coords, returntype = "sparse", progress_meter_freq=10, suppress_progmet=True) 
+#after 0.11 release:
+contact_matrix = MDAnalysis.analysis.distances.contact_matrix(random_array_coords, returntype = "sparse") 
 ```
-

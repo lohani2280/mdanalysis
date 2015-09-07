@@ -34,20 +34,24 @@ so that people using the [development branch](DevelopmentBranch) from the source
 
 
 # Preparing distribution tar balls #
+
 ## Preparing ##
+
   * Update local repository (`git pull`) and make sure that there are no conflicts.
   * Update [CHANGELOG](https://github.com/MDAnalysis/mdanalysis/blob/develop/package/CHANGELOG) with the release number and summarize important changes. Add all authors that contributed to this release. See the file itself for guidelines and formatting.
   * Commit updated tree `git commit`
   * Set `RELEASE` in `setup.py`  and `MDAnalysis.__version__` (MDAnalysis/version.py); note that there is a `setup.py` in the MDAnalysis package _and_ the [MDAnalysisTests](MDAnalysisTests) testsuite!). There's a script `maintain/change_release.sh` that typically does the job:
+
 ```
 ./maintainer/change_release.sh 0.9.0
 ```
-> Make sure to add and commit the changes!
+
+  * Make sure to add and commit the changes!
   * Test if the distribution (MDAnalysis and MDAnalysisTests) builds successfully and run the UnitTests:
 ```
 ./maintainer/run_tests.sh
 ```
-> Fix code so that all tests are passed (except for known failures). Note that if you worked on any of the **[Cython](http://cython.org/)** code then you should check that the new code was also compiled (monitor the output from `python setup.py build`).
+  * Fix code so that all tests are passed (except for known failures). Note that if you worked on any of the **[Cython](http://cython.org/)** code then you should check that the new code was also compiled (monitor the output from `python setup.py build`).
 
 > <font size='1'>
 <blockquote>Note on Cython code (see <a href='http://issues.mdanalysis.org/85'>Issue 85</a> for details):<br>
@@ -70,7 +74,7 @@ python setup.py sdist
 cd ../testsuite
 python setup.py sdist
 ```
-> This builds the distribution under `package/dist/MDAnalysis-MAJOR-MINOR-PATCH.tar.gz` and `testsuite/dist/MDAnalysisTests-MAJOR-MINOR-PATCH.tar.gz`.
+This builds the distribution under `package/dist/MDAnalysis-MAJOR-MINOR-PATCH.tar.gz` and `testsuite/dist/MDAnalysisTests-MAJOR-MINOR-PATCH.tar.gz`.
 
 
 ## Testing ##

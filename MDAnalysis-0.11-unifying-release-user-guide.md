@@ -288,3 +288,16 @@ random_array_coords = np.float32(np.random.rand(300,3))
 #after 0.11 release:
 contact_matrix = MDAnalysis.analysis.distances.contact_matrix(random_array_coords, returntype = "sparse") 
 ```
+
+### Submodule moves
+
+Many submodules were moved to the new `lib` submodule.  This was for internal code reasons; the lib submodule has no internal dependencies.
+
+These include
+ * core.tranformations to lib.transformations
+ * core.util to lib.util
+ * core.log to lib.log
+ * core.units to MDAnalysis.units
+ * core.distances to lib.distances
+ * core.parallel to lib.parallel
+ * created lib.mdamath

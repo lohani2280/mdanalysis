@@ -2,6 +2,8 @@ MDAnalysis 0.11.0 is a substantial release that unifies much of the code base at
 
 We also provide conversion function `MDAnalysis.ten2eleven` available (see [#377](/MDAnalysis/mdanalysis/issues/377)) that automates some of the changes in your code. Please see [migrating MDAnalysis code with ten2eleven](Migrating-MDAnalysis-code-with-ten2eleven.py) for how to use it.
 
+If you have questions or problems migrating your existing code, please ask for help on the [user mailing list](http://groups.google.com/group/mdnalysis-discussion). Everyone will be more than happy to help!
+
 ## Changes to the API and how to update your code
 
 ### Changes to Timesteps

@@ -81,9 +81,10 @@ Please ask on the [mailing list](http://groups.google.com/group/mdnalysis-discus
 
 
 ### pip ###
-One can also use [pip](https://pip.pypa.io/en/latest/index.html). For all [releases](Releases), you should be able to just do
+One can also use [pip](https://pip.pypa.io/en/latest/index.html). For all [releases](Release-Notes), you should be able to just do
 ```
-pip --upgrade MDAnalysis MDAnalysisTests
+pip --upgrade MDAnalysis 
+pip --upgrade MDAnalysisTests
 ```
 and `pip` will download the source distribution from the Python package index and install them, together with any required dependencies.
 

@@ -80,24 +80,18 @@ or any of the other options of [distutil's setup.py to install in alternative di
 Please ask on the [mailing list](http://groups.google.com/group/mdnalysis-discussion) for help with installation and/or [file a bug through the issue tracker](http://code.google.com/p/mdanalysis/issues/list).
 
 
-### Easy Install ###
+### pip ###
+One can also use [pip](https://pip.pypa.io/en/latest/index.html). For all [releases](Releases), you should be able to just do
+```
+pip --upgrade MDAnalysis MDAnalysisTests
+```
+and `pip` will download the source distribution from the Python package index and install them, together with any required dependencies.
 
-One can also use [EasyInstall](http://peak.telecommunity.com/DevCenter/EasyInstall). You should be able to do
+If you want to install from the checked out source, you can also use `pip`:
 ```
-easy_install [options] ./mdanalysis
+pip [options] ./mdanalysis
 ```
-for a standard installation (see easy\_install docs for details).
-
-If you downloaded a tar archive from the web you can
-  1. unpack the archive
-  1. easy\_install the unpacked archive
-It would look similar to
-```
-tar -zxvf MDAnalysis-0.7.3.tar.gz
-easy_install MDAnalysis-0.7.3 MDAnalysis[tests,analysis]
-```
-Note that the additional requirements `[tests,analysis]` tell easy\_install to download and install additional packages required for this functionality.
-
+for a standard installation.
 
 
 ### Developer installation ###

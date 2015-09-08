@@ -4,7 +4,7 @@ For alternative ways to install MDAnalysis, see the page [Install](Install).
 
 ## Installing from source ##
 **MDAnalysis** is also distributed in source form. In order to build the library some C code needs to be compiled. Thus you will need
-  * python (>=2.6)
+  * python (>=2.7 and <3)
   * a C compiler (GNU `gcc` works),
   * the Python header files (typically in a package `python-dev`),
   * [numpy](http://numpy.scipy.org) to compile the DCD reader and numerical extensions,

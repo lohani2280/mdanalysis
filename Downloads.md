@@ -4,12 +4,14 @@ Source code distributions are available from the [Python Package Index](https://
 Alternatively, clone the [MDAnalysis git repository](http://code.google.com/p/mdanalysis/source/checkout) and take the _master_ branch.
 
 ## Binary distributions ##
+<!-- 
 We provide binary packages (deb, rpm) for
   * OpenSUSE
   * Fedora
   * Debian
   * Ubuntu
 from **http://download.opensuse.org/repositories/home:/MDyNMR-FTW:/MDAnalysis**
+-->
 
 MDAnalysis is also available in the repositories for
   * Archlinux: **https://aur.archlinux.org/packages/python2-mdanalysis**

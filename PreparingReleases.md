@@ -29,7 +29,11 @@ RELEASE = '0.7.6-devel'
 so that people using the [development branch](DevelopmentBranch) from the sources see immediately that this is not a final release. For example, "0.7.6-devel" is the state _before_ the 0.7.6 release.
 
 # git repository: branches #
+Releases should exist on the _master_ branch:
 
+* declare *feature freeze* on _develop_ via developer list
+* *merge* _develop_ into _master_ (make sure that it gets the full release number)
+* *[[tag|#Tagging]]* the release
 
 # Preparing distribution tar balls #
 

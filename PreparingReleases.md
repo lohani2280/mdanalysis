@@ -28,9 +28,7 @@ RELEASE = '0.7.6-devel'
 ```
 so that people using the [development branch](DevelopmentBranch) from the sources see immediately that this is not a final release. For example, "0.7.6-devel" is the state _before_ the 0.7.6 release.
 
-# git check-ins #
-  * Check in sets of changes via [git](git). Ideally, all changes in one revision should have a common theme. If you implemented two rather different things (say, one bug fix and one new feature) then split your check in into two.
-  * _Always_ add a descriptive comment (feel free to be verbose).
+# git repository: branches #
 
 
 # Preparing distribution tar balls #

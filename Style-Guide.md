@@ -53,4 +53,4 @@ def func(arg1, arg2):
 
 ## Writing Tests
 
-Probably link to the page on writing tests to avoid repetition. Repetition.
+* [[Writing Tests|UnitTests]]

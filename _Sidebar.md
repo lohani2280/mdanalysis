@@ -4,8 +4,7 @@ Labels: python, molecular dynamics, analysis, DCD, CHARMM, LAMMPS, NAMD, Gromacs
 [Core Developers](https://github.com/orgs/MDAnalysis/teams/coredevs)
 
 ### Essentials ###
-[[Applications]]  
-[[Documentation]]  
+[[Applications]]    
 [[Downloads]]  
 [[Install]]  
 [[PaperErrata]]  

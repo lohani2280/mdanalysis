@@ -37,19 +37,10 @@ Note that that MDAnalysis is still considered experimental software (although a 
 
 The file [INSTALL](https://github.com/MDAnalysis/mdanalysis/blob/master/package/INSTALL) in the package itself and the wiki pages [Install](Install) and [InstallRecipes](InstallRecipes) should help you compiling and installing MDAnalysis.
 
-### Ubuntu binary packages ###
-
-We also provide packages for a range of distributions. See detailed instructions under [Installing Binary Ubuntu Packages](Install#Installing_using_binary_packages_%28for_Ubuntu/Debian_users%29).
-
-
 ### Python packages ###
 
-The package is also [listed on PyPI](http://pypi.python.org/pypi/MDAnalysis) (the Python package index) and should be installable with [easy\_install](http://packages.python.org/distribute/easy_install.html) or [pip](http://www.pip-installer.org/en/latest/index.html), e.g.
+The package is also [listed on PyPI](http://pypi.python.org/pypi/MDAnalysis) (the Python package index) and should be installable with [pip](http://www.pip-installer.org/en/latest/index.html), e.g.
 
-```
-easy_install -U MDAnalysis
-```
-or
 ```
 pip install MDAnalysis
 ```

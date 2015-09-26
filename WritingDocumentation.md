@@ -26,7 +26,7 @@ In `ipython` one can use the question mark operator
 ```
 Interactive use is not always convenient, though, and hence [Issue 26](http://issues.mdanalysis.org/26) called for proper documentation.
 
-As of Jan 2011, the **[Online Documentation](http://mdanalysis.googlecode.com/git/doc/html/index.html)** is available, too.
+As of Jan 2011, the **[Online Documentation](http://docs.mdanalysis.org/index.html)** is available, too.
 
 This page should help developers write good documentation that can be easily processed into online docs.
 
@@ -44,18 +44,18 @@ The module doc string can be a short sentence describing what the module does or
 
 ## Location of documentation ##
   * Code is documented through Python doc strings (see [PEP 257](http://www.python.org/dev/peps/pep-0257/) for good conventions); thus each Python file should contain some documentation.
-  * The [Online Documentation](http://mdanalysis.googlecode.com/git/doc/html/index.html) is generated from [reStructuredText](http://docutils.sourceforge.net/rst.html) in [doc/sphinx/source/documentation\_pages](http://code.google.com/p/mdanalysis/source/browse/#git%2Fpackage%2Fdoc%2Fsphinx%2Fsource%2Fdocumentation_pages).
-  * The googlecode pages also hold documentation in the [MDAnalysis Wiki](http://code.google.com/p/mdanalysis/w/list) (but as far as the user docs go, they are being phased out in favour of the [Online Docs](http://mdanalysis.googlecode.com/git/doc/html/index.html)).
+  * The [Online Documentation](http://docs.mdanalysis.org/index.html) is generated from [reStructuredText](http://docutils.sourceforge.net/rst.html) in [doc/sphinx/source/documentation\_pages](http://code.google.com/p/mdanalysis/source/browse/#git%2Fpackage%2Fdoc%2Fsphinx%2Fsource%2Fdocumentation_pages).
+  * The googlecode pages also hold documentation in the [MDAnalysis Wiki](http://code.google.com/p/mdanalysis/w/list) (but as far as the user docs go, they are being phased out in favour of the [Online Docs](http://docs.mdanalysis.org/index.html)).
 
 
 # Online Docs format: sphinx reStructuredText #
 
 ## Sphinx basics ##
-We are using [reStructuredText](http://docutils.sourceforge.net/rst.html) ("rst" or "reST") in the Python code and in the [Online Documentation](http://mdanalysis.googlecode.com/git/doc/html/index.html). The reST is processed with [sphinx](http://sphinx.pocoo.org/) to generate HTML or PDF. Thus, the docs should use reST with the sphinx autodoc extensions:
+We are using [reStructuredText](http://docutils.sourceforge.net/rst.html) ("rst" or "reST") in the Python code and in the [Online Documentation](http://docs.mdanalysis.org/index.html). The reST is processed with [sphinx](http://sphinx.pocoo.org/) to generate HTML or PDF. Thus, the docs should use reST with the sphinx autodoc extensions:
   * sphinx [reST Primer](http://sphinx.pocoo.org/rest.html)
   * sphinx [autodoc extension](http://sphinx.pocoo.org/ext/autodoc.html)
 
-Note that each page of the  [Online Documentation](http://mdanalysis.googlecode.com/git/doc/html/index.html) has a link to the _Source_ of the page. You can look at it in order to find out how a particular page has been written in reST and copy the approach for your own documentation.
+Note that each page of the  [Online Documentation](http://docs.mdanalysis.org/index.html) has a link to the _Source_ of the page. You can look at it in order to find out how a particular page has been written in reST and copy the approach for your own documentation.
 
 ## Generating the docs ##
 The documentation n HTML format lives in `package/doc/html`. HTML is the primary format in which we provide the docs. Documentation for *releases* is hosted on PyPi and is accessible at https://pythonhosted.org/MDAnalysis (and also http://docs.mdanalysis.org). The documentation for the *development branch* is hosted as [GitHub pages](https://pages.github.com/) in the *gh-pages* branch and is available at http://devdocs.mdanalysis.org.

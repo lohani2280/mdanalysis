@@ -7,7 +7,7 @@ The package provides the module **gridData**, which is loaded with
 import gridData
 ```
 
-**gridData** is used in MDAnalysis in the [MDAnalysis.analysis.density](http://mdanalysis.googlecode.com/git/package/doc/html/documentation_pages/analysis/density.html) module.
+**gridData** is used in MDAnalysis in the [MDAnalysis.analysis.density](http://docs.mdanalysis.org/documentation_pages/analysis/density.html) module.
 
 
 # Availability #

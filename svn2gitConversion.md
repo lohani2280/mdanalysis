@@ -69,7 +69,7 @@ git checkout -b MDAnalysisTestData origin/MDAnalysisTestData
 ```
 git checkout master
 ```
-  * The [online docs](http://mdanalysis.googlecode.com/git/doc/html/index.html) appear to be functional.
+  * The [online docs](http://docs.mdanalysis.org/index.html) appear to be functional.
 
 
 ## Issues ##

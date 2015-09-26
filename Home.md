@@ -2,7 +2,7 @@
 
 ----
 
-_The wiki was recently (2015-04-04) converted from the [old Google Code Wiki](https://code.google.com/p/mdanalysis/w/list) and  broken links (issue [#243](https://github.com/MDAnalysis/mdanalysis/issues/243)) and other inaccuracies are still plentiful (see also issue [#234](https://github.com/MDAnalysis/mdanalysis/issues/234)). Please feel free to open new issues in the [Issue Tracker](https://github.com/MDAnalysis/mdanalysis/issues) or correct problems yourself (it's a public wiki after all)._
+_The wiki was recently (2015-04-04) converted from the [old Google Code Wiki](http://wiki.mdanalysis.org) and  broken links (issue [#243](https://github.com/MDAnalysis/mdanalysis/issues/243)) and other inaccuracies are still plentiful (see also issue [#234](https://github.com/MDAnalysis/mdanalysis/issues/234)). Please feel free to open new issues in the [Issue Tracker](https://github.com/MDAnalysis/mdanalysis/issues) or correct problems yourself (it's a public wiki after all)._
 
 ----
 

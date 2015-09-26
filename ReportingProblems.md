@@ -36,7 +36,7 @@ The project has a friendly mailing list on Google Groups named [mdnalysis-discus
 
 The users mailinglist welcomes all MDAnalysis users. If you have a problem for which you cannot find a solution
   * in the [documentation](http://devdocs.mdanalysis.org/index.html)
-  * the [wiki](https://code.google.com/p/mdanalysis/w/list)
+  * the [wiki](http://wiki.mdanalysis.org)
   * using the [mailing list search](https://groups.google.com/forum/?fromgroups#!forum/mdnalysis-discussion)
 then go ahead and ask.
 

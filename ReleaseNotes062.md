@@ -9,7 +9,7 @@ or use **setuptools**' [easy\_install](http://peak.telecommunity.com/DevCenter/E
 easy_install -f http://code.google.com/p/mdanalysis MDAnalysis
 ```
 
-Any feedback through the [Issue Tracker](http://code.google.com/p/mdanalysis/issues/list) or the [Mailing List](http://groups.google.com/group/mdnalysis-discussion) is very much appreciated.
+Any feedback through the [Issue Tracker](https://github.com/MDAnalysis/mdanalysis/issues) or the [Mailing List](http://groups.google.com/group/mdnalysis-discussion) is very much appreciated.
 
 
 # Major changes #

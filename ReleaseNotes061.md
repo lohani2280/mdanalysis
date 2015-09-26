@@ -49,4 +49,4 @@ to contribute to the main development line. See also DevelopmentWorkflow )
 
 We'll try to keep the trunk reasonably clean (using unit tests). Releases will be found on /svn/branches from now on.
 
-Please report problems through the [Issue Tracker](http://code.google.com/p/mdanalysis/issues/list) or the mailing list.
+Please report problems through the [Issue Tracker](https://github.com/MDAnalysis/mdanalysis/issues) or the mailing list.

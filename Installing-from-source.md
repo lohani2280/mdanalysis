@@ -77,7 +77,7 @@ In you should be able to use
 ```
 or any of the other options of [distutil's setup.py to install in alternative directories](http://docs.python.org/install/index.html#alternate-installation).
 
-Please ask on the [mailing list](http://groups.google.com/group/mdnalysis-discussion) for help with installation and/or [file a bug through the issue tracker](http://code.google.com/p/mdanalysis/issues/list).
+Please ask on the [mailing list](http://groups.google.com/group/mdnalysis-discussion) for help with installation and/or [file a bug through the issue tracker](https://github.com/MDAnalysis/mdanalysis/issues).
 
 
 ### pip ###

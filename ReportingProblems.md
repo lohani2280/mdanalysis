@@ -9,7 +9,7 @@ So: If you're using MDAnalysis and something does not work as expected or if you
 The best way to report a problem is the [Issue Tracker](#Issue_Tracker) and for general questions related to [Installation](Install) or using the library ask on the [mailing list](#Mailing_List).
 
 ### Issue Tracker ###
-To report **bugs** or **feature requests** enter an **Issue** in the **[Issue Tracker](https://code.google.com/p/mdanalysis/issues/list)**.
+To report **bugs** or **feature requests** enter an **Issue** in the **[Issue Tracker](http://issues.mdanalysis.org)**.
 
 The developers monitor it closely and you typically get a reaction in less than two days.
 

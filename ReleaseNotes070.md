@@ -6,7 +6,7 @@ A number of bugs have been fixed and the coverage of UnitTests expanded. New scr
 
 If you have old code then it is worthwhile looking at the Changes below in more detail as it lists changes that are known to be incompatible with pre-0.7 code.
 
-We hope that the improvements in this release make it worthwhile to update your old code and encourage you to report any problems via the mailing list and/or the [Issue Tracker](http://code.google.com/p/mdanalysis/issues/list).
+We hope that the improvements in this release make it worthwhile to update your old code and encourage you to report any problems via the mailing list and/or the [Issue Tracker](https://github.com/MDAnalysis/mdanalysis/issues).
 
 
 # Changes #

@@ -73,6 +73,6 @@ git checkout master
 
 
 ## Issues ##
-If any serious issues appear, [open an issue on the tracker](http://code.google.com/p/mdanalysis/issues/list).
+If any serious issues appear, [open an issue on the tracker](https://github.com/MDAnalysis/mdanalysis/issues).
   * The [source code](http://code.google.com/p/mdanalysis/source/browse/) browser does not show log history for many files.
 

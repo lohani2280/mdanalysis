@@ -10,7 +10,7 @@ The core of MDAnalysis consists of files under
 
 Basically we want to make sure that the new code does not break the existing one and that
 
-  1. [Make a clone](https://code.google.com/p/mdanalysis/source/clones) of the latest development branch in google code .
+  1. [Clone](https://github.com/MDAnalysis/mdanalysis#fork-destination-box) of the latest development branch in google code .
   1. Pull the latest changes from the development branch.
   1. Merge your code into this branch.
   1. Push the changes to your public clone. Let us know through the developer list that we can pull your changes to look at them and test them.
@@ -21,4 +21,4 @@ Before asking us to pull check the following:
   * Have you added [test cases](UnitTests) for your own code? Check that your tests pass with your changes (and fail without them).
   * Have you [added documentation](https://code.google.com/p/mdanalysis/wiki/WritingDocumentation) (Python doc strings) that describe your new feature?
   * Have you updated the CHANGELOG (and AUTHORS when you're contributing your first commit)?
-  * Have you committed changes in self-contained commits (ideally, one feature per commit) with a good, expressive log message that references any [Issues](https://code.google.com/p/mdanalysis/issues/list) that you've been working on?
+  * Have you committed changes in self-contained commits (ideally, one feature per commit) with a good, expressive log message that references any [Issues](http://issues.mdanalysis.org) that you've been working on?

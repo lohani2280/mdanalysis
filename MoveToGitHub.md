@@ -10,7 +10,7 @@ From reading the [issues for export](https://code.google.com/p/support-tools/iss
 
 # TASKS by Person #
   * [Issue Tracker](#Issue_Tracker) ([Issue 231](https://code.google.com/p/mdanalysis/issues/detail?id=231)): **richardjgowers** (Richard) will
-    1. check if there are any [open issues](https://code.google.com/p/mdanalysis/issues/list) that have attachments. If yes, then
+    1. check if there are any [open issues](http://issues.mdanalysis.org) that have attachments. If yes, then
     1. download the attachments from all open issues and store them in individual directories named _IssueNNN/CommentMM_ with the original file names (_NNN_ is the issue id number, eg 055 for [Issue 55](https://code.google.com/p/mdanalysis/issues/detail?id=55) and _MM_ is the comment number, eg 01 for comment [#1](https://code.google.com/p/mdanalysis/issues/detail?id=55#c1) or 00 for the initial issue report).
     1. prepare a zip file (and wait for further instructions until we figure out a way to put everything back together)
   * team ([Issue 232](http://issues.mdanalysis.org/232)): **orbeckst** (Oliver)

@@ -1,1 +1,1 @@
-See [MDAnalysis.analysis.hbonds](http://mdanalysis.googlecode.com/git-history/develop/package/doc/html/documentation_pages/analysis/hbonds.html) and [Issue 103](http://issues.mdanalysis.org/103) for further details.
+See [MDAnalysis.analysis.hbonds](http://devdocs.mdanalysis.org/documentation_pages/analysis/hbonds.html) and [Issue 103](http://issues.mdanalysis.org/103) for further details.

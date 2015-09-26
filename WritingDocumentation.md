@@ -10,7 +10,7 @@ The format generally involves a single class / function per documentation page, 
 
 There are certainly some points to dicuss: 1) will we adopt a strict [doctest](http://docs.python.org/library/doctest.html) format for examples in docstrings (not meant to replace unit tests)? 2) Will we adopt the [numpydoc](https://pypi.python.org/pypi/numpydoc) Sphinx extension? This would be needed for a more precise match to the numpy documentation standard. 3) other issues?
 
-While I've tried to be reasonably consistent in my recently-added modules (i.e., [3D streamplot](http://mdanalysis.googlecode.com/git-history/develop/package/doc/html/documentation_pages/visualization/streamlines_3D.html)), I'm also guilty of cutting corners in a few of the formatting areas. The idea is to make changes that provide increased consistency with the numpy documentation standard if you stumble across a module that you think could use enhanced documentation.
+While I've tried to be reasonably consistent in my recently-added modules (i.e., [3D streamplot](http://devdocs.mdanalysis.org/documentation_pages/visualization/streamlines_3D.html)), I'm also guilty of cutting corners in a few of the formatting areas. The idea is to make changes that provide increased consistency with the numpy documentation standard if you stumble across a module that you think could use enhanced documentation.
 
 
 # Overview #

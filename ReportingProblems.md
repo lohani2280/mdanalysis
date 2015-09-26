@@ -35,7 +35,7 @@ If you can, [include a test case](ContributingCode#Test_cases) with your bug rep
 The project has a friendly mailing list on Google Groups named [mdnalysis-discussion](http://groups.google.com/group/mdnalysis-discussion) (no typo). You can post questions through the web interface  or subscribe to it.
 
 The users mailinglist welcomes all MDAnalysis users. If you have a problem for which you cannot find a solution
-  * in the [documentation](http://mdanalysis.googlecode.com/git-history/develop/package/doc/html/index.html)
+  * in the [documentation](http://devdocs.mdanalysis.org/index.html)
   * the [wiki](https://code.google.com/p/mdanalysis/w/list)
   * using the [mailing list search](https://groups.google.com/forum/?fromgroups#!forum/mdnalysis-discussion)
 then go ahead and ask.

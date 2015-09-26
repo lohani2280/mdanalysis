@@ -1,4 +1,4 @@
-The [AtomGroup](http://code.google.com/p/mdanalysis/source/browse/MDAnalysis/core/AtomGroup.py#108) class is the most important object in MDAnalysis. It contains a list of [Atom](http://code.google.com/p/mdanalysis/source/browse/MDAnalysis/core/AtomGroup.py#38)s and is described in under [Fundamental building blocks](http://mdanalysis.googlecode.com/git-history/develop/package/doc/html/documentation_pages/core/AtomGroup.html) in the [online documentation](http://mdanalysis.googlecode.com/git-history/develop/package/doc/html/index.html).
+The [AtomGroup](http://code.google.com/p/mdanalysis/source/browse/MDAnalysis/core/AtomGroup.py#108) class is the most important object in MDAnalysis. It contains a list of [Atom](http://code.google.com/p/mdanalysis/source/browse/MDAnalysis/core/AtomGroup.py#38)s and is described in under [Fundamental building blocks](http://devdocs.mdanalysis.org/documentation_pages/core/AtomGroup.html) in the [online documentation](http://devdocs.mdanalysis.org/index.html).
 
 ## Creating an AtomGroup ##
 

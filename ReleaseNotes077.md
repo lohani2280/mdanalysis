@@ -20,7 +20,7 @@
   * fixed [Issue 117](http://issues.mdanalysis.org/117) (could not write Gromacs XTC/TRR from AMBER netcdf)
   * fixed [Issue 120](http://issues.mdanalysis.org/120) (DCDWriter: wrote wrong unitcell information)
   * fixed [Issue 121](http://issues.mdanalysis.org/121) (PSFParser would fail with IndexError for files without SEGID)
-  * [Issue 122](http://issues.mdanalysis.org/122) (made installation of netCDF4 library optional, which means that users of the AMBER netcdf Reader/Writer will have to manually install the library and its dependencies netcdf and HDF5, see the wiki page on [netcdf](https://code.google.com/p/mdanalysis/wiki/netcdf))
+  * [Issue 122](http://issues.mdanalysis.org/122) (made installation of netCDF4 library optional, which means that users of the AMBER netcdf Reader/Writer will have to manually install the library and its dependencies netcdf and HDF5, see the wiki page on [netcdf](netcdf))
 
 ## Authors ##
 danny.parton, jandom, orbeckst, jjlights03, jphillips, naveen.michaudagrawal, andy.somogyi

@@ -10,7 +10,7 @@ For alternative ways to install MDAnalysis, see the page [Install](Install).
   * [numpy](http://numpy.scipy.org) to compile the DCD reader and numerical extensions,
 
 See
-[Additional non-standard packages](http://code.google.com/p/mdanalysis/wiki/Install#Additional_non-standard_packages) below for what else you need at run
+[Additional non-standard packages](Install#Additional_non-standard_packages) below for what else you need at run
 time.
 
 The source code can be obtained via the [Downloads](Downloads) page and as described below under [Getting the source](#Getting_the_source). The primary dependency is [numpy](http://www.numpy.org/).
@@ -132,7 +132,7 @@ In order to make _full use_ of the library in your own python code you will need
   * [BioPython](http://biopython.org/)'s Bio.PDB (MDAnalysis will complain if you don't have Biopython installed (even though it is not used by default anymore))
   * [networkx](http://networkx.lanl.gov/) --- for analysis of lipid leaflets via MDAnalysis.analysis.leaflet
   * [GridDataFormats](http://pypi.python.org/pypi/GridDataFormats)
-  * [netcdf4-python](http://code.google.com/p/netcdf4-python/): If you want to operate on AMBER binary trajectories (NetCDF) then you will need to have working [NetCDF](http://code.google.com/p/mdanalysis/wiki/netcdf) support based on the netcdf4-python package.
+  * [netcdf4-python](http://code.google.com/p/netcdf4-python/): If you want to operate on AMBER binary trajectories (NetCDF) then you will need to have working [NetCDF](netcdf) support based on the netcdf4-python package.
     * If you get a _ValueError: did not find HDF5 headers_ during      installation then you should install the _hdf5 development package_ through your package manager (see below for some hints on how to do this for [Linux](#Linux) and [Mac OS X](#Mac_OS_X)).
 
 
@@ -155,7 +155,7 @@ See also InstallRecipes for "copy & paste" installation instructions for various
 ```
  sudo apt-get install python-scipy python-matplotlib python-biopython  libhdf5-dev 
 ```
-> (If you have issues with the netcdf libraries see the [wiki page on netcdf](http://code.google.com/p/mdanalysis/wiki/netcdf)); the netcdf and libhdf5-dev packages are  required if you want to be able to process AMBER netcdf (binary) trajectories.)
+> (If you have issues with the netcdf libraries see the [wiki page on netcdf](netcdf)); the netcdf and libhdf5-dev packages are  required if you want to be able to process AMBER netcdf (binary) trajectories.)
   * Tested with GNU compilers
 
 

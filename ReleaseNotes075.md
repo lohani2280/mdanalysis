@@ -5,7 +5,7 @@
 MDAnalysis can now be found on [PyPI (MDAnalysis)](http://pypi.python.org/pypi/MDAnalysis), allowing simple installation
 from the internet. Metadata was added to setup to facilitate PyPI
 upload and pages on the wiki describe how to do this.
-In addition, [Debian/Ubuntu packages](http://code.google.com/p/mdanalysis/wiki/Install#Installing_using_binary_packages_%28for_Ubuntu/Debian_users%29) are also available.
+In addition, [Debian/Ubuntu packages](Install#Installing_using_binary_packages_%28for_Ubuntu/Debian_users%29) are also available.
 
 Note that in order to run UnitTests one needs the separate package [MDAnalysisTests](MDAnalysisTests) (with the same release number 0.7.5).
 

@@ -19,6 +19,6 @@ Before asking us to pull check the following:
 
   * Run the unit tests: they should all pass (or at least pass as well as the unmodified develop branch)
   * Have you added [test cases](UnitTests) for your own code? Check that your tests pass with your changes (and fail without them).
-  * Have you [added documentation](https://code.google.com/p/mdanalysis/wiki/WritingDocumentation) (Python doc strings) that describe your new feature?
+  * Have you [added documentation](WritingDocumentation) (Python doc strings) that describe your new feature?
   * Have you updated the CHANGELOG (and AUTHORS when you're contributing your first commit)?
   * Have you committed changes in self-contained commits (ideally, one feature per commit) with a good, expressive log message that references any [Issues](http://issues.mdanalysis.org) that you've been working on?

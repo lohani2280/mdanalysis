@@ -44,7 +44,7 @@ Fetch and parse (by Jan Domanski):
 ```
 #!/usr/bin/env python
 # Author: Jan Domanski
-# see http://code.google.com/p/mdanalysis/wiki/DownloadStatistics
+# see DownloadStatistics
 
 import mechanize
 from bs4 import BeautifulSoup
@@ -82,7 +82,7 @@ Plotting code (by Oliver Beckstein): [plot\_download\_stats.py](http://wiki.mdan
 # Author: Oliver Beckstein
 # Year: 2012
 # Licence: Released into the Public Domain
-# see http://code.google.com/p/mdanalysis/wiki/DownloadStatistics
+# see DownloadStatistics
 
 """Simple script to process the download statistics for MDAnalysis
 
@@ -96,7 +96,7 @@ Plotting code (by Oliver Beckstein): [plot\_download\_stats.py](http://wiki.mdan
 
 3. Look at the figure downloads.pdf
 
-See  http://code.google.com/p/mdanalysis/wiki/DownloadStatistics.
+See  DownloadStatistics.
 
 """
 

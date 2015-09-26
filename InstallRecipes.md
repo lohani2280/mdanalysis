@@ -197,7 +197,7 @@ Install all the scientific packages (note changes: python-dev and cython)
 ```
 ([NumPy](http://numpy.scipy.org/) is an absolutely essential component.
 
-Get the sources from http://code.google.com/p/mdanalysis (either [via subversion checkout](http://code.google.com/p/mdanalysis/wiki/Install) or a tarball). I am using the development trunk from subversion (svn):
+Get the sources from http://code.google.com/p/mdanalysis (either [via subversion checkout](Install) or a tarball). I am using the development trunk from subversion (svn):
 ```
  svn checkout http://mdanalysis.googlecode.com/svn/trunk/ mdanalysis
  cd mdanalysis
@@ -331,7 +331,7 @@ Install all the scientific packages, including the [ATLAS linear algebra library
 ([NumPy](http://numpy.scipy.org/) is an absolutely essential component. Here I use sse2 optimized ATLAS but you might want to choose a different package for your architecture; find possible choices with `aptitude search atlas`.)
 
 
-Get the sources from http://code.google.com/p/mdanalysis (either [via subversion checkout](http://code.google.com/p/mdanalysis/wiki/Install) or a tarball). I am using the development trunk from subversion (svn):
+Get the sources from http://code.google.com/p/mdanalysis (either [via subversion checkout](Install) or a tarball). I am using the development trunk from subversion (svn):
 ```
  svn checkout http://mdanalysis.googlecode.com/svn/trunk/ mdanalysis
  cd mdanalysis
@@ -509,7 +509,7 @@ python
 >>> import MDAnalysis.tests
 >>> MDAnalysis.tests.test(label="full")
 ```
-This will take some time. If you are impatient see the [UnitTests](http://code.google.com/p/mdanalysis/wiki/UnitTests) page for ways of running on multiple cores or only running a subset of the tests.
+This will take some time. If you are impatient see the [UnitTests](UnitTests) page for ways of running on multiple cores or only running a subset of the tests.
 
 ## Lion Mac OS X 10.7.5 ##
 [Issue 142](http://issues.mdanalysis.org/142) describes that on a Lion installation with MacPorts the Python 2.7 installation appears broken with the following error
@@ -573,7 +573,7 @@ Install all the scientific packages
 (Note: _scipy-py26_ also installs its dependency _scipy-core-py26_ which is [NumPy](http://numpy.scipy.org/), an absolutely essential component.)
 
 
-Get the sources from http://code.google.com/p/mdanalysis (either [via subversion checkout](http://code.google.com/p/mdanalysis/wiki/Install) or a tarball). I am using the development trunk from subversion (svn):
+Get the sources from http://code.google.com/p/mdanalysis (either [via subversion checkout](Install) or a tarball). I am using the development trunk from subversion (svn):
 ```
  svn checkout http://mdanalysis.googlecode.com/svn/trunk/ mdanalysis
  cd mdanalysis
@@ -622,7 +622,7 @@ Install all the scientific packages
 [NumPy](http://numpy.scipy.org/) is an absolutely essential component.
 
 
-Get the sources from http://code.google.com/p/mdanalysis (either [via subversion checkout](http://code.google.com/p/mdanalysis/wiki/Install) or a tarball). I am using the development trunk from subversion (svn):
+Get the sources from http://code.google.com/p/mdanalysis (either [via subversion checkout](Install) or a tarball). I am using the development trunk from subversion (svn):
 ```
  svn checkout http://mdanalysis.googlecode.com/svn/trunk/ mdanalysis
  cd mdanalysis

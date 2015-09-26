@@ -24,7 +24,7 @@ Remember to
 #### Test cases ####
 The best bug reports are the ones that a developer can reproduce on their own machine – then it is easy to figure out very quickly what goes wrong. Thus, any bug report that provides _all information to reproduce the bug_ is often fixed quickly.
 
-If you can, [include a test case](http://code.google.com/p/mdanalysis/wiki/ContributingCode#Test_cases) with your bug report:
+If you can, [include a test case](ContributingCode#Test_cases) with your bug report:
   * The Python code to reproduce the bug.
   * Any data file that might be needed (as an attachment to the Issue ticket).
     * Keep the _file size small_ or see if you can reproduce it with one of the data files already included (`MDAnalysis.tests.datafiles`)

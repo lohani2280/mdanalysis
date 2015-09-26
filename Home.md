@@ -54,7 +54,7 @@ See the **[Online Documentation](https://pythonhosted.org/MDAnalysis/index.html)
 
 MDAnalysis also comes with [example scripts](https://github.com/MDAnalysis/mdanalysis/tree/master/package/examples) and fairly general [analysis modules](https://github.com/MDAnalysis/mdanalysis/tree/master/package/MDAnalysis/analysis), available as [MDAnalysis.analysis](https://pythonhosted.org/MDAnalysis/documentation_pages/analysis_modules.html) — you can use this code as a starting point for your own analysis scripts.
 
-Finally, you can also ask for advice or help on the [mdnalysis-discussion](http://groups.google.com/group/mdnalysis-discussion) mailing list. If you find **bugs** or want to **request enhancements** please [file a report](http://code.google.com/p/mdanalysis/wiki/ReportingProblems) in the [Issue Tracker](https://github.com/MDAnalysis/mdanalysis/issues).
+Finally, you can also ask for advice or help on the [mdnalysis-discussion](http://groups.google.com/group/mdnalysis-discussion) mailing list. If you find **bugs** or want to **request enhancements** please [file a report](ReportingProblems) in the [Issue Tracker](https://github.com/MDAnalysis/mdanalysis/issues).
 
 ## Citation ##
 When using MDAnalysis in published work, please cite

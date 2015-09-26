@@ -7,7 +7,7 @@ In order to run the UnitTests, **MDAnalysisTests** must be installed together wi
 ## Availability and installation ##
 
 <ol>
-<li>You can always download the latest release from the <a href='http://code.google.com/p/mdanalysis/downloads/list'>Download</a> page. Make sure to pick the <i>same release number as the version of MDAnalysis</i> that you have installed. Then unpack and install with the usual Python commands:<br>
+<li>You can always download the latest release from the <a href='http://download.mdanalysis.org/'>Download</a> page. Make sure to pick the <i>same release number as the version of MDAnalysis</i> that you have installed. Then unpack and install with the usual Python commands:<br>
 <pre><code>curl -O MDAnalysisTests-0.7.5.tar.gz    # download from the commandline<br>
 tar -zxvf MDAnalysisTests-0.7.5.tar.gz  # unpack<br>
 cd MDAnalysisTests-0.7.5<br>

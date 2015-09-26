@@ -44,7 +44,7 @@ The module doc string can be a short sentence describing what the module does or
 
 ## Location of documentation ##
   * Code is documented through Python doc strings (see [PEP 257](http://www.python.org/dev/peps/pep-0257/) for good conventions); thus each Python file should contain some documentation.
-  * The [Online Documentation](http://docs.mdanalysis.org/index.html) is generated from [reStructuredText](http://docutils.sourceforge.net/rst.html) in [doc/sphinx/source/documentation\_pages](http://code.google.com/p/mdanalysis/source/browse/#git%2Fpackage%2Fdoc%2Fsphinx%2Fsource%2Fdocumentation_pages).
+  * The [Online Documentation](http://docs.mdanalysis.org/index.html) is generated from [reStructuredText](http://docutils.sourceforge.net/rst.html) in [doc/sphinx/source/documentation\_pages](https://github.com/MDAnalysis/mdanalysis/tree/develop/package/doc/sphinx/source/documentation_pages).
   * The googlecode pages also hold documentation in the [MDAnalysis Wiki](http://code.google.com/p/mdanalysis/w/list) (but as far as the user docs go, they are being phased out in favour of the [Online Docs](http://docs.mdanalysis.org/index.html)).
 
 

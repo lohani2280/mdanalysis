@@ -16,7 +16,7 @@ The 0.7.4 release of MDAnalysis has _considerably shrunk in size_: Instead of a 
 ## Fixes ##
 
   * fixed [Issue 74](http://issues.mdanalysis.org/74) (bug in AMBER topology parser which would show up for certain numbers of input lines; thanks to htaoyu1)
-  * fix for [Issue 48](http://issues.mdanalysis.org/48) (sparse contact\_matrix in [distances.py](http://code.google.com/p/mdanalysis/source/browse/MDAnalysis/analysis/distances.py) was slow as written in pure Python; was optimized in C code using [scipy.weave](http://www.scipy.org/Weave))
+  * fix for [Issue 48](http://issues.mdanalysis.org/48) (sparse contact\_matrix in [distances.py](https://github.com/MDAnalysis/mdanalysis/MDAnalysis/analysis/distances.py) was slow as written in pure Python; was optimized in C code using [scipy.weave](http://www.scipy.org/Weave))
   * HydrogenBondingAnalysis: donor atom name CO --> O (proper backbone oxygen) and acceptor NH -> N; without the fix one misses most of the backbone H-bonds
   * [alignto()](http://docs.mdanalysis.org/documentation_pages/analysis/align.html?highlight=alignto#MDAnalysis.analysis.align.alignto) and [rms\_fit\_traj()](http://mdanalysis.googlecode.com/svn/trunk/doc/html/documentation_pages/analysis/align.html?highlight=rms_fit_trj#MDAnalysis.analysis.align.rms_fit_trj): order of mobile and reference selection was reversed when supplied as a tuple `(sel1, sel2)`
 

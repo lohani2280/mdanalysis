@@ -30,7 +30,7 @@ MDAnalysis.tests.test()
   * FIXED bug in PDB.PDBWriter and CRD.CRDWriter
   * use SloppyPDB in order to cope with large PDB files
   * `core.distances.self_distance_array()` is now behaving the same way as `distance_array()`
-  * defined Trajectory API (see [MDAnalysis/coordinates/\_\_init\_\_.py](http://code.google.com/p/mdanalysis/source/browse/MDAnalysis/coordinates/__init__.py))
+  * defined Trajectory API (see [MDAnalysis/coordinates/\_\_init\_\_.py](https://github.com/MDAnalysis/mdanalysis/MDAnalysis/coordinates/__init__.py))
   * renamed `_dcdtest` to `dcdtimeseries` (will not affect old code)
   * unit tests added (still need more test cases)
 

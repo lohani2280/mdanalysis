@@ -20,7 +20,7 @@ Release 0.7.2 of MDAnalysis (31 March 2011).
 
 
 ## Fixes ##
-  * installation: removed dependency on [Cython](http://cython.org); developer should use [setup\_developer.py](http://code.google.com/p/mdanalysis/source/browse/setup_developer.py) instead of [setup.py](http://code.google.com/p/mdanalysis/source/browse/setup.py) ([Issue 66](http://issues.mdanalysis.org/66))
+  * installation: removed dependency on [Cython](http://cython.org); developer should use [setup\_developer.py](https://github.com/MDAnalysis/mdanalysis/setup_developer.py) instead of [setup.py](https://github.com/MDAnalysis/mdanalysis/setup.py) ([Issue 66](http://issues.mdanalysis.org/66))
   * Fixed a problem with the strict [PDBReader](http://docs.mdanalysis.org/documentation_pages/coordinates/PDB.html?highlight=pdbreader#MDAnalysis.coordinates.PDB.PDBReader): raised exception when the pdb did not contain a segid
   * Support for PDBs with 4 character resnames and segID output when writing ([Issue 63](https://code.google.com/p/mdanalysis/issues/detail?id=63)) --- makes the (default) PrimitivePDBReader/Writer more suitable for NAMD/CHARMM but breaks [strict PDB standard](http://www.wwpdb.org/documentation/format32/v3.2.html). If you need full PDB reading capabilities, use the strict [PDBReader](http://docs.mdanalysis.org/documentation_pages/coordinates/PDB.html?highlight=pdbreader#MDAnalysis.coordinates.PDB.PDBReader) (i.e. use `Universe(..., permissive=False)`).
   * fixed bug in (experimental) phi and psi selections

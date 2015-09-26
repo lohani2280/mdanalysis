@@ -2,7 +2,7 @@
 
 # Applications #
 
-MDAnalysis is a library that facilitates the construction of software tools that can perform novel analysis tasks. Some tools are shipped with MDAnalysis in the [MDAnalysis.analysis](http://pythonhosted.org/MDAnalysis/documentation_pages/analysis_modules.html) module and [example scripts](Examples) in the [examples directory of the source distribution](http://code.google.com/p/mdanalysis/source/browse/package#package%2Fexamples). There are also self-contained Python packages that depend on MDAnalysis but are installed separately (effectively since MDAnalysis 0.8). We refer to them as **applications**.
+MDAnalysis is a library that facilitates the construction of software tools that can perform novel analysis tasks. Some tools are shipped with MDAnalysis in the [MDAnalysis.analysis](http://pythonhosted.org/MDAnalysis/documentation_pages/analysis_modules.html) module and [example scripts](Examples) in the [examples directory of the source distribution](https://github.com/MDAnalysis/mdanalysis/tree/develop/package/examples). There are also self-contained Python packages that depend on MDAnalysis but are installed separately (effectively since MDAnalysis 0.8). We refer to them as **applications**.
 
 ## What is a MDAnalysis application? ##
 A MDAnalysis application is a self-contained Python package that makes use of MDAnalysis for some of its core functionality but is distributed independently from the MDAnalysis package itself.

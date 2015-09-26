@@ -39,9 +39,9 @@ easy_install -f http://code.google.com/p/mdanalysis/downloads/list MDAnalysis[te
   * defined trajectory API
   * deprecated `DCD.dcd_header` was renamed to `DCD._dcd_header`
   * XTC and TRR compute numframes by iterating through trajectory (slow!)
-  * introduced units: base units are ps (time) and Angstrom (length); see [core.flags](http://code.google.com/p/mdanalysis/source/browse/branches/release-0-6-2/MDAnalysis/core/__init__.py#199)
+  * introduced units: base units are ps (time) and Angstrom (length); see [core.flags](https://github.com/MDAnalysis/mdanalysis/branches/release-0-6-2/MDAnalysis/core/__init__.py#199)
   * XTC and TRR automatically convert between native Gromacs units (ps, nm) and base units (uses `core.flags['convert_gromacs_lengths'] = True`)
   * more test cases (see UnitTests)
   * _really_ FIXED [Issue 16](http://issues.mdanalysis.org/16) (can `easy_install` from tar file)
   * FIXED a bug in AtomGroup.principalAxes() (in [r297](https://code.google.com/p/mdanalysis/source/detail?r=297))
-  * added dependency information to [setup.py](http://code.google.com/p/mdanalysis/source/browse/branches/release-0-6-2/setup.py) ([numpy](http://numpy.scipy.org) by default; [nose](http://somethingaboutorange.com/mrl/projects/nose) for tests)
+  * added dependency information to [setup.py](https://github.com/MDAnalysis/mdanalysis/branches/release-0-6-2/setup.py) ([numpy](http://numpy.scipy.org) by default; [nose](http://somethingaboutorange.com/mrl/projects/nose) for tests)

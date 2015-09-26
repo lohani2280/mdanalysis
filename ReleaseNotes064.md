@@ -9,7 +9,7 @@
   * Simple 'chained reader' which enables a Universe to transparently read a list of trajectory files ([Issue 39](http://issues.mdanalysis.org/39)).
   * Additional methods for _AtomGroup_: numberOfResidues(), resids(), resnames()
   * analysis
-    * new bilayer analysis script for membrane composition on a per-leaflet basis ([examples/membrane-composition.py](http://code.google.com/p/mdanalysis/source/browse/branches/release-0-6-4/examples/membrane-composition.py))
+    * new bilayer analysis script for membrane composition on a per-leaflet basis ([examples/membrane-composition.py](https://github.com/MDAnalysis/mdanalysis/branches/release-0-6-4/examples/membrane-composition.py))
     * renamed examples/leaflet.py to membrane-leaflets.py
 
 

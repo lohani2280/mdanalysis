@@ -8,7 +8,7 @@ Notes on the test data are in the report for [Issue 87](http://issues.mdanalysis
 
 MDAnalysis contains a large number of tests of the core functionality, described in UnitTests. For many tests we are using real simulation trajectories and structures to check that everything is working as expected. These tests make it very unlikely that new code or fixes introduce new bugs. The test trajectories are also used in examples throughout the documentation, allowing anyone to try out MDAnalysis right away.
 
-The test trajectories are fairly big (about 20 GB) so we put them in a package separate from MDAnalysis. If you want to run the UnitTests or try out the examples then you must install **MDAnalysisTestData** (as described in [INSTALL](http://code.google.com/p/mdanalysis/source/browse/branches/MDAnalysisTestData/INSTALL).
+The test trajectories are fairly big (about 20 GB) so we put them in a package separate from MDAnalysis. If you want to run the UnitTests or try out the examples then you must install **MDAnalysisTestData** (as described in [INSTALL](https://github.com/MDAnalysis/mdanalysis/branches/MDAnalysisTestData/INSTALL).
 
 # Installation #
 You can download a file such as [MDAnalysisTestData-0.7.4.tar.gz](http://code.google.com/p/mdanalysis/downloads/detail?name=MDAnalysisTestData-0.7.4.tar.gz&can=2&q=#makechanges) from the [Download](http://code.google.com/p/mdanalysis/downloads/list) page, unpack it and install as usual:

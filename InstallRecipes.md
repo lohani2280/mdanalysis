@@ -1,13 +1,13 @@
 [Installing MDAnalysis](Install) can be a bit daunting at first because it requires a fairly complete python environment that is set up for scientific calculations.
 
-Even though the [Install](Install) page and the [INSTALL](http://code.google.com/p/mdanalysis/source/browse/INSTALL) file in the distribution explain the basic things that are needed to get MDAnalysis up and running, we found that sometimes users still struggle to make everything work.
+Even though the [Install](Install) page and the [INSTALL](https://github.com/MDAnalysis/mdanalysis/INSTALL) file in the distribution explain the basic things that are needed to get MDAnalysis up and running, we found that sometimes users still struggle to make everything work.
 
 On this page we want to provide example installation scenarios that worked for people. This should provide new users with hints at what might work for them. With a bit of luck it becomes as simple as cut and paste but in any case it should provide inspiration for what to look out for.
 
 _Please contribute your own successful installation protocols to this page by editing it directly or adding them as comments._ Others will thank you. Alternatively, email them to one of the maintainers or add them to the comments on this page. Thank you!
 
 # Changes with releases #
-The recipes below typically mention the release of MDAnalysis. Installation can change between releases thus you should always check the release and the release notes (either by looking at the [CHANGELOG](http://code.google.com/p/mdanalysis/source/browse/CHANGELOG) in the distribution or the release notes here on the wiki, accessible through the contents panel on the left hand side).
+The recipes below typically mention the release of MDAnalysis. Installation can change between releases thus you should always check the release and the release notes (either by looking at the [CHANGELOG](https://github.com/MDAnalysis/mdanalysis/CHANGELOG) in the distribution or the release notes here on the wiki, accessible through the contents panel on the left hand side).
 
 Also note the following:
   1. From **release >0.7.4 onwards**, the source code repository was [changed from subversion to git](svn2gitConversion) and hence source code checkouts need to be done with git (as described in the [source code checkout instructions](http://code.google.com/p/mdanalysis/source/checkout)).

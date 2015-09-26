@@ -76,7 +76,7 @@ u = Universe("system.pqr")
 u.atoms.write("system.pdb")
 ```
 
-In order to **convert trajectories** you obtain a trajectory Writer for the desired output, loop through the input trajectory frame by frame, and write each frame to the output (see [dcd2xtc.py](http://code.google.com/p/mdanalysis/source/browse/package/examples/dcd2xtc.py) for the conversion from DCD to XTC. The core of this short script is:
+In order to **convert trajectories** you obtain a trajectory Writer for the desired output, loop through the input trajectory frame by frame, and write each frame to the output (see [dcd2xtc.py](https://github.com/MDAnalysis/mdanalysis/package/examples/dcd2xtc.py) for the conversion from DCD to XTC. The core of this short script is:
 ```python
 from MDAnalysis import Universe, Writer
 u = Universe("system.psf", "system.dcd")
@@ -90,14 +90,14 @@ w.close_trajectory()
 
 ## Simple scripts ##
 
-Have a look at the [examples](http://code.google.com/p/mdanalysis/source/browse/#git%2Fpackage%2Fexamples) subdirectory for some other examples.
+Have a look at the [examples](https://github.com/MDAnalysis/mdanalysis/tree/develop/package/examples) subdirectory for some other examples.
 Note: These examples were all written using numpy version 1.0.2. Older versions of numpy may not work correctly (since the api wasn't finalized until 1.0). Some of the scripts are incomplete in that one has to enter a psf and a dcd file somewhere at the top. The main purpose is to give an idea of how to quickly code up some interesting analysis tasks with the help of MDAnalysis.
 
-  * Rotational autocorrelation ([rotational\_autocorrelation.py](http://code.google.com/p/mdanalysis/source/browse/package/examples/rotational_autocorrelation.py))
-  * Lipid order parameters ([lipid\_order\_parameters.py](http://code.google.com/p/mdanalysis/source/browse/package/examples/lipid_order_parameters.py))
-  * Potential profile across double bilayer system ([potential\_profile.py](http://code.google.com/p/mdanalysis/source/browse/package/examples/potential_profile.py))
-  * Radial distribution function of water in a pure water box ([radial\_distribution\_function.py](http://code.google.com/p/mdanalysis/source/browse/package/examples/radial_distribution_function.py))
-  * Schlitter entropy calculated based using the determinant ([schlitter\_determ.py](http://code.google.com/p/mdanalysis/source/browse/package/examples/schlitter_determ.py)) or by calculating the eigenvalues ([schlitter\_quasiharmonic.py](http://code.google.com/p/mdanalysis/source/browse/package/examples/schlitter_quasiharmonic.py)) of the covariance matrix.
+  * Rotational autocorrelation ([rotational\_autocorrelation.py](https://github.com/MDAnalysis/mdanalysis/package/examples/rotational_autocorrelation.py))
+  * Lipid order parameters ([lipid\_order\_parameters.py](https://github.com/MDAnalysis/mdanalysis/package/examples/lipid_order_parameters.py))
+  * Potential profile across double bilayer system ([potential\_profile.py](https://github.com/MDAnalysis/mdanalysis/package/examples/potential_profile.py))
+  * Radial distribution function of water in a pure water box ([radial\_distribution\_function.py](https://github.com/MDAnalysis/mdanalysis/package/examples/radial_distribution_function.py))
+  * Schlitter entropy calculated based using the determinant ([schlitter\_determ.py](https://github.com/MDAnalysis/mdanalysis/package/examples/schlitter_determ.py)) or by calculating the eigenvalues ([schlitter\_quasiharmonic.py](https://github.com/MDAnalysis/mdanalysis/package/examples/schlitter_quasiharmonic.py)) of the covariance matrix.
 
 ## Analysis module ##
 
@@ -107,7 +107,7 @@ import MDAnalysis.analysis
 help(MDAnalysis.analysis)           # see what's available
 import MDAnalysis.analysis.contacts # use the native-contacts analysis
 ```
-The [source code of the analysis sub-modules](http://code.google.com/p/mdanalysis/source/browse/#git%2Fpackage%2FMDAnalysis%2Fanalysis) can be used to learn how to do fairly complicated things with MDAnalysis.
+The [source code of the analysis sub-modules](https://github.com/MDAnalysis/mdanalysis/tree/develop/package/MDAnalysis/analysis) can be used to learn how to do fairly complicated things with MDAnalysis.
 
 Note that some of the sub-modules require additional python packages. One can automatically install dependencies for the _analysis_ optional package with (something like... see [InstallRecipes](InstallRecipes))
 ```

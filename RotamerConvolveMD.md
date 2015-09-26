@@ -3,9 +3,9 @@ This package analyses molecular dynamics trajectories or conformational ensemble
   * Author:    Philip W Fowler, Oliver Beckstein
   * Year:      2013
   * Licence:   GNU Public Licence, version 2 (or higher)
-  * Copyright: © 2013 Philip W Fowler, Oliver Beckstein
-  * Citation:  LS Stelzl, PW Fowler, MSP Sansom, O Beckstein. _J Mol Biol_ 426 (2014), 735–751 doi:10.1016/j.jmb.2013.10.024  (see Ref 3)
-  * Source code: https://mdanalysis.googlecode.com
+  * Copyright: � 2013 Philip W Fowler, Oliver Beckstein
+  * Citation:  LS Stelzl, PW Fowler, MSP Sansom, O Beckstein. _J Mol Biol_ 426 (2014), 735--751 doi:10.1016/j.jmb.2013.10.024  (see Ref 3)
+  * Source code: https://github.com/MDAnalysis/RotamerConvolveMD
   * Packages: https://pypi.python.org/pypi/RotamerConvolveMD
 
 This package contains the MTSL rotamer library R1A\_298K provided by Gunnar Jeschke, which is published under the GPL with his permission.
@@ -20,7 +20,7 @@ Double electron electron spin resonance (DEER) is an EPR technique for measuring
   1. calculates all (weighted) distance pairs between the remaining rotamers and
   1. thereby estimates a distance distribution for that structure.
 
-The code was written in Python using the MDAnalysis library<sup>1</sup> and a published rotamer library for MTSL<sup>2</sup>. It is available for download from the MDAnalysis website, http://mdanalysis.googlecode.com.
+The code was written in Python using the MDAnalysis library<sup>1</sup> and a published rotamer library for MTSL<sup>2</sup>. It is available for download from the MDAnalysis website, http://mdanalysis.googlecode.com .
 
 Our approach improves upon the existing method<sup>2</sup> by increasing computational efficiency and implementing, via the MDAnalysis library, analysis of ensembles of hundreds of structures, which allowed us to estimate distance distributions for entire simulation trajectories.
 
@@ -37,7 +37,7 @@ or
 ```
 easy_install RotamerConvolveMD
 ```
-This should also install MDAnalysis if needed.  If problems arise, try installing MDAnalysis first (see http://mdanalysis.googlecode.com for help).
+This should also install MDAnalysis if needed.  If problems arise, try installing MDAnalysis first (see http://www.mdanalysis.org for help).
 
 ## From source ##
 Get the source (either as a tarball or a git checkout) and install the package from its own top directory with
@@ -46,7 +46,7 @@ python setup.py install --user
 ```
 (see also the file INSTALL)
 
-This will automatically install MDAnalysis and other dependencies. If problems arise, try installing MDAnalysis first (see http://mdanalysis.googlecode.com for help).
+This will automatically install MDAnalysis and other dependencies. If problems arise, try installing MDAnalysis first (see http://www.mdanalysis.org for help).
 
 Analysis is performed with the script `convolve-mtss-rotamers.py`, which will have been installed in your `bin` directory. You might have to add the bin directory to your PATH. Consult your Python documentation for the details although often this will be `~/.local/bin` (for a typical `--user` installation or `/usr/local/bin` for site-wide installation).
 

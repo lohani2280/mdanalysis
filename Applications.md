@@ -17,9 +17,8 @@ A typical application consists of
 
 ## How to download and install an application? ##
 There are typically multiple ways to obtain and install from source although not all of them might be applicable for all applications:
-  1. Released versions of the application will have a source tarball on the [Downloads](http://code.google.com/p/mdanalysis/downloads/list) page. Download the tar file, unpack, `cd` into the unpacked directory, and run `python setup.py install` (or similar).
   1. If the application is hosted on the [Python package index](https://pypi.python.org/pypi) then you might be able to simply say `pip install APPLICATION-NAME` or `easy_install APPLICATION-NAME`.
-  1. You should always be able to obtain the source via git by checking out the master branch. Applications live in the top-level `applications` directory.
+  1. You should always be able to obtain the source. Applications are hosted at https://github.com/MDAnalysis.
 
 If you haven't installed MDAnalysis itself yet then the application will try to do this automatically. If this fails then you should first try to [install MDAnalysis yourself](Install) and then install the application. Feel free to ask for help on the [user mailing list](http://groups.google.com/group/mdnalysis-discussion).
 

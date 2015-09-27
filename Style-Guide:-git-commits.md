@@ -8,3 +8,4 @@ The guidelines for committing to the MDAnalysis [[git]] repository are part of t
     * optionally, add additional more verbose descriptions; paragraphs or bullet lists (with `-` or `*`) are good
     * manually break lines at 80 characters
     * manually indent bullet lists
+    * See also Tim Pope's [A Note About Git Commit Messages](http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html) for rationale.

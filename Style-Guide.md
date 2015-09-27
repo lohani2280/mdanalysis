@@ -1,6 +1,6 @@
 # Code style guidelines
 
-[See here](https://github.com/MDAnalysis/mdanalysis/issues/404) for the original discussion on this
+(For background and history see [Issue #404](https://github.com/MDAnalysis/mdanalysis/issues/404), which contains the original discussion on the Style Guide.)
 
 ## Coding Style
 

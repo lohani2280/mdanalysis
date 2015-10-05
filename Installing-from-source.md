@@ -117,11 +117,12 @@ However, the developer installation above is probably cleaner.
 
 # Additional non-standard packages #
 
-See the operating system specific notes below for hints how to get the necessary packages through the native package management system. Please add your own (eg for RPM based systems which the developers are not using heavily).
+See the operating system specific notes below for hints how to get the necessary packages through the native package management system. Please add your own (e.g. for RPM based systems, which the developers are not using heavily).
 
   * _python-dev_ includes `Python.h`, which is required for compiling.
   * _numpy_ is used at the compilation stage to find maths libraries.
-  * _scipy_, _biopython_, _netcdf4-python_ are only needed when one wants to use all MDAnalysis functions but are not required for compiling.
+  * _biopython_ is used for strict PDB file parsing and the KD-tree library
+  * _scipy_, _netcdf4-python_ are only needed when one wants to use all MDAnalysis functions but are not required for compiling.
 
 
 ## Required python packages ##
@@ -129,7 +130,7 @@ In order to make _full use_ of the library in your own python code you will need
   * [numpy](http://numpy.scipy.org/) of version 1.5 or greater
   * [scipy](http://www.scipy.org/)
   * [matplotlib](http://matplotlib.sourceforge.net/)
-  * [BioPython](http://biopython.org/)'s Bio.PDB (MDAnalysis will complain if you don't have Biopython installed (even though it is not used by default anymore))
+  * [BioPython](http://biopython.org/)
   * [networkx](http://networkx.lanl.gov/) --- for analysis of lipid leaflets via MDAnalysis.analysis.leaflet
   * [GridDataFormats](http://pypi.python.org/pypi/GridDataFormats)
   * [netcdf4-python](http://code.google.com/p/netcdf4-python/): If you want to operate on AMBER binary trajectories (NetCDF) then you will need to have working [NetCDF](netcdf) support based on the netcdf4-python package.
@@ -148,31 +149,34 @@ See also InstallRecipes for "copy & paste" installation instructions for various
 
 ## Linux ##
   * Install prerequisite packages on **[Ubuntu](http://www.ubuntu.com/)** or **[Debian](http://www.debian.org/)** with
-```
- sudo apt-get install python-dev python-cython python-numpy g++
-```
-> Install packages needed for full functionality
-```
- sudo apt-get install python-scipy python-matplotlib python-biopython  libhdf5-dev 
-```
-> (If you have issues with the netcdf libraries see the [wiki page on netcdf](netcdf)); the netcdf and libhdf5-dev packages are  required if you want to be able to process AMBER netcdf (binary) trajectories.)
+
+    ```
+    sudo apt-get install python-dev python-cython python-numpy g++
+    ```
+
+  * Install packages needed for full functionality
+
+    ```
+    sudo apt-get install python-scipy python-matplotlib python-biopython  libhdf5-dev 
+    ```
+
+    (If you have issues with the netcdf libraries see the [wiki page on netcdf](netcdf)); the `netcdf` and `libhdf5-dev` packages are  required if you want to be able to process AMBER netcdf (binary) trajectories.)
+
   * Tested with GNU compilers
-
-
 
 ## Mac OS X ##
 ### Mac Ports ###
 Tested 10.6.8+MacPorts
 ```
-port install  py26-numpy  py26-cython
-port install  py26-scipy  py26-matplotlib py26-biopython hdf5 netcdf+dap+netcdf4
+port install  py27-numpy  py27-cython
+port install  py27-scipy  py27-matplotlib py27-biopython hdf5 netcdf+dap+netcdf4
 ```
-(The netcdf and libhdf5-dev packages are only required if you want to be able to process AMBER netcdf (binary) trajectories.)
+(The `netcdf` and `libhdf5-de`v packages are only required if you want to be able to process AMBER netcdf (binary) trajectories.)
 
-Other packages such as networkx and GridDataFormats are automagically installed when running {{python setup.py install}} (or `easy_install` or `pip`).
+Other packages such as `networkx` and `GridDataFormats` are automagically installed when running `python setup.py install` (or `pip`).
 
 ### fink ###
-Tested with Mac OS X 10.4.11+fink (has not been tested since 2011 — feedback is welcome)
+Tested with Mac OS X 10.4.11+fink (**has not been tested since 2011 — feedback is welcome**)
 
 Install prerequisite packages using [fink](http://www.finkproject.org/)
 ```

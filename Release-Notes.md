@@ -1,5 +1,6 @@
 Release notes for each release of MDAnalysis are linked below:
 
+* [[0.12.0|ReleaseNotes0120]]
 * [[0.11.0|ReleaseNotes0110]]
 * [[0.10.0|ReleaseNotes0100]]
 * [[0.9.2|ReleaseNotes092]]

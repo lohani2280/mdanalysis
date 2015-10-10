@@ -6,11 +6,11 @@ Fixes
   * Fixed OpenMP detection on Linux/OSX #459
   * Fixed reading of LAMMPS trajectory times: default unit ought
     to be fs and not ps
-  * Fixed setting of dt for DCDReader (and LAMMPS DCDReader) with
-    keyword argument Universe(..., dt=<dt>)
-  * Fixed a bug in topology.core.guess_atom_element where a
+  * Fixed setting of `dt` for `DCDReader` (and LAMMPS DCDReader) with
+    keyword argument `Universe(..., dt=<dt>)`
+  * Fixed a bug in `topology.core.guess_atom_element` where a
     single digit atom name would raise an IndexError (#476)
-  * Fixed numpy -> np in LeafletFinder
+  * Fixed numpy -> np in `LeafletFinder`
 
 ## AUTHORS
 

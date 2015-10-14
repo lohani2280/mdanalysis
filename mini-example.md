@@ -1,3 +1,4 @@
+## RMSF
 Calculation of the RMSF:
 
 ```python
@@ -35,4 +36,21 @@ ax.set_xlabel("Residue")
 ax.set_ylabel(r"C$_\alpha$ RMSF ($\AA$)")
 ax.set_xlim(1, max(ca.residues.resids))
 fig.savefig("ca_rmsf.pdf")
+```
+
+## LeafletFinder
+```python
+import MDAnalysis as mda
+import networkx as nx 
+from MDAnalysis.lib.distances import distance_array
+
+u = mda.Universe(pdb, xtc)
+headgroup_atoms = u.select_atoms("name P*")
+x = headgroup_atoms.positions
+
+adj = (distance_array(x, x) < 12)
+leaflets = sorted(nx.connected_components(nx.Graph(adj)), key=len, reverse=True)
+
+A_lipids = headgroup_atoms[leaflets[0]].residues 
+B_lipids = headgroup_atoms[leaflets[1]].residues
 ```

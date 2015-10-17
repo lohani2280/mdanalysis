@@ -9,19 +9,13 @@ pip install --upgrade MDAnalysisTests
 ```
 or download the tar file, unpack, and run `python setup.py install`.
 
-Find the path to your MDAnalysisTests install and run the tests with
+Run the tests by invoking
 ```
-path_to_MDAnalysisTests/mda_nosetests -v --parallel-processes=4 --process-timeout=120
+python -c 'from MDAnalysis.tests import test; test(argv=["--exe", "-v", "--parallel-processes=4", "--process-timeout=120"])'
 ```
-(You can increase the number of parallel processes depending on the number of cores available; with 12 cores, the test suite runs within ~90 seconds.)
-The `mda_nosetests` test runner can be found under the MDAnalysisTests install directory. You can find it by runnning `python -c 'import MDAnalysisTests; print MDAnalysisTests.__path__'`.
+(You can increase the number of parallel processes depending on the number of cores available; with 12 cores, the test suite runs within ~90 seconds. You can run in serial by leaving out the `--parallel-processes` flag)
 
-nose's own `nosetests` can be used instead of `mda_nosetests`, with some [limited functionality](#compatibility-with-nosetests).
-
-To run in serial mode (takes almost 30 mins)
-```
-path_to_MDAnalysisTests/mda_nosetests -v
-```
+nose's `nosetests` can be used instead, with some [limited functionality](#compatibility-with-nosetests).
 
 All tests should pass (i.e. no **FAIL**, **ERROR**, or **MEMLEAK**); *SKIPPED* or *KNOWNFAILURE* are ok. For anything that fails or gives an error [ask on the user mailing list](http://users.mdanalysis.org) or [raise an issue](/MDAnalysis/mdanalysis/issues).
 

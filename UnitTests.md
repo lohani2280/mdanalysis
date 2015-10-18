@@ -29,26 +29,33 @@ All tests should pass (i.e. no **FAIL**, **ERROR**, or **MEMLEAK**); *SKIPPED* o
 Use the tests from the [git source repository](Source), which are located in the [testsuite/MDAnalysisTests](https://github.com/MDAnalysis/mdanalysis/tree/develop/testsuite) directory:
 ```
 cd testsuite/MDAnalysisTests
-./mda_nosetests -v --parallel-processes=4 --process-timeout=120
+./mda_nosetests --exe -v --parallel-processes=4 --process-timeout=120
 ```
 (Try increasing the number of processes; with 24 processes on 12 cores (+hyperthreading) this took ~40 seconds; in serial it takes ~30 min).
+
+The syntax to mda_nosetests is the same as for nose's `nosetests`, with some extra flags provided by our plugins (use the `-h` flag for more info).
+To run specific tests just specify the path to the test file:
+```
+./mda_nosetests test_analysis.py
+```
+
+Specific test classes inside test files, and even specific test methods, can also be specified:
+```
+#Test the entire TestContactMatrix class
+./mda_nosetests test_analysis.py:TestContactMatrix
+#Test only test_sparse in the TestContactMatrix class
+./mda_nosetests test_analysis.py:TestContactMatrix.test_sparse
+```
 
 ## Alternatives
 You can install `MDAnalysisTests` and then run the tests anywhere. Extra functionality, afforded by our nose plugins, is added only if the tests are run through the `mda_nosetests` script, or by directly invoking `MDAnalysis.tests.test()` (which is what the 3-line `mda_nosetests` script does under the hood).
 
-You can run all tests in serial from the commandline, like this
+You can run all tests in serial from the python interpreter like this:
+```python
+from MDAnalysis.tests import test
+test(argv=["--exe", "-v"])'
 ```
-python -c 'from MDAnalysis.tests import test; test(argv=["--exe", "-v"])'
-```
-or, equivalently (assuming `mda_nosetests` is in your path)
-```
-mda_nosetests --exe -v
-```
-or from within the Python interpreter: start `python` or `ipython` and type (the `>>>` is the prompt and should not be typed!)
-```
->>> import MDAnalysis.tests
->>> MDAnalysis.tests.test(argv=['--exe', '-v'])
-```
+The elements of the list passed to argv are the same as the possible flags to mda_nosetests.
 
 nose's `nosetests` script can also be used (just make sure you are running the right version)
 ```

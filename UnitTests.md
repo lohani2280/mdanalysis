@@ -55,7 +55,10 @@ You can run all tests in serial from the python interpreter like this:
 from MDAnalysis.tests import test
 test(argv=["--exe", "-v"])'
 ```
-The elements of the list passed to argv are the same as the possible flags to mda_nosetests.
+The elements of the list passed to argv are the same as the possible flags to mda_nosetests. Specific file/class/test testing can be done by supplementing the appropriate test descriptor, for instance:
+```python
+test(argv=["--exe", "-v", "test_analysis.py:TestContactMatrix.test_sparse"])'
+```
 
 nose's `nosetests` script can also be used (just make sure you are running the right version)
 ```

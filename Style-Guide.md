@@ -26,6 +26,26 @@ We recommend that you either use a Python IDE ([PyCharm](https://www.jetbrains.c
 
 To apply the code formatting in an automated way you can also use code formatters. As external tools there are [autopep8](https://github.com/hhatto/autopep8) and [yapf](https://github.com/google/yapf). Most IDE's either have their own code formatter or will work with one of the above through plugins.
 
+## Import modules
+* Try to reduce dependency on external packages; currently, you can use anything in 
+   * `numpy`
+   * `biopython`
+   * `gridDataFormats`
+   * `networkx`
+  because these packages are always installed.
+ 
+  `scipy` is optional and not guaranteed to be installed.
+
+  If you must depend on new external package, discuss its use on the [developer mailing list](http://developers.mdanalysis.org) or as part of the issue/PR. For independent modules in `MDAnalysis.analysis` or `MDAnalysis.visualization`, there are fewer restrictions, except that a user that does not have a required package installed still must be able to import everything else in MDAnalysis. 
+
+* use **absolute imports** in the library (i.e. relative imports must be explicitly indicated), e.g.,
+  ```python
+  from __future__ import absolute_import
+  import .core
+  import ..units
+  ``
+* Do not use *relative imports* (e.g. ``import .datafiles``) in the test suite because it breaks running the tests from inside the test directory [#189](MDAnalysis/mdanalysis/issues/189)
+
 ## Writing Docstrings
 
 Since 0.11.0 we adopted to use the numpy-style doc strings. They are nice to read as normal text and are converted by sphinx to normal ReST through [napoleon](http://sphinxcontrib-napoleon.readthedocs.org/en/latest/index.html). All previous doc-strings are using pure ReST, we use the same approach as for the coding-style here. When you touch a function please update it's docstring to follow the numpy-style. All new function

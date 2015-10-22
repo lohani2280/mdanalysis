@@ -29,15 +29,17 @@ To apply the code formatting in an automated way you can also use code formatter
 ## Importing modules
 
 * Try to reduce dependency on external packages; currently, you can use anything in 
+
    * `numpy`
    * `biopython`
    * `gridDataFormats`
    * `networkx`
+
   because these packages are always installed.
  
   `scipy` is optional and not guaranteed to be installed.
 
-  If you must depend on new external package, discuss its use on the [developer mailing list](http://developers.mdanalysis.org) or as part of the issue/PR. For independent modules in `MDAnalysis.analysis` or `MDAnalysis.visualization`, there are fewer restrictions, except that a user that does not have a required package installed still must be able to import everything else in MDAnalysis. 
+  If you must depend on new external package, discuss its use on the [developer mailing list](http://developers.mdanalysis.org) or as part of the issue/PR. For independent modules in `MDAnalysis.analysis` or `MDAnalysis.visualization`, there are fewer restrictions, except that a user who does not have a required package installed must still be able to import everything else in MDAnalysis. Your module should print a message notifying the user that a specific additional package needs to be installed.
 
 * use **absolute imports** in the library (i.e. relative imports must be explicitly indicated), e.g.,
   ```python

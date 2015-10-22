@@ -80,7 +80,7 @@ def func(arg1, arg2):
 The [[source code|Source#source-code-organisation]] is distributed over the `package` directory (the library and documentation) and the `testsuite` (test code and data files). Commits can contain code in both directories, e.g. a new feature and a test case can be committed together.
 
 ### Compiled code
-MDAnalysis contains compiled code (cython, C, C++) in addition to pure Python. With [[#444|/MDAnalysis/mdanalysis/issues/444]] we agreed on the following layout:
+MDAnalysis contains compiled code (cython, C, C++) in addition to pure Python. With [#444](/MDAnalysis/mdanalysis/issues/444) we agreed on the following layout:
 
 *Place all source files for compiled shared object files into the same folder as the final shared object file.*
 

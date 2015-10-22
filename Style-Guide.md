@@ -4,8 +4,7 @@
 
 ## Coding Style
 
-MDAnalysis is an old project and hasn't used a consistent coding style. Since version
-0.11.0 we are trying to update all the code to conform with [PEP8](http://legacy.python.org/dev/peps/pep-0008/). Our strategy is to update the style every time we touch an old function and thus switch
+MDAnalysis is a project with a long history and many contributors and hasn't used a consistent coding style. Since version 0.11.0 we are trying to update all the code to conform with [PEP8](http://legacy.python.org/dev/peps/pep-0008/). Our strategy is to update the style every time we touch an old function and thus switch
 to [PEP8](http://legacy.python.org/dev/peps/pep-0008/) continuously.
 
 ### Differences to PEP8

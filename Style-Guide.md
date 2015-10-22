@@ -18,6 +18,18 @@ to [PEP8](http://legacy.python.org/dev/peps/pep-0008/) continuously.
 Differences to PEP8
 * 80 columns line length instead of 79
 
+### Python 2/3 compatibility
+
+MDAnalysis strives to be compatible with python 2 and 3 at the same time. To deal with the differences
+we use the [six](https://pypi.python.org/pypi/six) which takes care of loading the appropriate functions for each version of python. So instead of `xrange` or `iterzip` use the `zip` and `range` function provided by [six](https://pypi.python.org/pypi/six) like this.
+
+```python
+from range.moves import zip, range
+
+for i,j in zip(range(3), range(3)):
+    print(i, j)
+```
+
 ### Code Linter
 
 We recommend that you either use a Python IDE ([PyCharm](https://www.jetbrains.com/pycharm/) and others). You can also use external tools like [flake8](http://flake8.readthedocs.org/en/latest/). For integration of external tools with emacs and vim check out [elpy (emacs)](https://github.com/jorgenschaefer/elpy) and [python-mode (vim)](https://github.com/klen/python-mode)

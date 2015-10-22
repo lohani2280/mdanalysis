@@ -1,21 +1,28 @@
 # Code style guidelines
 
-(For background and history see [Issue #404](https://github.com/MDAnalysis/mdanalysis/issues/404), which contains the original discussion on the Style Guide.)
+(For background and history see [Issue #404](/MDAnalysis/mdanalysis/issues/404), which contains the original discussion on the Style Guide.)
 
 ## Coding Style
 
 MDAnalysis is a project with a long history and many contributors and hasn't used a consistent coding style. Since version 0.11.0 we are trying to update all the code to conform with [PEP8](http://legacy.python.org/dev/peps/pep-0008/). Our strategy is to update the style every time we touch an old function and thus switch
 to [PEP8](http://legacy.python.org/dev/peps/pep-0008/) continuously.
 
-### Differences to PEP8
+### Important requirements
 
- * 80 columns line length instead of 79
+* keep line length to **80 characters** or less; break long lines snesibly
+* indent with **spaces** and use **4 spaces per level**
+* naming (follows PEP8): 
+  * classes: *CapitalClasses* (i.e. capitalized nouns without spaces)
+  * methods and functions: *underscore_methods* (lower case, with underscores for spaces)
+
+Differences to PEP8
+* 80 columns line length instead of 79
 
 ### Code Linter
 
 We recommend that you either use a Python IDE ([PyCharm](https://www.jetbrains.com/pycharm/) and others). You can also use external tools like [flake8](http://flake8.readthedocs.org/en/latest/). For integration of external tools with emacs and vim check out [elpy (emacs)](https://github.com/jorgenschaefer/elpy) and [python-mode (vim)](https://github.com/klen/python-mode)
 
-### Code Formater
+### Code Formatter
 
 To apply the code formatting in an automated way you can also use code formatters. As external tools there are [autopep8](https://github.com/hhatto/autopep8) and [yapf](https://github.com/google/yapf). Most IDE's either have their own code formatter or will work with one of the above through plugins.
 

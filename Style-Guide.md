@@ -80,7 +80,7 @@ Follow [[git commits|Style-Guide:-git-commits]].
 
 ## Writing Tests
 
-For now, see [[Writing Tests|UnitTests]] (but that needs to be cleaned up). In short:
+For now, see [[Writing Tests|UnitTests#developers]] (but that needs to be cleaned up). In short:
 
 * changes and additions in the **core** (everything except `MDAnalysis.analysis` and `MDAnalysis.visualization`): unit tests are **mandatory**
 * changes and additions to 

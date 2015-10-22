@@ -47,10 +47,44 @@ def func(arg1, arg2):
     return True
 ```
 
+## Code organization
+### Package and test suite
+The [[source code|Source#source-code-organisation]] is distributed over the `package` directory (the library and documentation) and the `testsuite` (test code and data files). Commits can contain code in both directories, e.g. a new feature and a test case can be committed together.
+
+### Compiled code
+MDAnalysis contains compiled code (cython, C, C++) in addition to pure Python. With [[#444|/MDAnalysis/mdanalysis/issues/444]] we agreed on the following layout:
+
+*Place all source files for compiled shared object files into the same folder as the final shared object file.*
+
+`*.pyx` files and cython-generated `*.c` would be in the same directory as the `*.so`. While external dependend C/C++/Fortran libraries are in dedicate `src` and `include` folders. See the following tree as an example.
+
+```
+MDAnalysis 
+      |--lib
+      |   |-- _distances.so
+      |   |-- distances.pyx
+      |   |-- distances.c
+      |-- coordinates
+          |-- _dcdmodule.so
+          |-- src
+              |-- dcd.c
+          |-- include
+              |-- dcd.h
+```
+
+
+This is standard see [numpy](https://github.com/numpy/numpy/tree/master/numpy/linalg/lapack_lite), [scipy](https://github.com/scipy/scipy/tree/master/scipy/spatial), [scikit-learn](https://github.com/scikit-learn/scikit-learn/tree/master/sklearn/svm/src). [mdtraj](https://github.com/mdtraj/mdtraj/tree/master/mdtraj/formats/xtc)
+
 ## Commit messages
 
-* [[git commits|Style-Guide:-git-commits]]
+Follow [[git commits|Style-Guide:-git-commits]].
 
 ## Writing Tests
 
-* [[Writing Tests|UnitTests]]
+For now, see [[Writing Tests|UnitTests]] (but that needs to be cleaned up). In short:
+
+* changes and additions in the **core** (everything except `MDAnalysis.analysis` and `MDAnalysis.visualization`): unit tests are **mandatory**
+* changes and additions to 
+   * `MDAnalysis.analysis`
+   * `MDAnalysis.visualization`
+  Tests are **highly encouraged** (and anyone reviewing commits can ask for at least minimal tests)

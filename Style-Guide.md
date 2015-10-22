@@ -26,7 +26,8 @@ We recommend that you either use a Python IDE ([PyCharm](https://www.jetbrains.c
 
 To apply the code formatting in an automated way you can also use code formatters. As external tools there are [autopep8](https://github.com/hhatto/autopep8) and [yapf](https://github.com/google/yapf). Most IDE's either have their own code formatter or will work with one of the above through plugins.
 
-## Import modules
+## Importing modules
+
 * Try to reduce dependency on external packages; currently, you can use anything in 
    * `numpy`
    * `biopython`
@@ -43,8 +44,9 @@ To apply the code formatting in an automated way you can also use code formatter
   from __future__ import absolute_import
   import .core
   import ..units
-  ``
-* Do not use *relative imports* (e.g. ``import .datafiles``) in the test suite because it breaks running the tests from inside the test directory [#189](MDAnalysis/mdanalysis/issues/189)
+  ```
+
+* Do not use *relative imports* (e.g. ``import .datafiles``) in the test suite because it breaks running the tests from inside the test directory (see [#189](MDAnalysis/mdanalysis/issues/189))
 
 ## Writing Docstrings
 

@@ -24,7 +24,7 @@ MDAnalysis strives to be compatible with python 2 and 3 at the same time. To dea
 we use the [six](https://pypi.python.org/pypi/six) which takes care of loading the appropriate functions for each version of python. So instead of `xrange` or `iterzip` use the `zip` and `range` function provided by [six](https://pypi.python.org/pypi/six) like this.
 
 ```python
-from range.moves import zip, range
+from six.moves import zip, range
 
 for i,j in zip(range(3), range(3)):
     print(i, j)

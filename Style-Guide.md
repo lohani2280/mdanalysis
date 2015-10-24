@@ -9,14 +9,11 @@ to [PEP8](http://legacy.python.org/dev/peps/pep-0008/) continuously.
 
 ### Important requirements
 
-* keep line length to **80 characters** or less; break long lines snesibly
+* keep line length to **79 characters** or less; break long lines snesibly
 * indent with **spaces** and use **4 spaces per level**
 * naming (follows PEP8): 
   * classes: *CapitalClasses* (i.e. capitalized nouns without spaces)
   * methods and functions: *underscore_methods* (lower case, with underscores for spaces)
-
-Differences to PEP8
-* 80 columns line length instead of 79
 
 ### Python 2/3 compatibility
 

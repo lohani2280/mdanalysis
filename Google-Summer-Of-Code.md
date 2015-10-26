@@ -8,7 +8,7 @@ So if you want to introduce yourself, discuss ideas or your application feel fre
 
 A list of projects ideas. Each with a short sentence describing it. If more information/background is needed create a new page
 
-- Implement Principal Component Analysis, Time Independent Correlation Analysis, Diffusion Maps or another dimension reduction technique of your choice
+- Implement a [General Dimension Reduction Algorithm](https://github.com/MDAnalysis/mdanalysis/wiki/%5BGSoC-Project%5D-Dimension-Reduction)
 - Expand the reach of MDAnalysis by implementing a new file format, such as the TNG file format from Gromacs
 - Increase the availability of this code by helping port MDAnalysis to Python 3 and Windows.
 - Experiment with Dask as a backend for your Trajectory classes.

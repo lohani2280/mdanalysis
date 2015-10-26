@@ -8,7 +8,7 @@ So if you want to introduce yourself, discuss ideas or your application feel fre
 
 A list of projects ideas. Each with a short sentence describing it. If more information/background is needed create a new page
 
-- Implement Principle Component Analysis, Time Independent Correlation Analysis, Diffusion Maps or another dimension reduction technique of your choice
+- Implement Principal Component Analysis, Time Independent Correlation Analysis, Diffusion Maps or another dimension reduction technique of your choice
 - Expand the reach of MDAnalysis by implementing a new file format, such as the TNG file format from Gromacs
 - Increase the availability of this code by helping port MDAnalysis to Python 3 and Windows.
 - Experiment with Dask as a backend for your Trajectory classes.
@@ -39,7 +39,7 @@ At the same time if you have experience with our tools (such as Python or Cython
 - Commit early and commit often! Push to github so that we can see and review your work.
 - Actively work on our project timeline and communicate with us during the community bonding period
 - Communicate every working day with your mentor. Just say "Hello" if you like. It can be via email, skype, github comments, etc
-- If there is a reason, why you can't work or can't contact us on a regular basis please make us aware of this.
+- If there is a reason why you can't work or can't contact us on a regular basis please make us aware of this.
 - If you don't communicate with us regularly we will fail you.
 
 **Midterm and Final evaluations**

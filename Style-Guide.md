@@ -18,7 +18,7 @@ to [PEP8](http://legacy.python.org/dev/peps/pep-0008/) continuously.
 ### Python 2/3 compatibility
 
 MDAnalysis strives to be compatible with python 2 and 3 at the same time. To deal with the differences
-we use the [six](https://pypi.python.org/pypi/six) which takes care of loading the appropriate functions for each version of python. So instead of `xrange` or `iterzip` use the `zip` and `range` function provided by [six](https://pypi.python.org/pypi/six) like this.
+we use [six](https://pypi.python.org/pypi/six) which takes care of loading the appropriate functions for each version of python. So instead of `xrange` or `iterzip` use the `zip` and `range` function provided by [six](https://pypi.python.org/pypi/six) like this.
 
 ```python
 from six.moves import zip, range

@@ -9,7 +9,7 @@ So if you want to introduce yourself, discuss ideas or your application feel fre
 A list of projects ideas. Each with a short sentence describing it. If more information/background is needed create a new page
 
 - Implement a [General Dimension Reduction Algorithm](https://github.com/MDAnalysis/mdanalysis/wiki/%5BGSoC-Project%5D-Dimension-Reduction)
-- Expand the reach of MDAnalysis by implementing a new file format, such as the TNG file format from Gromacs
+- Expand the reach of MDAnalysis by implementing a new file format, such as the [TNG file format](http://onlinelibrary.wiley.com/doi/10.1002/jcc.23495/abstract) from Gromacs
 - Increase the availability of this code by helping port MDAnalysis to Python 3 and Windows.
 - Experiment with Dask as a backend for your Trajectory classes.
 - Help us implement a general pipeline to use multiple CPU-cores for analysis tasks (Dask, MPI)

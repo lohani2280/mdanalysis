@@ -9,7 +9,7 @@ to [PEP8](http://legacy.python.org/dev/peps/pep-0008/) continuously.
 
 ### Important requirements
 
-* keep line length to **79 characters** or less; break long lines snesibly
+* keep line length to **79 characters** or less; break long lines sensibly
 * indent with **spaces** and use **4 spaces per level**
 * naming (follows PEP8): 
   * classes: *CapitalClasses* (i.e. capitalized nouns without spaces)
@@ -29,7 +29,7 @@ for i,j in zip(range(3), range(3)):
 
 ### Code Linter
 
-We recommend that you either use a Python IDE ([PyCharm](https://www.jetbrains.com/pycharm/) and others). You can also use external tools like [flake8](http://flake8.readthedocs.org/en/latest/). For integration of external tools with emacs and vim check out [elpy (emacs)](https://github.com/jorgenschaefer/elpy) and [python-mode (vim)](https://github.com/klen/python-mode)
+We recommend that you either use a Python IDE ([PyCharm](https://www.jetbrains.com/pycharm/) and others). You can also use external tools like [flake8](http://flake8.readthedocs.org/en/latest/). For integration of external tools with emacs and vim check out [elpy (emacs)](https://github.com/jorgenschaefer/elpy) and [python-mode (vim)](https://github.com/klen/python-mode).
 
 ### Code Formatter
 
@@ -61,8 +61,7 @@ To apply the code formatting in an automated way you can also use code formatter
 
 ## Writing Docstrings
 
-Since 0.11.0 we adopted to use the numpy-style doc strings. They are nice to read as normal text and are converted by sphinx to normal ReST through [napoleon](http://sphinxcontrib-napoleon.readthedocs.org/en/latest/index.html). All previous doc-strings are using pure ReST, we use the same approach as for the coding-style here. When you touch a function please update it's docstring to follow the numpy-style. All new function
-should have numpy-style docstrings.
+Since 0.11.0 we adopted the use of numpy-style doc strings. They are nice to read as normal text and are converted by sphinx to normal ReST through [napoleon](http://sphinxcontrib-napoleon.readthedocs.org/en/latest/index.html). All previous doc-strings are using pure ReST, and we use the same approach as for the coding-style here. When you touch a function please update its docstring to follow the numpy-style. All new functions should have numpy-style docstrings.
 
 ```python
 def func(arg1, arg2):
@@ -95,7 +94,7 @@ MDAnalysis contains compiled code (cython, C, C++) in addition to pure Python. W
 
 *Place all source files for compiled shared object files into the same folder as the final shared object file.*
 
-`*.pyx` files and cython-generated `*.c` would be in the same directory as the `*.so`. While external dependend C/C++/Fortran libraries are in dedicate `src` and `include` folders. See the following tree as an example.
+`*.pyx` files and cython-generated `*.c` would be in the same directory as the `*.so`. External dependent C/C++/Fortran libraries are in dedicated `src` and `include` folders. See the following tree as an example.
 
 ```
 MDAnalysis 
@@ -112,7 +111,7 @@ MDAnalysis
 ```
 
 
-This is standard see [numpy](https://github.com/numpy/numpy/tree/master/numpy/linalg/lapack_lite), [scipy](https://github.com/scipy/scipy/tree/master/scipy/spatial), [scikit-learn](https://github.com/scikit-learn/scikit-learn/tree/master/sklearn/svm/src). [mdtraj](https://github.com/mdtraj/mdtraj/tree/master/mdtraj/formats/xtc)
+This is standard. See [numpy](https://github.com/numpy/numpy/tree/master/numpy/linalg/lapack_lite), [scipy](https://github.com/scipy/scipy/tree/master/scipy/spatial), [scikit-learn](https://github.com/scikit-learn/scikit-learn/tree/master/sklearn/svm/src), [mdtraj](https://github.com/mdtraj/mdtraj/tree/master/mdtraj/formats/xtc), for other examples.
 
 ## Commit messages
 

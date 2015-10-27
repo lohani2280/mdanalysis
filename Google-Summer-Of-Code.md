@@ -13,7 +13,8 @@ A list of projects ideas. Each with a short sentence describing it. If more info
 - Increase the availability of this code by helping port MDAnalysis to Python 3 and Windows. See (#260)[https://github.com/MDAnalysis/mdanalysis/issues/260]
 - Experiment with Dask as a backend for your Trajectory classes.
 - Help us implement a general pipeline to use multiple CPU-cores for analysis tasks (Dask, MPI)
-- Work with domain-decomposition algorithmns to improve our distance search algorithms ([cell grids](https://github.com/richardjgowers/cellgrid))
+- Work with domain-decomposition algorithmns to improve our distance search algorithms ([cell grids](https://github.com/richardjgowers/cellgrid)).
+- Implement a flexible parser for atom selections.
 - Or your idea here! Get in contact with us to propose an idea.
 
 

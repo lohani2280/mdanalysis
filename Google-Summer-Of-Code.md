@@ -12,7 +12,7 @@ A list of projects ideas. Each with a short sentence describing it. If more info
 - Expand the reach of MDAnalysis by implementing a new file format, such as the [TNG file format](http://onlinelibrary.wiley.com/doi/10.1002/jcc.23495/abstract) from Gromacs
 - Increase the availability of this code by helping port MDAnalysis to Python 3 and Windows. See [#260](https://github.com/MDAnalysis/mdanalysis/issues/260)
 - Experiment with [Dask](http://dask.pydata.org/en/latest/) as a backend for your Trajectory classes.
-- Help us implement a general pipeline to use multiple CPU-cores for analysis tasks (Dask, MPI)
+- Help us implement a general pipeline to use multiple CPU-cores for analysis tasks ([Dask](http://dask.pydata.org/en/latest/), [MPI](http://pythonhosted.org/mpi4py/usrman/index.html))
 - Work with domain-decomposition algorithms to improve our distance search algorithms ([cell grids](https://github.com/richardjgowers/cellgrid)).
 - Implement a flexible parser for atom selections.
 - Implement flexible search of atoms inside volume elements defined by densities. 

@@ -37,7 +37,7 @@ To apply the code formatting in an automated way you can also use code formatter
 
 ## Importing modules
 
-* Try to reduce dependency on external packages; currently, you can use anything in 
+* Any modules from the standard library can be used, as well as the following nonstandard libraries:
 
    * `numpy`
    * `biopython`
@@ -50,12 +50,25 @@ To apply the code formatting in an automated way you can also use code formatter
 
   If you must depend on new external package, discuss its use on the [developer mailing list](http://developers.mdanalysis.org) or as part of the issue/PR. For independent modules in `MDAnalysis.analysis` or `MDAnalysis.visualization`, there are fewer restrictions, except that a user who does not have a required package installed must still be able to import everything else in MDAnalysis. Your module should print a message notifying the user that a specific additional package needs to be installed.
 
-* use **absolute imports** in the library (i.e. relative imports must be explicitly indicated), e.g.,
+* Imports should all happen at the start of a module (not inside Classes or functions).  The exception to this is when dealing with non essential dependencies (such as in `analysis`), which can be nested inside the Class or function to allow to package to work without them.
+
+* Libraries must be imported in the following order:
+
+  - future
+  - global imports
+  - local imports
+
+use **absolute imports** in the library (i.e. relative imports must be explicitly indicated), e.g.,
   ```python
   from __future__ import absolute_import
+
+  import numpy as np
+
   import .core
   import ..units
   ```
+
+* In the testsuite, use the order above, but import `MDAnalysis` modules before `MDAnalysisTests` imports
 
 * Do not use *relative imports* (e.g. ``import .datafiles``) in the test suite because it breaks running the tests from inside the test directory (see [#189](MDAnalysis/mdanalysis/issues/189))
 

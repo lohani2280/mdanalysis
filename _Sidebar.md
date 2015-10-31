@@ -9,7 +9,8 @@ Labels: python, molecular dynamics, analysis, DCD, CHARMM, LAMMPS, NAMD, Gromacs
 [[Install]]  
 [[PaperErrata]]  
 [[Release Notes|Release Notes]]  
-[[Guide for Developers|Guide-for-Developers]]
+[[Guide for Developers|Guide-for-Developers]]  
+[[Google Summer of Code|Google-Summer-of-Code]]
 
 ### Links ###
 [@mdanalysis](https://twitter.com/mdanalysis) on Twitter  

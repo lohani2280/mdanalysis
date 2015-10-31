@@ -19,10 +19,18 @@ A list of projects ideas. Each with a short sentence describing it. If more info
 - Or your idea here! Get in contact with us to propose an idea.
 
 
-# What will your summer be like
+# Who are we?
 
 The MDAnalysis development team is friendly, cooperative and relatively informal. We consist of people from a wide range of backgrounds, including students, PhD-candidates, professors and researchers actively using this software.
 We will take your work with respect and appreciate the time that you will spend on MDAnalysis since it will help us in both our own and our community's research projects.
+
+## Available mentors
+
+The following devs have expressed interest in mentoring for GSoC:
+
+- [Max](https://github.com/kain88-de)
+- [Manuel](https://github.com/mnmelo)
+- [Richard](https://github.com/richardjgowers)
 
 # Am I experienced enough?
 

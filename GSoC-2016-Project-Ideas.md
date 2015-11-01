@@ -1,4 +1,4 @@
-A list of projects ideas. Each with a short sentence describing it.
+A list of projects ideas. Each with a short sentence describing it. Please also note that not every project we suggest here will take you all summer. Some will be short (eg TNG format) and with others you might only be able to implement parts (eg dask backend). 
 
 
 # Implement a general dimension reduction algorithm

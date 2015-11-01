@@ -64,9 +64,9 @@ We require that all of our students have at least one commit in our `develop` br
 
 A good example for this is the project to port MDAnalysis to python 3. Here each extension and submodule give a natural sub project that you can tackle one after the other. For other it might not be that easy to find suitable sub-tasks but you can always ask us on the mailing list for help.
 
-During your summer you'll encounter bugs in mixxx or find code that can be refactored to help you implement your ideas. You can also immediately fix them in the develop branch and help us all out. This has several advantages. All your pull request will only concentrate on specific features and are much better to review. And you'll also get direct feedback from other devs and user during the summer.
+During your summer you'll encounter bugs in MDAnalysis or find code that can be refactored to help you implement your ideas. You can also immediately fix them in the develop branch and help us all out. This has several advantages. All your pull request will only concentrate on specific features and are much better to review. And you'll also get direct feedback from other devs and user during the summer.
 
-Since this is a hard requirement we as mentors will also have an eye on that and check if your proposal incorporates it and also warn you ahead of time during the summer if we see that you might not make it. Communicating with us on a regular basis is vital for that though. 
+Since this is a hard requirement we as mentors will also have an eye on that and check if your proposal incorporates it and also warn you ahead of time during the summer if we see that you might not make it. Communicating with us on a regular basis is vital for that, though. 
 
 ### Your application should answer the following questions.
 

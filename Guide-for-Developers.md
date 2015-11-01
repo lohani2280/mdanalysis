@@ -1,5 +1,6 @@
 # Useful Links for Developing MDAnalysis #
 
+* [Setup Development Environment](https://github.com/MDAnalysis/mdanalysis/wiki/Setup-Development-Environment)
 * [Contributing code](https://github.com/MDAnalysis/mdanalysis/wiki/ContributingCode)  
 * [Working on the MDAnalysis core](https://github.com/MDAnalysis/mdanalysis/wiki/CoreDevelopment)  
 * [Distributed development with git](https://github.com/MDAnalysis/mdanalysis/wiki/DistributedDevelopment)  

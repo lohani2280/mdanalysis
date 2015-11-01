@@ -50,6 +50,35 @@ At the same time if you have experience with our tools (such as Python or Cython
 
 # How to write a great Application
 
+Firstly, think about your choice of project carefully, you're going to be doing it for a couple of months, so it's important that you choose something you're going to enjoy. Once you've made your mind up:
+
+1. Make sure you've thought about the project and understand what it entails
+2. Don't be afraid to come up with original solutions to the problem
+3. Don't be afraid to give us lots of detail about how you would approach the project
+
+Overall, your application should make us believe that you are capable of completing the project and delivering the functionality to our users. If you aren't sure about anything, get in touch with us, we're happy to advise you.
+
+### Dividing your project
+
+We require that all of our students have at least one commit in our `develop` branch before the end of the summer. The best way to achieve this is to divide your project into small self contained subprojects and plan to merge at least one of them around midterm. 
+
+A good example for this is the project to port MDAnalysis to python 3. Here each extension and submodule give a natural sub project that you can tackle one after the other. For other it might not be that easy to find suitable sub-tasks but you can always ask us on the mailing list for help.
+
+During your summer you'll encounter bugs in mixxx or find code that can be refactored to help you implement your ideas. You can also immediately fix them in the develop branch and help us all out. This has several advantages. All your pull request will only concentrate on specific features and are much better to review. And you'll also get direct feedback from other devs and user during the summer.
+
+Since this is a hard requirement we as mentors will also have an eye on that and check if your proposal incorporates it and also warn you ahead of time during the summer if we see that you might not make it. Communicating with us on a regular basis is vital for that though. 
+
+### Your application should answer the following questions.
+
+- Why are you interested in working with us
+- Have you used MDAnalysis for your research already?
+- Do you have any experience programming?
+- Do you have any exams during GSoC or plan a vacation during the summer?
+
+## How to estimate time needed for development
+
+To get a feeling for the code and get some experience with our code you can go and tackle some of our easy bugs. Look at the code that you want to change, check if it follows our coding guidelines. Do some research on the API's you want to use, plan what classes you will add and how their public API will look. Write down your algorithms in pseudo code. The better your research is and the better you plan ahead the easier it will be to judge how long a given task will take. For your time estimates you should also consider that you can do less stuff during exams and try to be a bit conservative. If you have never done anything like GSoC before you will tend to underestimate the time to complete a task. I know that giving these estimates is not easy and that also professionals have problems with it. Having a good plan, knowing its weak and strong points will help a lot. 
+
 # Some (entirely optional) things you might consider doing
 
 - Why not introduce yourself on the mailing list. Tell us what you plan to work on during the summer or what you have already done with MDAnalysis

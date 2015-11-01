@@ -1,5 +1,5 @@
 <img src="https://developers.google.com/open-source/gsoc/images/gsoc2015-300x270.jpg" title="Google Summer of Code 2016" alt="Google Summer of Code 2016" align="right"/>
-MDAnalysis is planning to host a **[Google Summer of Code 2016](https://developers.google.com/open-source/gsoc/) student**. In short (more details below — please read the whole page if you are interested!):
+MDAnalysis is planning to host  **[Google Summer of Code 2016](https://developers.google.com/open-source/gsoc/) students**. In short (more details below — please read the whole page if you are interested!):
 
 * The student will be mentored by at least one experienced MDAnalysis core developer and also receive support from Google. 
 * The student will contribute code to MDAnalysis.

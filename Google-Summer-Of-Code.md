@@ -1,3 +1,9 @@
+<img src="https://developers.google.com/open-source/gsoc/images/gsoc2015-300x270.jpg" title="Google Summer of Code 2015" alt="Google Summer of Code 2015" align="right"/>
+MDAnalysis is planning to host a **[Google Summer of Code 2016](https://developers.google.com/open-source/gsoc/) student**. In short (more details below — please read the whole page if you are interested!):
+
+* The student will be mentored by at least one experienced MDAnalysis core developer and also receive support from Google. 
+* The student will contribute code to MDAnalysis.
+
 # How to Contact MDAnalysis
 
 You are more than welcome to contact us before submitting your application, we will be happy to advise you on most aspects of the process. Getting in touch first is especially recommended if you are planning to apply to work on an original idea, rather than one of our suggestions.

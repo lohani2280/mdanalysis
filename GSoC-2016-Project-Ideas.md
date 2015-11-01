@@ -28,8 +28,8 @@ None of the current devs has a Windows environment. But some research groups do 
 
 # Experiment with different backends for the trajectory classes
 
-Most MD-simulations produce way more data then we could fit into RAM, even with a modern computer.
-To cope with this MDAnalysis never loading a full trajectory but only one frame at a time. This comes with a performance penalty. There are new Python packages like [Dask](http://dask.pydata.org/en/latest/) and  [Blaze](http://blaze.pydata.org/) that can potentially help us here. You should look into the different distributed computation numerical array libraries in python and implement a reader using it during the summer.
+Most MD-simulations produce way more data that we could fit into the RAM, even with a modern computer.
+To cope with this, MDAnalysis never loads a full trajectory but only one frame at a time. This comes with a performance penalty. There are new Python packages like [Dask](http://dask.pydata.org/en/latest/) and  [Blaze](http://blaze.pydata.org/) that can potentially help us here. You should look into the different distributed computation numerical array libraries in python and implement a reader using it during the summer.
 
 # Develop a analysis pipeline framework for multi-core CPUs
 
@@ -37,7 +37,7 @@ Help us implement a general pipeline to use multiple CPU-cores for analysis task
 
 # Improve distance search 
 
- Work with domain-decomposition algorithms to improve our distance search algorithms ([cell grids](https://github.com/richardjgowers/cellgrid)).
+Work with domain-decomposition algorithms to improve our distance search algorithms ([cell grids](https://github.com/richardjgowers/cellgrid)).
 
 # Formalize our Atom selection parser
 

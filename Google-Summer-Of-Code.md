@@ -47,3 +47,12 @@ At the same time if you have experience with our tools (such as Python or Cython
 - Set a realistic goal for mid-term. If you fail to meet your own goal we are more likely to fail you in the evaluations
 - Have some code merged into our develop branch at the end of the summer to pass the final evaluation
 - The last point is a hard requirement. Make sure that your time plan includes it.
+
+# How to write a great Application
+
+# Some (entirely optional) things you might consider doing
+
+- Why not introduce yourself on the mailing list. Tell us what you plan to work on during the summer or what you have already done with MDAnalysis
+- checkout the source and run the tests from the source code (If you don't manage to setup the virtual environment don't be embarrassed to ask for help)
+- Maybe fix an [easy bug](https://github.com/MDAnalysis/mdanalysis/issues?q=is%3Aopen+is%3Aissue+label%3ADifficulty-easy)
+

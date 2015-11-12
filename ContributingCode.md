@@ -7,7 +7,7 @@ MDAnalysis is a free and open source project. It evolves and grows with the dema
 
 ## Contributing code ##
 
-Maybe you have a useful new feature for MDAnalysis (for instance, you wrote a specialized analysis task for a paper and now, as the paper has been accepted, you want to share the code) or a fix for a bug or a performance improvement. How can you get this code into the public version of MDAnalysis so that other users can also benefit from your code (and possibly cite you...) or you are just tired adding your feature every time a new release of MDAnalysis comes out.
+Maybe you have a useful new feature for MDAnalysis (for instance, you wrote a specialized analysis task for a paper and now, as the paper has been accepted, you want to share the code) or a fix for a bug or a performance improvement. How can you get this code into the public version of MDAnalysis so that other users can also benefit from your code (and possibly cite you...)?
 
 If you are not listed as a _committer_ under [Project People](https://github.com/orgs/MDAnalysis/people) then you cannot just add code to the source code repository. However, because we are using [git for source code management](Source), things are still very easy: The typical approach for getting code into MDAnalysis follows a simple protocol:
 
@@ -45,7 +45,7 @@ Test-driven development is actually a very good way to write code: You _first_ w
 
 UnitTests has more information on the testing framework. However, you might also want to look at existing test cases (all to be found in [testsuite/MDAnalysisTests](https://github.com/MDAnalysis/mdanalysis/tree/develop/testsuite/MDAnalysisTests)) to get an idea how to structure your test cases.
 
-### When are test cases required ###
+### When are test cases required? ###
 For some contributed code we require test cases in order to integrate it with the full library. We do this in order to make sure that our users can rely on the library being as bug-free as possible.
 
   * New code and enhancements for the **core of MDAnalysis** i.e. in **MDAnalysis/core, MDAnalysis/topology, MDAnalysis/coordinates, MDAnalysis/selections, MDAnalysis/KDTree** _must_ always come with sufficient test cases.

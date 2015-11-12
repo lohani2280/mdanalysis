@@ -43,7 +43,7 @@ UnitTests are a crucial component of proper software engineering (see e.g. [Soft
 
 Test-driven development is actually a very good way to write code: You _first_ write your test case and while development you repeatedly run your tests until they pass.
 
-UnitTests has more information on the testing framework. However, you might also want to look at existing test cases (all to be found in [testsuite/MDAnalysisTests](https://github.com/MDAnalysis/mdanalysis/tree/develop/testsuite/MDAnalysisTests)) to get an idea how to structure your test cases.
+[UnitTests](https://github.com/MDAnalysis/mdanalysis/wiki/UnitTests) has more information on the testing framework. However, you might also want to look at existing test cases (all to be found in [testsuite/MDAnalysisTests](https://github.com/MDAnalysis/mdanalysis/tree/develop/testsuite/MDAnalysisTests)) to get an idea how to structure your test cases.
 
 ### When are test cases required? ###
 For some contributed code we require test cases in order to integrate it with the full library. We do this in order to make sure that our users can rely on the library being as bug-free as possible.

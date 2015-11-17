@@ -190,4 +190,5 @@ Install packages needed for full functionality
 **NOTE**: Use the Apple-provided `gcc`, not the fink provided one. Apparently, only Apple's gcc has the `-arch` flag that appears to be required for `python setup.py install`. (Thanks to Justin Lemkul for pointing it out; see [Issues after Installation](http://groups.google.com/group/mdnalysis-discussion/browse_thread/thread/1bf033ed1d3bb915)). In order to install Apple's gcc you will need to install the Apple Developer Tools that come on one of the additional installation disks with the Mac or install [Xcode](http://developer.apple.com/xcode/) from the web (note that Xcode 3.x is free and can be obtained by registering online for the Apple Developer Connection).
 
 
-
+# Older versions
+The installation procedure for older versions of MDAnalysis is chronicled under [[Installation from Source: Historical notes on older versions]] but is unlikely to be relevant for current users.

@@ -1,4 +1,4 @@
-For the latest versions of MDAnalysis see the [[Install]] notes.
+For installing the **latest versions** of MDAnalysis see the [[Install]] notes.
 
 Older versions of MDAnalysis had different requirements and for historical reasons they are listed here:
 

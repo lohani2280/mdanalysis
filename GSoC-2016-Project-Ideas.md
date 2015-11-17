@@ -17,6 +17,10 @@ Of course you can also suggest us another dimension reduction algorithm that you
 
 MDAnalysis already supports a wide range of different MD-formats. But we are still missing some like the new [TNG file format](http://onlinelibrary.wiley.com/doi/10.1002/jcc.23495/abstract) from Gromacs. You can also a format that you want to use personally in MDAnalysis.
 
+# Random Walk Trajectory Backend
+
+To check if a new analysis-method works as intended it is often a good idea to use it with a random walk in different simple energy landscapes (A flat energy, harmonic well, double well). In this project you would develop a 'Reader' that produces random trajectories. 
+
 # Increase the availability of this code by helping port MDAnalysis to Python 3
 
 Python 3 is getting adopted by a wider range of users and unix distributions are starting to switch.

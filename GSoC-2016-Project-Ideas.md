@@ -42,7 +42,7 @@ Help us implement a general pipeline to use multiple CPU-cores for analysis task
 
 # Improve distance search 
 
-Work with domain-decomposition algorithms to improve our distance search algorithms ([cell grids](https://github.com/richardjgowers/cellgrid)).
+Work with domain-decomposition algorithms to improve our distance search algorithms ([cell grids](https://github.com/richardjgowers/cellgrid)) and/or implement distance search on GPUs.
 
 # Formalize our Atom selection parser
 

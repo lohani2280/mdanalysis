@@ -53,3 +53,4 @@ Implement a formal flexible parser for atom selections (using [pyparsing](https:
 Combine spatial densities (e.g. from time averaged quantities or experimental data such as electron densities) with atom-based queries in order to aid multiscaling approaches and comparisons between experiment and simulation.
 
 # Or your idea here! Get in contact with us to propose an idea.
+Raise an issue in the [Issue Tracker](/MDAnalysis/mdanalysis/issues) or contact us via the [developer Google group](http://developers.mdanalysis.org).

@@ -1,4 +1,5 @@
 # Useful Links for Developing MDAnalysis #
+GitHub does not provide a search for wikis (!) but you can install the [GitHub Wiki Search plugin](https://github.com/linyows/github-wiki-search) into your browser, which patches a search box into any GitHub wiki that you visit.
 
 * [Setup Development Environment](https://github.com/MDAnalysis/mdanalysis/wiki/Setup-Development-Environment)
 * [Contributing code](https://github.com/MDAnalysis/mdanalysis/wiki/ContributingCode)  

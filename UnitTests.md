@@ -248,6 +248,7 @@ The [SciPy testing guidelines](http://projects.scipy.org/numpy/wiki/TestingGuide
 
 Conventions for MDAnalysis
   * Relative import statements are now banned from unit testing modules (see [Issue #189](/MDAnalysis/mdanalysis/issues/189) for details)
+  * using `os.chdir()` is banned because it can break the tests in really weird ways (see [Issue #556](https://github.com/MDAnalysis/mdanalysis/issues/556)): use `with tempdir.in_tempdir()` or something similar
   * Test input data is stored in  [MDAnalysisTests/data](https://github.com/MDAnalysis/mdanalysis/tree/develop/testsuite/MDAnalysisTests/data).
     * Keep files small if possible; for trajectories 10 frames or less are sufficient.
     * Add the file name of test data files to [MDAnalysisTests/datafiles.py](https://github.com/MDAnalysis/mdanalysis/blob/develop/testsuite/MDAnalysisTests/datafiles.py) (see the code for details).

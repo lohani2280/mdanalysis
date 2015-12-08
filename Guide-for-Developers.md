@@ -17,6 +17,7 @@ GitHub does not provide a search for wikis (!) but you can install the [GitHub W
 * [Online docs (development branch)](http://www.mdanalysis.org/mdanalysis/package/doc/html/)
 * [Trajectory API](http://pythonhosted.org/MDAnalysis/documentation_pages/coordinates/init.html?highlight=trajectory%20api#trajectory-api)  
 * [Writing a new topology reader](https://github.com/MDAnalysis/mdanalysis/wiki/Writing-a-Topology-Reader)
+* [Guide to new topology format](https://github.com/MDAnalysis/mdanalysis/wiki/Guide-to-new-Topology-format)
 * [Topology data structures](https://github.com/MDAnalysis/mdanalysis/wiki/TopologyDataStructures)  
 * [Semantic Versioning](https://github.com/MDAnalysis/mdanalysis/wiki/SemanticVersioning)  
 * [Extensions and Python 3](https://github.com/MDAnalysis/mdanalysis/wiki/List-of-extensions)

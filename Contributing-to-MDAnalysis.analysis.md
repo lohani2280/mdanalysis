@@ -8,7 +8,7 @@ In order to maintain a uniform high standard across the whole MDAnalysis library
 
 1. New module must have a **maintainer** (i.e. someone who is willing to fix bugs and review pull requests)
    * The maintainer's *name*, *email* and *github username* must be contained in the code and in the docs.
-   * The date of addition must be documented (through `.. versionadded:: 1.0`` reST tags and `:year: 2016` at the top of the docs).
+   * The date of addition must be documented (through `.. versionadded:: 1.0` reST tags and `:year: 2016` at the top of the docs).
    * The maintainer has to updated contact details (through a PR or issue).
    * The maintainer has to find a successor if they cannot maintain code anymore. The successor is then added to the docs as above.
 2. Code must be fully **documented**.

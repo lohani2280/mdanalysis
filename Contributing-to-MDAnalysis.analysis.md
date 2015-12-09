@@ -20,4 +20,16 @@ In order to maintain a uniform high standard across the whole MDAnalysis library
    * comes with necessary data files
    * coverage ≥85% (as measured by coveralls)
 
+### Questions
 
+#### Imports
+How should imports be handled? 
+* Can they be imported at top level or should they be inside functions/methods?
+* Do they need to be guarded with try/except and error messages printed or is `ImportError` ok?
+
+How to deal with modules that are not installed by default, such as
+  * `matplotlib`
+  * `scipy` (at the moment not a dependency)
+  * `pandas`
+  * color brewer `brewer2mpl` (or now [palettable](https://jiffyclub.github.io/palettable/))
+  * ...

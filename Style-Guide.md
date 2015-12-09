@@ -72,6 +72,8 @@ use **absolute imports** in the library (i.e. relative imports must be explicitl
 
 * Do not use *relative imports* (e.g. ``import .datafiles``) in the test suite because it breaks running the tests from inside the test directory (see [#189](MDAnalysis/mdanalysis/issues/189))
 
+* Never import the `MDAnalysis` module from the `__init__.py` of `MDAnalysisTests` or from any of its plugins (it's ok to import from test files). Importing `MDAnalysis` from the test setup code will cause severe coverage underestimation.
+
 ## Writing Docstrings
 
 Since 0.11.0 we adopted the use of numpy-style doc strings. They are nice to read as normal text and are converted by sphinx to normal ReST through [napoleon](http://sphinxcontrib-napoleon.readthedocs.org/en/latest/index.html). All previous doc-strings are using pure ReST, and we use the same approach as for the coding-style here. When you touch a function please update its docstring to follow the numpy-style. All new functions should have numpy-style docstrings.

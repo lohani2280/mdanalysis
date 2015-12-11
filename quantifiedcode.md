@@ -1,11 +1,11 @@
-[![Code Issues (master)](https://www.quantifiedcode.com/api/v1/project/b993444b512c4f9ab23f9f20e6af7479/badge.svg)](https://www.quantifiedcode.com/app/project/b993444b512c4f9ab23f9f20e6af7479)
+[![Code Issues](https://www.quantifiedcode.com/api/v1/project/829d7d4b95d04111b38451d14101545d/badge.svg)](https://www.quantifiedcode.com/app/project/829d7d4b95d04111b38451d14101545d)
 
 [quantifiedcode](https://www.quantifiedcode.com/) is a tool that checks code for best practices and finds bugs. It also advertises that it can send PR to a github project that correct issues and it can supposedly run checks on PRs.
 
 ## quantifiedcode: MDAnalysis ##
 It is now enabled for MDAnalysis (but the badge above only points to the _master_ branch whereas we really care about _develop_):
 
-https://www.quantifiedcode.com/app/project/b993444b512c4f9ab23f9f20e6af7479?branch=origin%2Fdevelop
+https://www.quantifiedcode.com/app/project/829d7d4b95d04111b38451d14101545d?branch=origin%2Fdevelop
 
 We can use quantifiedcode in the same way as one uses the spell checker in a text processor: fix the obvious mistakes and use most of it as suggestions.
 

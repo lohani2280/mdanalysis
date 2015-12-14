@@ -3,9 +3,9 @@
 [quantifiedcode](https://www.quantifiedcode.com/) is a tool that checks code for best practices and finds bugs. It also advertises that it can send PR to a github project that correct issues and it can supposedly run checks on PRs.
 
 ## quantifiedcode: MDAnalysis ##
-It is now enabled for MDAnalysis (but the badge above only points to the _master_ branch whereas we really care about _develop_):
+It is now enabled for MDAnalysis:
 
-https://www.quantifiedcode.com/app/project/829d7d4b95d04111b38451d14101545d?branch=origin%2Fdevelop
+https://www.quantifiedcode.com/app/project/gh:MDAnalysis:mdanalysis
 
 We can use quantifiedcode in the same way as one uses the spell checker in a text processor: fix the obvious mistakes and use most of it as suggestions.
 

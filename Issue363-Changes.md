@@ -65,3 +65,5 @@ This scheme only works if each atom is a member of one and only one residue. Lik
 2. **Memory**. We don't store, for example, a resname for each atom, but instead store attributes at the level they make sense for.
 3. **Consistency**. Since attributes are stored in one place, we avoid cases where the topology is in an inconsistent state, e.g. two atoms in the same residue give a different resname.
 4. **No staleness**. Because e.g. `ResidueGroups` are only an array of indices, not a list of `Residue` objects generated upon creation of the group, changes of resiude-level properties by another `ResidueGroup` are always reflected consistently by every other one. Data is not duplicated anywhere in this scheme, and is all contained in the `Topology` object.
+
+For further performance comparisons, check out this [notebook](https://gist.github.com/dotsdl/0e0fbd409e3e102d0458).

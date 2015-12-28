@@ -36,5 +36,5 @@ Also, it was unclear what size a given output would be (see [Issue-411](https://
 
 ### How to work around this
 
-To access Atom level information from anything that isn't an AtomGroup, add the `.atoms` level accessor.
-For example, changing all `.positions` calls on anything that isn't an `AtomGroup` to `.atoms.positions`
+To access Atom level information from anything that isn't an AtomGroup, use the `.atoms` level accessor.
+For example, changing all `.positions` calls on anything that isn't an `AtomGroup` to `.atoms.positions`. 

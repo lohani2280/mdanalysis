@@ -2,6 +2,8 @@ Note: Issue-363 is a work in progress, nothing is final yet, everything is up fo
 
 [Issue #363](https://github.com/MDAnalysis/mdanalysis/issues/363) brings many changes, these are summarised here:
 
+# This is about using Array-based Topologies
+
 ## All Groups are no longer subclassed from AtomGroup.  
 
 ### Explanation

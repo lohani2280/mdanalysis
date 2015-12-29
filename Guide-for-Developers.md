@@ -22,5 +22,9 @@ GitHub does not provide a search for wikis (!) but you can install the [GitHub W
 * [Semantic Versioning](https://github.com/MDAnalysis/mdanalysis/wiki/SemanticVersioning)  
 * [Extensions and Python 3](https://github.com/MDAnalysis/mdanalysis/wiki/List-of-extensions)
 
+## New Topology Docs: ##
+* [Upcoming changes](https://github.com/MDAnalysis/mdanalysis/wiki/Issue363-Changes)
+* [Using TopologyAttributes](https://github.com/MDAnalysis/mdanalysis/wiki/Issue363-Changes)
+
 ## Website and repository management ##
 * [Moving the Project to GitHub](https://github.com/MDAnalysis/mdanalysis/wiki/MoveToGitHub)  

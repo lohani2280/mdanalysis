@@ -61,6 +61,7 @@ Firstly, think about your choice of project carefully, you're going to be doing 
 1. Make sure you've thought about the project and understand what it entails
 2. Don't be afraid to come up with original solutions to the problem
 3. Don't be afraid to give us lots of detail about how you would approach the project
+4. Contact us early! The earlier you contact us the earlier you will be able to get feedback from us to improve your application
 
 Overall, your application should make us believe that you are capable of completing the project and delivering the functionality to our users. If you aren't sure about anything, get in touch with us, we're happy to advise you.
 

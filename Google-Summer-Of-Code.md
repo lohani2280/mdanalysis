@@ -76,7 +76,7 @@ Since this is a hard requirement we as mentors will also have an eye on that and
 
 ### Your application should include answers to the following questions.
 
-- Why are you interested in working with us
+- Why are you interested in working with us?
 - Have you used MDAnalysis for your research already?
 - Do you have any experience programming?
 - Do you have any exams during GSoC or plan a vacation during the summer?

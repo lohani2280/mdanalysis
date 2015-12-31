@@ -74,7 +74,7 @@ During your summer you'll encounter bugs in MDAnalysis or find code that can be 
 
 Since this is a hard requirement we as mentors will also have an eye on that and check if your proposal incorporates it and also warn you ahead of time during the summer if we see that you might not make it. Communicating with us on a regular basis is vital for that, though. 
 
-### Your application should answer the following questions.
+### Your application should include answers to the following questions.
 
 - Why are you interested in working with us
 - Have you used MDAnalysis for your research already?

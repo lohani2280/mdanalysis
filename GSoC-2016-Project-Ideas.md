@@ -16,7 +16,7 @@ Of course you can also suggest us another dimension reduction algorithm that you
 
 # Add new MD-Formats
 
-MDAnalysis already supports a wide range of different MD-formats. But we are still missing some like the new [TNG file format](http://onlinelibrary.wiley.com/doi/10.1002/jcc.23495/abstract) from Gromacs. You can also a format that you want to use personally in MDAnalysis.
+MDAnalysis already supports a wide range of different MD-formats. But we are still missing some like the new [TNG file format](http://onlinelibrary.wiley.com/doi/10.1002/jcc.23495/abstract) from Gromacs. You can also add a format that you want to use personally in MDAnalysis.
 
 # Random Walk Trajectory Backend
 

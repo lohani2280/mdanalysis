@@ -22,6 +22,12 @@ MDAnalysis already supports a wide range of different MD-formats. But we are sti
 
 To check if a new analysis-method works as intended it is often a good idea to use it with a random walk in different simple energy landscapes (A flat energy, harmonic well, double well). In this project you would develop a 'Reader' that produces random trajectories. 
 
+Langevin dynamics in a energy landscape are close to the conformational dynamics of proteins, see [1]. As a first
+start you could implement a integrator for langevin dynamics and later have the trajectory 'reader' use the integrator to dynamically generate the trajectory. 
+
+[1] Robert Zwanzig. Nonequilibrium statistical mechanics. Oxford University Press,
+2001
+
 # Increase the availability of this code by helping port MDAnalysis to Python 3
 
 Python 3 is getting adopted by a wider range of users and unix distributions are starting to switch.

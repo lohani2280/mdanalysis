@@ -54,10 +54,7 @@ Test-driven development is actually a very good way to write code: You _first_ w
 [UnitTests](https://github.com/MDAnalysis/mdanalysis/wiki/UnitTests) has more information on the testing framework. However, you might also want to look at existing test cases (all to be found in [testsuite/MDAnalysisTests](https://github.com/MDAnalysis/mdanalysis/tree/develop/testsuite/MDAnalysisTests)) to get an idea how to structure your test cases.
 
 ### When are test cases required? ###
-For some contributed code we require test cases in order to integrate it with the full library. We do this in order to make sure that our users can rely on the library being as bug-free as possible.
-
-  * New code and enhancements for the **core of MDAnalysis** i.e. in **MDAnalysis/core, MDAnalysis/topology, MDAnalysis/coordinates, MDAnalysis/selections, MDAnalysis/KDTree** _must_ always come with sufficient test cases.
-  * Code for the **analysis** module (MDAnalysis/analysis) should be accompanied with test cases. (In the future this might become a hard requirement.)
+All code should be accompanied with test cases. We strive for coverage >85% (ideally >90%).
 
 ### New data files ###
 If possible, re-use the existing data files in MDAnalysis (see [MDAnalysisTests.datafiles](https://github.com/MDAnalysis/mdanalysis/blob/develop/testsuite/MDAnalysisTests/datafiles.py) and the files in the directory [testsuite/MDAnalysisTests/data](https://github.com/MDAnalysis/mdanalysis/tree/develop/testsuite/MDAnalysisTests/data)) for tests; this helps to keep the (separate) MDAnaltsisTests package small. If new files are required (e.g. for a new coordinate Reader/Writer) then

@@ -12,14 +12,21 @@ Maybe you have a useful new feature for MDAnalysis (for instance, you wrote a sp
 If you are not listed as a _committer_ under [Project People](https://github.com/orgs/MDAnalysis/people) then you cannot just add code to the source code repository. However, because we are using [git for source code management](Source), things are still very easy: The typical approach for getting code into MDAnalysis follows a simple protocol:
 
   1. Ensure that you can publish your code under a **licence that is compatible with the GNU Public Licence 2 (or higher)**; otherwise we will not be able to incorporate the code into MDAnalysis.
-  1. Read the [how MDAnalysis is developed](DevelopmentWorkflow)
+
+  1. Read [how MDAnalysis is developed](DevelopmentWorkflow)
+
   1. **Clone the MDAnalysis source**. [Distributed development with git](DistributedDevelopment) describes in more detail how to do this.
+
   1. **Add your changes** to _your own clone_ of MDAnalysis. **Push** the changes so that they show up in the clone. (Also note the section on [Test cases](#TestCases) below.)
+
   1. File a **pull request** on the [Pull requests tracker](https://github.com/MDAnalysis/mdanalysis/pulls).
-    * describe the nature of the code you're contributing
-    * link to the branch on your clone
-    * add any other important information
+
+       * describe the nature of the code you're contributing
+       * link to the branch on your clone
+       * add any other important information
+
     (For more information on how to do pull request ("PR") on GitHub see the [help on using pull requests](https://help.github.com/articles/using-pull-requests/).)
+
   1. **Monitor your issue report** for additional questions or suggestions (e.g. by starring it and [setting your preferences](https://github.com/settings/profile) so that email is sent to you when changes occur). If you don't get a response in three days, send an email to the [developer mailing list](https://groups.google.com/forum/#!forum/mdnalysis-devel), announcing your contribution (with a link to the issue report).
 
 A developer will then review your code and likely incorporate it into mainline MDAnalysis by pulling the changes from your clone.

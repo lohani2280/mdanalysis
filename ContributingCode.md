@@ -19,6 +19,7 @@ If you are not listed as a _committer_ under [Project People](https://github.com
     * describe the nature of the code you're contributing
     * link to the branch on your clone
     * add any other important information
+    (For more information on how to do pull request ("PR") on GitHub see the [help on using pull requests](https://help.github.com/articles/using-pull-requests/).)
   1. **Monitor your issue report** for additional questions or suggestions (e.g. by starring it and [setting your preferences](https://github.com/settings/profile) so that email is sent to you when changes occur). If you don't get a response in three days, send an email to the [developer mailing list](https://groups.google.com/forum/#!forum/mdnalysis-devel), announcing your contribution (with a link to the issue report).
 
 A developer will then review your code and likely incorporate it into mainline MDAnalysis by pulling the changes from your clone.

@@ -16,7 +16,9 @@ Of course you can also suggest us another dimension reduction algorithm that you
 
 ## Add new MD-Formats
 
-MDAnalysis already supports a wide range of different MD-formats. But we are still missing some like the new [TNG file format](http://onlinelibrary.wiley.com/doi/10.1002/jcc.23495/abstract) from Gromacs. You can also add a format that you want to use personally in MDAnalysis.
+One of the strengths of MDAnalysis is its ability to support a wide range of different MD-formats. But we are still missing some like the new [TNG file format](http://onlinelibrary.wiley.com/doi/10.1002/jcc.23495/abstract) from Gromacs or [H5MD](https://github.com/pdebuyl/pyh5md). Alternatively, you can also add a format that you want to use personally in MDAnalysis.
+This project will familiarise you with working with and connecting different APIs,
+as well as giving insight into how modern portable data storage file formats work.
 
 ## Random Walk Trajectory Backend
 
@@ -45,6 +47,7 @@ To cope with this, MDAnalysis never loads a full trajectory but only one frame a
 ## Develop a analysis pipeline framework for multi-core CPUs
 
 Help us implement a general pipeline to use multiple CPU-cores for analysis tasks ([Dask](http://dask.pydata.org/en/latest/), [MPI](http://pythonhosted.org/mpi4py/usrman/index.html), or even a hybrid approach)
+For an example of the direction this is currently taking, [see here](https://github.com/MDAnalysis/mdanalysis/pull/618)
 
 ## Improve distance search 
 

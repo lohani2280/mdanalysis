@@ -128,9 +128,11 @@ Create a ReleaseXYZ wiki page, modelled after e.g. [Release062](Release062) (usi
 ## Update docs on PyPI ##
 Since 0.7.4 there's also a [MDAnalysis page on PyPi](http://pypi.python.org/pypi/MDAnalysis/) (the Python Package Index).
 
-For full releases we have the documentation at http://packages.python.org/MDAnalysis/ . It is updated by _zipping_ the html docs and uploading manually:
+For full releases we have the documentation at http://packages.python.org/MDAnalysis/ . It is updated by building and then _zipping_ the html docs and uploading manually:
 ```
-cd doc/html
+cd package/doc/sphinx
+make html
+cd ../html
 zip -r ../pypidoc.zip *
 ```
 Then _upload documentation_ (the file `pypidoc.zip`) via the [MDAnalysis: Edit](http://pypi.python.org/pypi?%3Aaction=pkg_edit&name=MDAnalysis) page.

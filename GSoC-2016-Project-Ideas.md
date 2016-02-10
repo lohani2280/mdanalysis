@@ -1,14 +1,14 @@
 <img src="https://developers.google.com/open-source/gsoc/images/gsoc2016-sun-373x373.png" title="Google Summer of Code 2016" alt="Google Summer of Code 2016" align="right"/>
-A list of projects ideas for [[Google Summer of Code 2016|Google-Summer-Of-Code]]. Each with a short sentence describing it. Please also note that not every project we suggest here will take you all summer. Some will be short (eg TNG format) and with others you might only be able to implement parts (eg [[dask backend|#Experiment-with-different-backends-for-the-trajectory-classes]]). 
+A list of projects ideas for [[Google Summer of Code 2016|Google-Summer-Of-Code]]. Each with a short sentence describing it. Please also note that not every project we suggest here will take you all summer. Some will be short (eg TNG format) and with others you might only be able to implement parts (eg [[dask backend|GSoC-2016-Project-Ideas#experiment-with-different-backends-for-the-trajectory-classes]]). 
 
 The project ideas can be roughly categorized as
 
-1. [[New analysis functionality|#new-analysis-functionality]]
-2. [[Increasing performance|#increasing-performance]]
-3. [[New input formats|#new-input-formats]]
-4. [[Increase platform availability|#increase-platform-availability]]
-5. [[Increase ease-of-use|#Increase-ease-of-use]]
-6. [[Improve the library core|#Improve the library core]]
+1. [[New analysis functionality|GSoC-2016-Project-Ideas#new-analysis-functionality]]
+2. [[Increasing performance|GSoC-2016-Project-Ideas#increasing-performance]]
+3. [[New input formats|GSoC-2016-Project-Ideas#new-input-formats]]
+4. [[Increase platform availability|GSoC-2016-Project-Ideas#increase-platform-availability]]
+5. [[Increase ease-of-use|GSoC-2016-Project-Ideas#increase-ease-of-use]]
+6. [[Improve the library core|GSoC-2016-Project-Ideas#improve-the-library-core]]
 
 ------
 

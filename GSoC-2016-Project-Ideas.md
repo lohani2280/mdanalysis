@@ -1,5 +1,5 @@
 <img src="https://developers.google.com/open-source/gsoc/images/gsoc2016-sun-373x373.png" title="Google Summer of Code 2016" alt="Google Summer of Code 2016" align="right"/>
-A list of projects ideas. Each with a short sentence describing it. Please also note that not every project we suggest here will take you all summer. Some will be short (eg TNG format) and with others you might only be able to implement parts (eg dask backend). 
+A list of projects ideas for [[Google Summer of Code 2016|Google-Summer-Of-Code]]. Each with a short sentence describing it. Please also note that not every project we suggest here will take you all summer. Some will be short (eg TNG format) and with others you might only be able to implement parts (eg dask backend). 
 
 
 ## Implement a general dimension reduction algorithm

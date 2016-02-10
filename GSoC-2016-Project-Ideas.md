@@ -10,6 +10,8 @@ The project ideas can be roughly categorized as
 5. [[Increase ease-of-use|GSoC-2016-Project-Ideas#increase-ease-of-use]]
 6. [[Improve the library core|GSoC-2016-Project-Ideas#improve-the-library-core]]
 
+**Or work on your your own idea!** Get in contact with us to propose an idea and we will work with you to flesh it out into a full project. Raise an issue in the [Issue Tracker](/MDAnalysis/mdanalysis/issues) or contact us via the [developer Google group](http://developers.mdanalysis.org).
+
 ------
 
 # New analysis functionality
@@ -99,5 +101,3 @@ Implement a formal flexible parser for atom selections (using [pyparsing](https:
 MDAnalysis is using Anström and picoseconds as default units. Our Reader/Writer objects are only aware of units to
 the extend that they convert other MD-formats to our default units. But we can also read the coordinates in the native units. This can make it hard to remember what units the coordinates of an AtomGroup have, to fix this you should switch from pure numpy arrays to a unit aware numpy-ndarray wrapper. See [Issue #596](https://github.com/MDAnalysis/mdanalysis/issues/596)
 
-## Or your idea here! Get in contact with us to propose an idea.
-Raise an issue in the [Issue Tracker](/MDAnalysis/mdanalysis/issues) or contact us via the [developer Google group](http://developers.mdanalysis.org).

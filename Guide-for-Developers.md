@@ -1,6 +1,10 @@
 # Useful Links for Developing MDAnalysis #
 GitHub does not provide a search for wikis (!) but you can install the [GitHub Wiki Search plugin](https://github.com/linyows/github-wiki-search) into your browser, which patches a search box into any GitHub wiki that you visit.
 
+First read
+* [Style Guide](https://github.com/MDAnalysis/mdanalysis/wiki/Style-Guide)
+
+Then look at (in no particular order)
 * [Setup Development Environment](https://github.com/MDAnalysis/mdanalysis/wiki/Setup-Development-Environment)
 * [Contributing code](https://github.com/MDAnalysis/mdanalysis/wiki/ContributingCode)  
 * [Working on the MDAnalysis core](https://github.com/MDAnalysis/mdanalysis/wiki/CoreDevelopment)  
@@ -11,7 +15,6 @@ GitHub does not provide a search for wikis (!) but you can install the [GitHub W
 * [Source Code Management](https://github.com/MDAnalysis/mdanalysis/wiki/Source)  
 * [Writing documentation](https://github.com/MDAnalysis/mdanalysis/wiki/WritingDocumentation)  
 * [Trying the development branch](https://github.com/MDAnalysis/mdanalysis/wiki/DevelopmentBranch)  
-* [Style Guide](https://github.com/MDAnalysis/mdanalysis/wiki/Style-Guide)
 
 ## Developer docs:  ##
 * [Online docs (development branch)](http://www.mdanalysis.org/mdanalysis/package/doc/html/)

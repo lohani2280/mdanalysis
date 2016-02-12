@@ -140,4 +140,5 @@ For now, see [[Writing Tests|UnitTests#writing-test-cases]] (but that needs to b
 * changes and additions to 
    * `MDAnalysis.analysis`
    * `MDAnalysis.visualization`
+
   Tests are **highly encouraged** (and anyone reviewing commits can ask for at least minimal tests)

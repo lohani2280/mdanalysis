@@ -76,7 +76,7 @@ use **absolute imports** in the library (i.e. relative imports must be explicitl
 
 ## Writing Docstrings
 
-Since 0.11.0 we adopted the use of numpy-style doc strings. They are nice to read as normal text and are converted by sphinx to normal ReST through [napoleon](http://sphinxcontrib-napoleon.readthedocs.org/en/latest/index.html). All previous doc-strings are using pure ReST, and we use the same approach as for the coding-style here. When you touch a function please update its docstring to follow the numpy-style. All new functions should have numpy-style docstrings.
+Since 0.11.0 we adopted the use of [numpy-style doc strings](https://github.com/numpy/numpy/blob/master/doc/HOWTO_DOCUMENT.rst.txt). They are nice to read as normal text and are converted by sphinx to normal ReST through [napoleon](http://sphinxcontrib-napoleon.readthedocs.org/en/latest/index.html). All previous doc-strings are using pure ReST, and we use the same approach as for the coding-style here. When you touch a function please update its docstring to follow the numpy-style. All new functions should have numpy-style docstrings.
 
 ```python
 def func(arg1, arg2):

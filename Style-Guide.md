@@ -1,5 +1,12 @@
 # Code style guidelines
 
+1. [[Coding Style|Style-Guide#coding-style]]
+1. [[Importing modules|Style-Guide#importing-modules]]
+1. [[Writing Docstrings|Style-Guide#writing-docstrings]]  
+1. [[Code organization|Style-Guide#code-organization]]
+1. [[Version control|Style-Guide#version-control]]
+1. [[Tests|Style-Guide#tests]]
+
 (For background and history see [Issue #404](/MDAnalysis/mdanalysis/issues/404), which contains the original discussion on the Style Guide.)
 
 ## Coding Style
@@ -128,11 +135,13 @@ MDAnalysis
 
 This is standard. See [numpy](https://github.com/numpy/numpy/tree/master/numpy/linalg/lapack_lite), [scipy](https://github.com/scipy/scipy/tree/master/scipy/spatial), [scikit-learn](https://github.com/scikit-learn/scikit-learn/tree/master/sklearn/svm/src), [mdtraj](https://github.com/mdtraj/mdtraj/tree/master/mdtraj/formats/xtc), for other examples.
 
-## Commit messages
+## Version control
+We use [[git]] for version control. The [[DevelopmentWorkflow]] uses *pull requests* against the [[DevelopmentBranch]] (named *develop*) followed by automated testing and code review by project members. Successful PRs are merged into *develop*.
 
+### Commit messages
 Follow [[git commits|Style-Guide:-git-commits]].
 
-## Writing Tests
+## Tests
 
 For now, see [[Writing Tests|UnitTests#writing-test-cases]] (but that needs to be cleaned up). In short:
 

@@ -43,29 +43,15 @@ We recommend that you either use a Python IDE ([PyCharm](https://www.jetbrains.c
 To apply the code formatting in an automated way you can also use code formatters. As external tools there are [autopep8](https://github.com/hhatto/autopep8) and [yapf](https://github.com/google/yapf). Most IDE's either have their own code formatter or will work with one of the above through plugins.
 
 ## Importing modules
+We are striving to keep module dependencies small and lightweight (i.e., easily installable with `pip`).
 
-* Any modules from the standard library can be used, as well as the following nonstandard libraries:
-
-   * `numpy`
-   * `biopython`
-   * `gridDataFormats`
-   * `networkx`
-
-  because these packages are always installed.
- 
-  `scipy` is optional and not guaranteed to be installed.
-
-  If you must depend on new external package, discuss its use on the [developer mailing list](http://developers.mdanalysis.org) or as part of the issue/PR. For independent modules in `MDAnalysis.analysis` or `MDAnalysis.visualization`, there are fewer restrictions, except that a user who does not have a required package installed must still be able to import everything else in MDAnalysis. Your module should print a message notifying the user that a specific additional package needs to be installed.
-
-* Imports should all happen at the start of a module (not inside Classes or functions).  The exception to this is when dealing with non essential dependencies (such as in `analysis`), which can be nested inside the Class or function to allow to package to work without them.
-
-* Libraries must be imported in the following order:
-
-  - future
-  - global imports
-  - local imports
-
-use **absolute imports** in the library (i.e. relative imports must be explicitly indicated), e.g.,
+### General rules for importing
+* Imports must all happen at the start of a module (not inside classes or functions).  
+* Modules must be imported in the following order:
+  - [future](https://docs.python.org/2/library/__future__.html) (`from __future__ import absolute_import, print_function, division`)
+  - global imports (installed packages)
+  - local imports (MDAnalysis modules)
+* use **absolute imports** in the library (i.e. relative imports must be explicitly indicated), e.g.,
   ```python
   from __future__ import absolute_import
 
@@ -75,11 +61,42 @@ use **absolute imports** in the library (i.e. relative imports must be explicitl
   import ..units
   ```
 
-* In the testsuite, use the order above, but import `MDAnalysis` modules before `MDAnalysisTests` imports
+#### Module imports in `MDAnalysis.analysis`
 
-* Do not use *relative imports* (e.g. ``import .datafiles``) in the test suite because it breaks running the tests from inside the test directory (see [#189](MDAnalysis/mdanalysis/issues/189))
+1. In `MDAnalysis.analysis`, all imports must be at the top level (as in the General Rule) — see [[#666|https://github.com/MDAnalysis/mdanalysis/issues/666]]
+1. [[Optional modules|Style-Guide#modules-in-mdanalysisanalysis-and-mdanalysisvisualization]] can be imported.
+1. No analysis module is imported automatically at the `MDAnalysis.analysis` level to avoid breaking the installation when optional dependencies are missing.
 
+#### Module imports in the test suite
+* In the test suite, use the order above, but import `MDAnalysis` modules before `MDAnalysisTests` imports
+* Do not use *relative imports* (e.g. ``import .datafiles``) in the test suite because it breaks running the tests from inside the test directory (see [#189](/MDAnalysis/mdanalysis/issues/189))
 * Never import the `MDAnalysis` module from the `__init__.py` of `MDAnalysisTests` or from any of its plugins (it's ok to import from test files). Importing `MDAnalysis` from the test setup code will cause severe coverage underestimation.
+
+
+### List of core module dependencies
+
+Any module from the standard library can be used, as well as the following nonstandard libraries:
+
+   * `numpy`
+   * `biopython`
+   * `gridDataFormats`
+   * `networkx`
+
+because these packages are always installed. (Note that `scipy` is optional and not guaranteed to be installed, see below).
+
+If you must depend on a new external package, first discuss its use on the [developer mailing list](http://developers.mdanalysis.org) or as part of the issue/PR. 
+
+
+#### Modules in the "core"
+The core of MDAnalysis contains all packages that are not in `MDAnalysis.analysis` or `MDAnalysis.visualization`. Only packages in the [[List of core module dependencies|Style-Guide#list-of-core-module-dependencies]] can be imported.
+
+#### Modules in `MDAnalysis.analysis` and `MDAnalysis.visualization`
+Modules under `MDAnalysis.analysis` are considered independent. Each can have its own set of dependencies. We strive to keep them small as well but module authors are in principle free to import what they need. These dependencies beyond the core dependencies are **optional dependencies** (and should be listed in `setup.py` under *analysis*).
+
+A user who does not have a specific optional package installed must still be able to import everything else in MDAnalysis. An analysis module may simply raise an `ImportError` if a package is missing but it is recommended that it should print and log an *error message* notifying the user that a specific additional package needs to be installed to use this module.
+
+If a large portion of the code in the module does not depend on a specific optional module then you should guard the import at the top level with a `try/except`, print and log a *warning*, and only raise an `ImportError` in the specific function or method that would depend on the missing module. (Example: see `scipy.sparse` in `MDAnalysis.analysis.distances` in PR [[#708|https://github.com/MDAnalysis/mdanalysis/pull/708]])
+
 
 ## Writing Docstrings
 

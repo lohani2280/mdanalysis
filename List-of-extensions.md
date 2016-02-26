@@ -9,5 +9,5 @@ MDAnalysis uses lots of extensions, below is a list of them and their readiness 
 | ~~lib.parallel.distances~~    | More parallel distances      | Cython     | Yes?? | [#530](https://github.com/MDAnalysis/mdanalysis/issues/530) |
 | lib.qcprot                | RMSD via QCP                 | Cython     | Yes?                     | |
 | lib._transformations      | Coordinate transformations   | C/CPython  | Probably ([#401](https://github.com/MDAnalysis/mdanalysis/issues/401))  | |
-| lib.KDTree._KDTree        | KDTree for distance searches | CPP/SWIG   | No (#383)                | [395](https://github.com/MDAnalysis/mdanalysis/pull/395) |
+| ~~lib.KDTree._KDTree~~        | KDTree for distance searches | CPP/SWIG   | No (#383)                | [395](https://github.com/MDAnalysis/mdanalysis/pull/395) (now using Biophyton) |
 | coordinates.xdrfile       | Gromacs format reader        | C/Swig     | No ([#211](https://github.com/MDAnalysis/mdanalysis/issues/211))                | [441](https://github.com/MDAnalysis/mdanalysis/pull/441#event-517264871) |

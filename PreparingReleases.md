@@ -32,7 +32,10 @@ so that people using the [development branch](DevelopmentBranch) from the source
 Releases should exist on the _master_ branch:
 
 * declare *feature freeze* on _develop_ via developer list
+* finalise the CHANGELOG file with date
 * *merge* _develop_ into _master_ (make sure that it gets the full release number)
+* increment version
+* rebuild c files (See [Issue #667](https://github.com/MDAnalysis/mdanalysis/issues/667))
 * *[[tag|#Tagging]]* the release
 
 # Preparing distribution tar balls #

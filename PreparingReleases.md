@@ -22,11 +22,11 @@ The **release number** is set in [setup.py](https://github.com/MDAnalysis/mdanal
 RELEASE = '0.7.5'
 ```
 
-**While the code is in development** (i.e. whenever we are not preparing a release!) the release number gets the suffix **-devel**, e.g.
+**While the code is in development** (i.e. whenever we are not preparing a release!) the release number gets the suffix **-dev0**, e.g.
 ```
-RELEASE = '0.7.6-devel'
+RELEASE = '0.7.6-dev0'
 ```
-so that people using the [development branch](DevelopmentBranch) from the sources see immediately that this is not a final release. For example, "0.7.6-devel" is the state _before_ the 0.7.6 release.
+so that people using the [development branch](DevelopmentBranch) from the sources see immediately that this is not a final release. For example, "0.7.6-dev0" is the state _before_ the 0.7.6 release.
 
 # git repository: branches #
 Releases should exist on the _master_ branch:

@@ -3,9 +3,7 @@ MDAnalysis 0.14.0 is a new release with many new features and fixes; see also th
 * release: 0.14.0
 * release date: 02/28/16 
 
-## Authors
-tyler.je.reddy, kain88-de, jbarnoud, richardjgowers, orbeckst, manuel.nuno.melo, Balasubra, Saxenauts, mattihappy
-
+# CHANGELOG
 ## API Changes
 
   * Offsets files for Gromacs trajectory formats have been changed to a numpy style format '.npz'. Offsets files will be regenerated when you load a    xtc/trr trajectory again. (Issue #441)
@@ -43,3 +41,6 @@ tyler.je.reddy, kain88-de, jbarnoud, richardjgowers, orbeckst, manuel.nuno.melo,
   * Fixed cyzone selection failing in orthogonal systems (Issue #710)
   * Fixed Error in calculation of average grid density (Issue #716)
   * Fixed indexing an AtomGroup using a list of bools now working (Issue #729)
+
+# Authors
+tyler.je.reddy, kain88-de, jbarnoud, richardjgowers, orbeckst, manuel.nuno.melo, Balasubra, Saxenauts, mattihappy

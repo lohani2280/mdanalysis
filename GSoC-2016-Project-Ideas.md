@@ -39,7 +39,14 @@ Of course you can also suggest us another dimension reduction algorithm that you
 
 **Mentors**: Max, Richard, Manuel
 
-Work with domain-decomposition algorithms to improve our distance search algorithms ([cell grids](https://github.com/richardjgowers/cellgrid)) and/or implement distance search on **GPUs** using CUDA/OpenCL.
+To analyze molecular simulations it is often helpful which atoms are close to each other. For this we calculate distance matrices where the distances between every atom pair is calculated. This is a very expensive operation that grows quadratic with the number of atoms involved.
+
+Since we are only interested in atoms that are close to each other we can use some algorithms run faster
+after some initial analysis of the coordinates. One class of these algorithms are domain-decomposition algorithms. The basic idea of this type of algorithms is to decompose the volume occupied by the atoms into different cells and then only calculate distances for atoms in neighboring cells. If atoms are not in neighboring cells we already know that the distance is to big for us to be interesting.
+
+One domain decomposition algorithm is [cell grids](https://github.com/richardjgowers/cellgrid).
+
+In this project you would integrate the cell grid algorithm into MDAnalysis. 
 
 # New input formats
 

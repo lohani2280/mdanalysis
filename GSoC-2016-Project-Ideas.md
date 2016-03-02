@@ -76,7 +76,11 @@ start you could implement a integrator for langevin dynamics and later have the 
 **Mentors**: Max, Richard, Manuel
 
 Python 3 is getting adopted by a wider range of users and unix distributions are starting to switch.
-MDAnalysis can't run right now under Python 3 mostly due to it's [C/Cython extensions](https://github.com/MDAnalysis/mdanalysis/wiki/List-of-extensions), we currently try to move our C-extensions to cython which supports Python 2 and 3 with one source. See also [#260](https://github.com/MDAnalysis/mdanalysis/issues/260)
+MDAnalysis can't run right now under Python 3 mostly due to it's [C/Cython extensions](https://github.com/MDAnalysis/mdanalysis/wiki/List-of-extensions), we currently try to move our C-extensions to cython which supports Python 2 and 3 with one source. See also [#260](https://github.com/MDAnalysis/mdanalysis/issues/260).
+
+Missing here right now is the DCD trajectory readers. There exists an [incomplete work](https://github.com/MDAnalysis/mdanalysis/pull/682) to enable Python 2/3 of the DCD reader. In this project you would finish this work by either writing finishing this work or by rewriting the DCD interface in cython.
+
+The second part of this project is to remove all other incompatibilities with Python 3 we currently have. For this you should work that our test-suite passes on Python 3. 
 
 # Increase ease-of-use
 
@@ -95,14 +99,6 @@ mda convert --topology adk.psf -i adk_dims.dcd -o adk_dims.xtc
 This project would involve creating a template for these command line utilities to follow and implementing a foolproof user interface for navigating them [using a popular command line parsing library](https://realpython.com/blog/python/comparing-python-command-line-parsing-libraries-argparse-docopt-click/).
 
 # Improve the library core
-
-## Formalize our Atom selection parser
-
-**Difficulty**: Medium
-
-**Mentors**: Max, Richard, Manuel
-
-Implement a formal flexible parser for atom selections (using [pyparsing](https://pyparsing.wikispaces.com/); see also [our discussion](https://github.com/MDAnalysis/mdanalysis/issues/371) on it).
 
 ## Switch from pure ndarray's to unit aware nd-arrays.
 

@@ -1,5 +1,5 @@
 <img src="https://developers.google.com/open-source/gsoc/images/gsoc2016-sun-373x373.png" title="Google Summer of Code 2016" alt="Google Summer of Code 2016" align="right"/>
-A list of projects ideas for [[Google Summer of Code 2016|Google-Summer-Of-Code]]. Each with a short sentence describing it. Please also note that not every project we suggest here will take you all summer. Some will be short (e.g., [[adding the new TNG trajectory format|GSoC-2016-Project-Ideas#add-new-md-formats]]) and with others you might only be able to implement parts (eg [[dask backend|GSoC-2016-Project-Ideas#experiment-with-different-backends-for-the-trajectory-classes]]). 
+A list of projects ideas for [[Google Summer of Code 2016|Google-Summer-Of-Code]]. Each with a short sentence describing it. Please also note that not every project we suggest here will take you all summer. Some will be short (e.g., [[adding the new TNG trajectory format|GSoC-2016-Project-Ideas#add-new-md-formats]]). 
 
 The project ideas can be roughly categorized as
 
@@ -17,6 +17,10 @@ The project ideas can be roughly categorized as
 # New analysis functionality
 ## Implement a general dimension reduction algorithm
 
+**Difficulty**: Hard
+
+**Mentors**: Max, Richard, Manuel
+
 MDAnalysis already comes with a range of different standard analysis tools but currently lacks an implementation of a general dimension reduction algorithm, that can select an arbitrary number of dimensions of interest. 3 common general techniques are
 
 - [Time Independent Component Analysis](http://arxiv.org/abs/1302.6614)
@@ -29,13 +33,11 @@ Of course you can also suggest us another dimension reduction algorithm that you
 
 # Increasing performance
 
-
-## Develop a analysis pipeline framework for multi-core CPUs
-
-Help us implement a general pipeline to use multiple CPU-cores for analysis tasks ([Dask](http://dask.pydata.org/en/latest/), [MPI](http://pythonhosted.org/mpi4py/usrman/index.html), or even a hybrid approach)
-For an example of the direction this is currently taking, [see here](https://github.com/MDAnalysis/mdanalysis/pull/618)
-
 ## Improve distance search 
+
+**Difficulty**: Hard
+
+**Mentors**: Max, Richard, Manuel
 
 Work with domain-decomposition algorithms to improve our distance search algorithms ([cell grids](https://github.com/richardjgowers/cellgrid)) and/or implement distance search on **GPUs** using CUDA/OpenCL.
 
@@ -43,11 +45,19 @@ Work with domain-decomposition algorithms to improve our distance search algorit
 
 ## Add new MD-Formats
 
+**Dificulty**: Medium
+
+**Mentors**: Max, Richard, Manuel
+
 One of the strengths of MDAnalysis is its ability to support a wide range of different MD-formats. But we are still missing some like the new [TNG file format](http://onlinelibrary.wiley.com/doi/10.1002/jcc.23495/abstract) from Gromacs or [H5MD](https://github.com/pdebuyl/pyh5md). Alternatively, you can also add a format that you want to use personally in MDAnalysis.
-This project will familiarise you with working with and connecting different APIs,
+This project will familiarize you with working with and connecting different APIs,
 as well as giving insight into how modern portable data storage file formats work.
 
 ## Random Walk Trajectory Backend
+
+**Difficulty**: Hard
+
+**Mentors**: Max, Richard, Manuel
 
 To check if a new analysis-method works as intended it is often a good idea to use it with a random walk in different simple energy landscapes (A flat energy, harmonic well, double well). In this project you would develop a 'Reader' that produces random trajectories. 
 
@@ -61,12 +71,20 @@ start you could implement a integrator for langevin dynamics and later have the 
 
 ## Help port MDAnalysis to Python 3
 
+**Difficulty**: Easy
+
+**Mentors**: Max, Richard, Manuel
+
 Python 3 is getting adopted by a wider range of users and unix distributions are starting to switch.
 MDAnalysis can't run right now under Python 3 mostly due to it's [C/Cython extensions](https://github.com/MDAnalysis/mdanalysis/wiki/List-of-extensions), we currently try to move our C-extensions to cython which supports Python 2 and 3 with one source. See also [#260](https://github.com/MDAnalysis/mdanalysis/issues/260)
 
 # Increase ease-of-use
 
 ## Create a command line interface for MDAnalysis tasks
+
+**Difficulty**: Medium
+
+**Mentors**: Max, Richard, Manuel
 
 Currently MDAnalysis exists only as a framework, however making common tasks available via the command line would make certain work flows easier.  As an example, the conversion of trajectories between formats could take the form: 
 
@@ -80,9 +98,17 @@ This project would involve creating a template for these command line utilities 
 
 ## Formalize our Atom selection parser
 
+**Difficulty**: Medium
+
+**Mentors**: Max, Richard, Manuel
+
 Implement a formal flexible parser for atom selections (using [pyparsing](https://pyparsing.wikispaces.com/); see also [our discussion](https://github.com/MDAnalysis/mdanalysis/issues/371) on it).
 
 ## Switch from pure ndarray's to unit aware nd-arrays.
+
+**Difficulty**: Hard
+
+**Mentors**: Max, Richard, Manuel
 
 MDAnalysis is using Anström and picoseconds as default units. Our Reader/Writer objects are only aware of units to
 the extend that they convert other MD-formats to our default units. But we can also read the coordinates in the native units. This can make it hard to remember what units the coordinates of an AtomGroup have, to fix this you should switch from pure numpy arrays to a unit aware numpy-ndarray wrapper. See [Issue #596](https://github.com/MDAnalysis/mdanalysis/issues/596)

@@ -42,7 +42,7 @@ Of course you can also suggest us another dimension reduction algorithm that you
 To analyze molecular simulations it is often helpful which atoms are close to each other. For this we calculate distance matrices where the distances between every atom pair is calculated. This is a very expensive operation that grows quadratic with the number of atoms involved.
 
 Since we are only interested in atoms that are close to each other we can use some algorithms run faster
-after some initial analysis of the coordinates. One class of these algorithms are domain-decomposition algorithms. The basic idea of this type of algorithms is to decompose the volume occupied by the atoms into different cells and then only calculate distances for atoms in neighboring cells. If atoms are not in neighboring cells we already know that the distance is to big for us to be interesting.
+after some initial analysis of the coordinates. One class of these algorithms are domain-decomposition algorithms. The basic idea of this type of algorithms is to decompose the volume occupied by the atoms into different cells and then only calculate distances for atoms in neighboring cells. If atoms are not in neighboring cells we already know that the distance is to big for us to be interesting. A theoretical description of these algorithm can be found in [this book Appendix F](http://www.amazon.de/Understanding-Molecular-Simulation-Applications-Computational/dp/0122673514%3FSubscriptionId%3DAKIAILSHYYTFIVPWUY6Q%26tag%3Dduckduckgo-ffnt-de-21%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3D0122673514)
 
 One domain decomposition algorithm is [cell grids](https://github.com/richardjgowers/cellgrid).
 

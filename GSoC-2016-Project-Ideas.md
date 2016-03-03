@@ -27,7 +27,7 @@ MDAnalysis already comes with a range of different standard analysis tools but c
 - [Diffusion Maps] (http://arxiv.org/abs/1506.06259)
 - [Principle Component Analysis](https://en.wikipedia.org/wiki/Principal_component_analysis)
 
-There are python implementations for all of these algorithms but none of them currently work with MDAnalysis out of the box. This is because the current python implementations work on normal numpy arrays that stores a complete trajectory in memory, but MDAnalysis never loads the whole trajectory but only one frame at a time. This approach allows MDAnalysis to treat very large system on a normal laptop or workstation.
+There are python implementations for all of these algorithms but none of them currently work with MDAnalysis out of the box. This is because the current python implementations work on normal numpy arrays that stores a complete trajectory in memory, but MDAnalysis never loads the whole trajectory but only one frame at a time. This approach allows MDAnalysis to treat very large system on a normal laptop or workstation. A new dimension reduction should be implemented as a class and inherit from [analysis.base](https://github.com/MDAnalysis/mdanalysis/blob/5b6471d93a36581d06ec73a1a0bddc8a460d4213/package/MDAnalysis/analysis/base.py#L35).
 
 Of course you can also suggest us another dimension reduction algorithm that you would like to implement.
 
@@ -68,8 +68,12 @@ as well as giving insight into how modern portable data storage file formats wor
 
 To check if a new analysis-method works as intended it is often a good idea to use it with a random walk in different simple energy landscapes (A flat energy, harmonic well, double well). In this project you would develop a 'Reader' that produces random trajectories. 
 
-Langevin dynamics in a energy landscape are close to the conformational dynamics of proteins, see [1]. As a first
-start you could implement a integrator for langevin dynamics and later have the trajectory 'reader' use the integrator to dynamically generate the trajectory. 
+For analysis of molecular data a comparison against random data can be very useful for several reasons. The first is that we want to test if our analysis can distinguish between a simulation and random noise.
+It can also be interesting to see what general analysis methods like Principle Component Analysis produce with [random data](http://journals.aps.org/pre/abstract/10.1103/PhysRevE.62.8438).
+
+The first random trajectory generator would just be a random walk in 3N dimensions (N is the number of particles in the simulation to compare to). The second would be to implement langevin dynamics in either predefined energy landscapes and/or arbitrary ones. Langevin dynamics in a energy landscape are close to the conformational dynamics of proteins, see [1]. As a first start you could implement a integrator for Langevin dynamics and later have the trajectory 'reader' use the integrator to dynamically generate the trajectory.
+
+Please note that this project does require a background in statistical phyics or mathematics.
 
 [1] Robert Zwanzig. Nonequilibrium statistical mechanics. Oxford University Press,
 2001

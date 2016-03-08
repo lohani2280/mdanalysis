@@ -4,6 +4,14 @@ MDAnalysis is planning to host  **[Google Summer of Code 2016](https://developer
 * The student will be mentored by at least one experienced MDAnalysis core developer and also receive support from Google. 
 * The student will contribute code to MDAnalysis.
 
+# Eligibility
+Eligibility requirements are described in the [GSoC FAQ](https://developers.google.com/open-source/gsoc/faq): 
+* You must be at least 18 years of age.
+* You must be a **full or part-time student** at an [accredited university](https://developers.google.com/open-source/gsoc/faq#accredited) (or have been accepted as of April 22, 2016).
+* You must be eligible to work in the country you will reside in during the program.
+* You have not already participated as a Student in GSoC more than twice.
+* You must reside in a country that is not currently embargoed by the United States. See [Program Rules](https://developers.google.com/open-source/gsoc/rules) for more information.
+
 # How to Contact MDAnalysis
 
 You are more than welcome to contact us before submitting your application, we will be happy to advise you on most aspects of the process. Getting in touch first is especially recommended if you are planning to apply to work on an original idea, rather than one of our suggestions.

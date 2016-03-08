@@ -65,6 +65,16 @@ Firstly, think about your choice of project carefully, you're going to be doing 
 
 Overall, your application should make us believe that you are capable of completing the project and delivering the functionality to our users. If you aren't sure about anything, get in touch with us, we're happy to advise you.
 
+### Requirements for an Application
+
+We are a taking part in GSoC as under the [Python software foundation](https://www.python.org/psf/) umbrella. This means next to the 
+requirements listed here the [requirements of the PSF](https://wiki.python.org/moin/SummerOfCode/2016#How_do_I_Apply.3F) apply.
+
+- Introduce yourself on the [mailing list](https://groups.google.com/forum/#!forum/mdnalysis-devel). Tell us what you plan to work on during 
+   the summer or what you have already done with MDAnalysis
+- Checkout the source and run the tests from the source code (If you don't manage to setup the virtual environment don't be embarrassed to ask for help)
+- Fix an [easy bug](https://github.com/MDAnalysis/mdanalysis/issues?q=is%3Aopen+is%3Aissue+label%3ADifficulty-easy). Alternatively you can also write a new tests or update update our documentation.
+
 ### Dividing your project
 
 We require that all of our students have at least one commit in our `develop` branch before the end of the summer. The best way to achieve this is to divide your project into small self contained subprojects and plan to merge at least one of them around midterm. 
@@ -86,9 +96,4 @@ Since this is a hard requirement we as mentors will also have an eye on that and
 
 To get a feeling for the code and get some experience with our code you can go and tackle some of our easy bugs. Look at the code that you want to change, check if it follows our coding guidelines. Do some research on the API's you want to use, plan what classes you will add and how their public API will look. Write down your algorithms in pseudo code. The better your research is and the better you plan ahead the easier it will be to judge how long a given task will take. For your time estimates you should also consider that you can do less stuff during exams and try to be a bit conservative. If you have never done anything like GSoC before you will tend to underestimate the time to complete a task. We know that giving these estimates is not easy and that also professionals have problems with it. Having a good plan, knowing its weak and strong points will help a lot. 
 
-# Some (entirely optional) things you might consider doing
-
-- Why not introduce yourself on the mailing list. Tell us what you plan to work on during the summer or what you have already done with MDAnalysis
-- checkout the source and run the tests from the source code (If you don't manage to setup the virtual environment don't be embarrassed to ask for help)
-- Maybe fix an [easy bug](https://github.com/MDAnalysis/mdanalysis/issues?q=is%3Aopen+is%3Aissue+label%3ADifficulty-easy)
 

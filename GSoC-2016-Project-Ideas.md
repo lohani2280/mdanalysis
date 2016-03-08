@@ -117,6 +117,6 @@ This project would involve creating a template for these command line utilities 
 
 **Mentors**: Max, Richard, Manuel
 
-MDAnalysis is using Anström and picoseconds as default units. Our Reader/Writer objects are only aware of units to
+MDAnalysis is using ångström and picoseconds as default units. Our Reader/Writer objects are only aware of units to
 the extend that they convert other MD-formats to our default units. But we can also read the coordinates in the native units. This can make it hard to remember what units the coordinates of an AtomGroup have, to fix this you should switch from pure numpy arrays to a unit aware numpy-ndarray wrapper. See [Issue #596](https://github.com/MDAnalysis/mdanalysis/issues/596)
 

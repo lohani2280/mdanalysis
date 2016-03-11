@@ -19,7 +19,7 @@ The project ideas can be roughly categorized as
 
 **Difficulty**: Hard
 
-**Mentors**: Max, Richard, Manuel
+**Mentors**: Max, Richard, Manuel, Jonathan
 
 MDAnalysis already comes with a range of different standard analysis tools but currently lacks an implementation of a general dimension reduction algorithm, that can select an arbitrary number of dimensions of interest. 3 common general techniques are
 
@@ -37,7 +37,7 @@ Of course you can also suggest us another dimension reduction algorithm that you
 
 **Difficulty**: Hard
 
-**Mentors**: Max, Richard, Manuel
+**Mentors**: Max, Richard, Manuel, Jonathan
 
 To analyze molecular simulations it is often helpful which atoms are close to each other. For this we calculate distance matrices where the distances between every atom pair is calculated. This is a very expensive operation that grows quadratic with the number of atoms involved.
 
@@ -54,7 +54,7 @@ In this project you would integrate the cell grid algorithm into MDAnalysis.
 
 **Dificulty**: Medium
 
-**Mentors**: Max, Richard, Manuel
+**Mentors**: Max, Richard, Manuel, Jonathan
 
 One of the strengths of MDAnalysis is its ability to support a wide range of different MD-formats. But we are still missing some like the new [TNG file format](http://onlinelibrary.wiley.com/doi/10.1002/jcc.23495/abstract) from Gromacs , [H5MD](https://github.com/pdebuyl/pyh5md) or the [HALMD](http://halmd.org/) format. Alternatively, you can also add a format that you want to use personally in MDAnalysis.
 This project will familiarize you with working with and connecting different APIs,
@@ -64,7 +64,7 @@ as well as giving insight into how modern portable data storage file formats wor
 
 **Difficulty**: Hard
 
-**Mentors**: Max, Richard, Manuel
+**Mentors**: Max, Richard, Manuel, Jonathan
 
 To check if a new analysis-method works as intended it is often a good idea to use it with a random walk in different simple energy landscapes (A flat energy, harmonic well, double well). In this project you would develop a 'Reader' that produces random trajectories. 
 
@@ -84,7 +84,7 @@ Please note that this project does require a background in statistical phyics or
 
 **Difficulty**: Easy
 
-**Mentors**: Max, Richard, Manuel
+**Mentors**: Max, Richard, Manuel, Jonathan
 
 Python 3 is getting adopted by a wider range of users and unix distributions are starting to switch.
 MDAnalysis can't run right now under Python 3 mostly due to it's [C/Cython extensions](https://github.com/MDAnalysis/mdanalysis/wiki/List-of-extensions), we currently try to move our C-extensions to cython which supports Python 2 and 3 with one source. See also [#260](https://github.com/MDAnalysis/mdanalysis/issues/260).
@@ -99,7 +99,7 @@ The second part of this project is to remove all other incompatibilities with Py
 
 **Difficulty**: Medium
 
-**Mentors**: Max, Richard, Manuel
+**Mentors**: Max, Richard, Manuel, Jonathan
 
 Currently MDAnalysis exists only as a framework, however making common tasks available via the command line would make certain work flows easier.  As an example, the conversion of trajectories between formats could take the form: 
 
@@ -115,7 +115,7 @@ This project would involve creating a template for these command line utilities 
 
 **Difficulty**: Hard
 
-**Mentors**: Max, Richard, Manuel
+**Mentors**: Max, Richard, Manuel, Jonathan
 
 MDAnalysis is using ångström and picoseconds as default units. Our Reader/Writer objects are only aware of units to
 the extend that they convert other MD-formats to our default units. But we can also read the coordinates in the native units. This can make it hard to remember what units the coordinates of an AtomGroup have, to fix this you should switch from pure numpy arrays to a unit aware numpy-ndarray wrapper. See [Issue #596](https://github.com/MDAnalysis/mdanalysis/issues/596)

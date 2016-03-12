@@ -33,6 +33,22 @@ Of course you can also suggest us another dimension reduction algorithm that you
 
 # Increasing performance
 
+## Implement efficient parallel analysis of trajectories 
+
+**Difficulty**: Hard
+
+**Mentors**: Max, Richard, Manuel, Jonathan
+
+Molecular simulation trajectories are very often analyzed frame-by-frame. This is frequently an embarrassingly parallel procedure, in which work can be efficiently divided simply by splitting the trajectory and letting each worker process one of the chunks. The goal of this project is to implement a parallelization framework that automates all the trajectory splitting, work distribution, and eventual result collection.
+
+A parallelization framework should put the least burden possible on the end-user, so that minimal changes are required to turn serial code into parallel. Likewise, the parallelization framework must blend naturally with the analysis API of MDAnalysis. In this way, analyses written using [analysis.base](https://github.com/MDAnalysis/mdanalysis/blob/5b6471d93a36581d06ec73a1a0bddc8a460d4213/package/MDAnalysis/analysis/base.py#L35) will automatically become parallelizable.
+
+Implementing parallelization in Python code can be done in [many ways](https://wiki.python.org/moin/ParallelProcessing). Aspects to consider when choosing one or several approaches are:
+- Most users will primarily have access to SMP parallelization;
+- Notwithstanding the above point, many users also typically have access to multi-node HPC clusters, and we should be able to leverage their use;
+- In an analysis context, being able to write results to shared memory will improve the memory usage footprint and simplify result collection;
+- GPU parallelization is attractive for its wide availability (though possibly more complex to implement in a meaningful way).
+
 ## Improve distance search 
 
 **Difficulty**: Hard
@@ -73,7 +89,7 @@ It can also be interesting to see what general analysis methods like Principle C
 
 The first random trajectory generator would just be a random walk in 3N dimensions (N is the number of particles in the simulation to compare to). The second would be to implement langevin dynamics in either predefined energy landscapes and/or arbitrary ones. Langevin dynamics in a energy landscape are close to the conformational dynamics of proteins, see [1]. As a first start you could implement a integrator for Langevin dynamics and later have the trajectory 'reader' use the integrator to dynamically generate the trajectory.
 
-Please note that this project does require a background in statistical phyics or mathematics.
+Please note that this project does require a background in statistical physics or mathematics.
 
 [1] Robert Zwanzig. Nonequilibrium statistical mechanics. Oxford University Press,
 2001

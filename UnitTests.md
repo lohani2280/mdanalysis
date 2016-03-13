@@ -11,9 +11,9 @@ or download the tar file, unpack, and run `python setup.py install`.
 
 Run the tests by invoking
 ```
-python -c 'from MDAnalysis.tests import test; test(argv=["--exe", "-v", "--parallel-processes=4", "--process-timeout=120"])'
+python -c 'from MDAnalysis.tests import test; test(argv=["--exe", "-v", "--processes=4", "--process-timeout=120"])'
 ```
-(You can increase the number of parallel processes depending on the number of cores available; with 12 cores, the test suite runs within ~90 seconds. You can run in serial by leaving out the `--parallel-processes` flag)
+(You can increase the number of parallel processes depending on the number of cores available; with 12 cores, the test suite runs within ~90 seconds. You can run in serial by leaving out the `--processes` flag)
 
 nose's `nosetests` can be used instead, with some [limited functionality](#compatibility-with-nosetests).
 
@@ -29,7 +29,7 @@ All tests should pass (i.e. no **FAIL**, **ERROR**, or **MEMLEAK**); *SKIPPED* o
 Use the tests from the [git source repository](Source), which are located in the [testsuite/MDAnalysisTests](https://github.com/MDAnalysis/mdanalysis/tree/develop/testsuite) directory:
 ```
 cd testsuite/MDAnalysisTests
-./mda_nosetests --exe -v --parallel-processes=4 --process-timeout=120
+./mda_nosetests --exe -v --processes=4 --process-timeout=120
 ```
 (Try increasing the number of processes; with 24 processes on 12 cores (+hyperthreading) this took ~40 seconds; in serial it takes ~30 min).
 

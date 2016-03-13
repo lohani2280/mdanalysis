@@ -7,7 +7,7 @@ For some platforms, MDAnalysis can be installed directly in pre-compiled form. (
 * Currently only Python 2.
 
 ## Installing the anaconda2 distribution for the first time
-First install ''anaconda'' (Python 2 for right now) by [downloading the Python 2.7 Linux 64-bit anaconda2 installer](https://www.continuum.io/downloads#_unix) and running the installer
+First install *anaconda* (Python 2 for right now) by [downloading the Python 2.7 Linux 64-bit anaconda2 installer](https://www.continuum.io/downloads#_unix) and running the installer
 ```bash
 bash Anaconda2-2.5.0-Linux-x86_64.sh
 ```

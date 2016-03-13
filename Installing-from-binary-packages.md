@@ -2,7 +2,7 @@ For some platforms, MDAnalysis can be installed directly in pre-compiled form. (
 
 # Anaconda
 **Note**: This currently **experimental**, feedback welcome (at PR [#751](/MDAnalysis/mdanalysis/issues/751))
-* *Experimental, since 0.14.1-dev0* (see issue [#608](/MDAnalysis/mdanalysis/issues/608) with PR [#751](/MDAnalysis/mdanalysis/issues/751)).
+* *Experimental, since 0.14.0* (see issue [#608](/MDAnalysis/mdanalysis/issues/608) with PR [#751](/MDAnalysis/mdanalysis/issues/751)).
 * Currently only Linux 64 bit supported.
 * Currently only Python 2.
 

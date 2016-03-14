@@ -6,30 +6,8 @@ For some platforms, MDAnalysis can be installed directly in pre-compiled form. (
 * Currently only Linux 64 bit supported.
 * Currently only Python 2.
 
-## Installing the anaconda2 distribution for the first time
-First install *anaconda* (Python 2 for right now) by [downloading the Python 2.7 Linux 64-bit anaconda2 installer](https://www.continuum.io/downloads#_unix) and running the installer
-```bash
-bash Anaconda2-2.5.0-Linux-x86_64.sh
-```
-(adjust the version number according to the name of the downloaded installer). Unless you know better, have the installer "prepend the Anaconda2 install location to `PATH` in your ~/.bashrc" (answer *yes*). See [conda test-drive](http://conda.pydata.org/docs/test-drive.html) for an introduction to using `conda`.
+Install the current anaconda package according to the [conda docs](https://docs.continuum.io/anaconda/install). Add the official MDAnalysis anaconda channel, this has to be done once:
 
-Check that your conda environment is working:
-```bash
-conda --version
-```
-should give something like 
-```
-conda 3.19.1
-```
-perhaps with a higher version number.
-
-Update everything to the latest version (answer `y` when asked)
-```bash
-conda update conda
-```
-
-## Installing MDAnalysis with `conda`
-Add the MDAnalysis anaconda channel (only has to be done once):
 ```bash
 conda config --add channels MDAnalysis
 ```
@@ -38,7 +16,10 @@ Install MDAnalysis
 ```bash
 conda install mdanalysis
 ```
-
+Update MDAnalysis
+```bash
+conda update mdanalysis
+```
 
 
 # Distributions

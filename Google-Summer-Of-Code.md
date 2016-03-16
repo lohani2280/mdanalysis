@@ -1,8 +1,12 @@
 <img src="https://developers.google.com/open-source/gsoc/images/gsoc2016-sun-373x373.png" title="Google Summer of Code 2016" alt="Google Summer of Code 2016" align="right"/>
-MDAnalysis is planning to host  **[Google Summer of Code 2016](https://developers.google.com/open-source/gsoc/) students**. In short (more details below — please read the whole page if you are interested!):
+MDAnalysis is hosting  **[Google Summer of Code 2016](https://developers.google.com/open-source/gsoc/) students**. In short (more details below — please read the whole page if you are interested!):
 
 * The student will be mentored by at least one experienced MDAnalysis core developer and also receive support from Google. 
 * The student will contribute code to MDAnalysis.
+
+Start by reading the [MDAnalysis GSoC blog post](http://www.mdanalysis.org/2016/03/08/gsoc2016/).
+
+The application window closes on **March 25, 2016 at 12:00 (PDT)**.
 
 # Eligibility
 Eligibility requirements are described in the [GSoC FAQ](https://developers.google.com/open-source/gsoc/faq): 

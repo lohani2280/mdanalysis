@@ -29,6 +29,8 @@ conda update mdanalysis
 
 
 # Distributions
-Some [third-party repositories](Downloads#binary-distributions) might have binary packages of MDAnalysis but we are not currently making any binary packages available.
+Some [third-party repositories](Downloads#binary-distributions) might have binary packages of MDAnalysis but we are not currently making any distribution-specific binary packages available. 
+
+(If you are package maintainer for a distribution and you want your distribution listed here, please [/MDAnalysis/mdanalysis/issues](raise an issue) to notify us and provide information and links to the distribution and the MDAnalysis package itself.)
 
 

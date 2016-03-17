@@ -91,6 +91,7 @@ requirements listed here the [requirements of the PSF](https://wiki.python.org/m
   * fix an [easy bug](https://github.com/MDAnalysis/mdanalysis/issues?q=is%3Aopen+is%3Aissue+label%3ADifficulty-easy)
   * write a new test
   * update our documentation
+
   Talk to us on the [mailing list](https://groups.google.com/forum/#!forum/mdnalysis-devel) if you need suggestions.
 
 ### Dividing your project

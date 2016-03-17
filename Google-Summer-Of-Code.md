@@ -86,7 +86,12 @@ requirements listed here the [requirements of the PSF](https://wiki.python.org/m
 - Introduce yourself on the [mailing list](https://groups.google.com/forum/#!forum/mdnalysis-devel). Tell us what you plan to work on during 
    the summer or what you have already done with MDAnalysis
 - Checkout the source and run the tests from the source code (If you don't manage to setup the virtual environment don't be embarrassed to ask for help)
-- Fix an [easy bug](https://github.com/MDAnalysis/mdanalysis/issues?q=is%3Aopen+is%3Aissue+label%3ADifficulty-easy). Alternatively you can also write a new tests or update update our documentation.
+- Work through the [tutorial](http://www.mdanalysis.org/MDAnalysisTutorial/) to understand how MDAnalysis is being used.
+- Author at least one commit in the MDAnalysis develop branch. For instance, you could
+  * fix an [easy bug](https://github.com/MDAnalysis/mdanalysis/issues?q=is%3Aopen+is%3Aissue+label%3ADifficulty-easy)
+  * write a new test
+  * update our documentation
+  Talk to us on the [mailing list](https://groups.google.com/forum/#!forum/mdnalysis-devel) if you need suggestions.
 
 ### Dividing your project
 

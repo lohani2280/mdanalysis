@@ -1,4 +1,7 @@
-# Code style guidelines
+# Requirements for code to be included into MDAnalysis
+The aim of this guide is to have a uniform and well-tested code base for MDAnalysis in order to improve code quality and maintainability. The **Style Guide** *prescribes* various aspects that new code has to conform to; old code should be refactored to conform to these requirements. 
+
+The Style Guide evolves through a community-driven process of [[proposals|https://github.com/MDAnalysis/mdanalysis/issues?q=is%3Aissue+is%3Aopen+label%3Aproposal]] and discussions among all interested developers.
 
 1. [[Coding Style|Style-Guide#coding-style]]
 1. [[Importing modules|Style-Guide#importing-modules]]

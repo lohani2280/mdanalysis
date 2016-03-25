@@ -134,7 +134,7 @@ The [[source code|Source#source-code-organisation]] is distributed over the `pac
 ### Compiled code
 MDAnalysis contains compiled code (cython, C, C++) in addition to pure Python. With [#444](/MDAnalysis/mdanalysis/issues/444) we agreed on the following layout:
 
-*Place all source files for compiled shared object files into the same folder as the final shared object file.*
+*Place all source files for compiled shared object files into the same directory as the final shared object file.*
 
 `*.pyx` files and cython-generated `*.c` would be in the same directory as the `*.so`. External dependent C/C++/Fortran libraries are in dedicated `src` and `include` folders. See the following tree as an example.
 

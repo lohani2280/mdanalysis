@@ -1,7 +1,9 @@
 # Requirements for code to be included into MDAnalysis
 The aim of this guide is to have a uniform and well-tested code base for MDAnalysis in order to improve code quality and maintainability. The **Style Guide** *prescribes* various aspects that new code has to conform to; old code should be refactored to conform to these requirements. 
 
-The Style Guide evolves through a community-driven process of [[proposals|https://github.com/MDAnalysis/mdanalysis/issues?q=is%3Aissue+is%3Aopen+label%3Aproposal]] and discussions among all interested developers.
+The Style Guide evolves through a community-driven process of [[proposals|https://github.com/MDAnalysis/mdanalysis/labels/proposal]] for changes in [[policy|https://github.com/MDAnalysis/mdanalysis/labels/policy]] and discussions among all interested developers.
+
+
 
 1. [[Coding Style|Style-Guide#coding-style]]
 1. [[Importing modules|Style-Guide#importing-modules]]
@@ -163,11 +165,26 @@ Follow [[git commits|Style-Guide:-git-commits]].
 
 ## Tests
 
-For now, see [[Writing Tests|UnitTests#writing-test-cases]] (but that needs to be cleaned up). In short:
+* Tests are **mandatory** for all new contributions.
+* Functional tests of individual methods of classes or functions are preferred but "integration tests" that test most of the functionality in a single test are also acceptable.
+* We strive for test coverage > 90% — check the coverage of testing when the PR is automatically tested.
+* Try to test exceptions (i.e. that your code fails in predictable ways, see [[#597|https://github.com/MDAnalysis/mdanalysis/issues/597]]).
 
-* changes and additions in the **core** (everything except `MDAnalysis.analysis` and `MDAnalysis.visualization`): unit tests are **mandatory**
-* changes and additions to 
-   * `MDAnalysis.analysis`
-   * `MDAnalysis.visualization`
+See [[Writing Tests|UnitTests#writing-test-cases]] (but that needs to be cleaned up) on more background and details on how to structure tests and how to include data files.
 
-  Tests are **highly encouraged** (and anyone reviewing commits can ask for at least minimal tests)
+### Tests for the core
+The **core** (everything except `MDAnalysis.analysis` and `MDAnalysis.visualization`) is critical and special scrutiny is applied to all changes and additions to the core. Good tests are absolutely required and code will not be merged unless extensive and comprehensive tests are also provided.
+
+### Tests for `MDAnalysis.analysis`
+[[#743|https://github.com/MDAnalysis/mdanalysis/issues/743]] outlines the testing requirements for analysis code:
+
+#### New code contributions
+* New code for `MDAnalysis.analysis` must come with unit tests. All old tests and the new tests must pass before code is merged into develop.
+* Tests for analysis classes and functions should at a minimum perform regression tests, i.e., run on input and compare to values generated when the code was added so that we know when the output changes in the future. (Even better are tests that test for absolute correctness of results but regression tests are the minimum requirement.)
+
+#### Existing code in `MDAnalysis.analysis`
+Any code in `MDAnalysis.analysis` that does not have substantial testing (at least 70% coverage) will be moved to a special `MDAnalysis.analysis.legacy` module (by release 1.0.0) that will come with its own warning that this is essentially unmaintained functionality that is still provided because there's no alternative. Legacy packages that receive sufficient upgrades in testing can come back to the normal `MDAnalysis.analysis` name space.
+
+
+### Tests for `MDAnalysis.visualization`
+No consensus has emerged yet how to best test visualization code. At least minimal tests that run the code are typically requested.

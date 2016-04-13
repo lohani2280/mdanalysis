@@ -1,4 +1,4 @@
-Note: Issue-363 is a work in progress, nothing is final yet, everything is up for debate!
+~~Note: Issue-363 is a work in progress, nothing is final yet, everything is up for debate!~~
 
 [Issue #363](https://github.com/MDAnalysis/mdanalysis/issues/363) brings many changes, these are summarised here:
 

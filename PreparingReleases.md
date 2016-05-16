@@ -140,6 +140,13 @@ zip -r ../pypidoc.zip *
 ```
 Then _upload documentation_ (the file `pypidoc.zip`) via the [MDAnalysis: Edit](http://pypi.python.org/pypi?%3Aaction=pkg_edit&name=MDAnalysis) page.
 
+## Update release on anaconda ##
+
+Update the release version and build the package in one vagrant box from [this repo](https://github.com/kain88-de/vagrant-manylinux-template).
+
+```
+anaconda upload -u MDAnalysis /path/to/build/package/mdanalysis-version-py27_0.tar.bz
+```
 
 # Test data #
 

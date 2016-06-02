@@ -14,5 +14,7 @@ If you have questions with the installation, please ask on the [mdnalysis-discus
 * [Installing from binary packages](Installing from binary packages)
 * [Installing from source](Installing from source)
 
-There are special instructions for installations during development in the description of the [development workflow](DevelopmentWorkflow).
+# Developers #
+Read the [[Guide for Developers]], which includes special installation instructions.
+
 

@@ -1,3 +1,9 @@
+-------------
+
+*This is a historical document and is of no relevance anymore.*
+
+-------------
+
 As oulined in [Issue 223](http://issues.mdanalysis.org/223), Google Code is closing down and we need to move the MDAnalysis project. The (current) choice is GitHub. This page collects the issues we need to consider. Important documentation on the whole procedure can be found in the [GitHubExporterFAQ](https://code.google.com/p/support-tools/wiki/GitHubExporterFAQ).
 
 # Transition #

@@ -43,7 +43,7 @@ PQR files contain the atomic partial charges. If you want to know the charge on 
 ```python
 u = MDAnalysis.Universe("protein.pqr")
 for r in u.residues:
-  print("%s %d     %+4.2f" % (r.name, r.id, r.totalCharge())
+  print("%s %d     %+4.2f" % (r.name, r.id, r.total_charge())
 ```
 This will print the residue and the total charge for all residues.
 
@@ -54,12 +54,12 @@ def rescharges(u, filename=None, epsilon=0.01):
         out = open(filename, "w")
     else:
         import sys
-	out = sys.stdout
+        out = sys.stdout
     resq = []
     for r in u.residues:
-        q = r.totalCharge()
+        q = r.total_charge()
         record = (r.name, r.id, q)
-	resq.append(record)
+        resq.append(record)
         out.write("%s %d     %+4.2f\n" % record)
     if filename is not None:
         out.close()

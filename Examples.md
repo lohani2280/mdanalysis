@@ -35,7 +35,6 @@ A.write('1ES7_A.pdb')
 
 Note:
   * MDAnalysis uses PDB chain identifiers to set the segment id ("segid") of Segments. Thus for chain selections (which is PDB specific) you need to select for ''segid''.
-  * When reading PDB files from the [Protein Data Bank](http://www.pdb.org/pdb/home/home.do) you can use the "strict" PDB reader (based on [biopython](http://biopython.org)'s Bio.PDB) via the ''permissive=False'' keyword. It will deal with insertion codes and other specialities of the [PDB file format](http://www.wwpdb.org/docs.html). If you know that the input structure is in a simple PDB format (or in any of the other [supported file formats](http://docs.mdanalysis.org/documentation_pages/coordinates/init.html#supported-coordinate-formats) then you can simply omit the ''permissive'' keyword.
 
 
 ## Interactive analysis of structures ##

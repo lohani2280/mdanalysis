@@ -28,7 +28,7 @@ Load a PDB, select what you want, and then write out the selection in PDB (or an
 
 ```python
 import MDAnalysis
-u = MDAnalysis.Universe('1ES7.pdb', permissive=False)    # permissive=False uses Bio.PDB (True will probably also work)
+u = MDAnalysis.Universe('1ES7.pdb') 
 A = u.selectAtoms('segid A')
 A.write('1ES7_A.pdb')
 ```

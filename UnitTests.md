@@ -204,6 +204,7 @@ Extra flags are available for the plugins:
 * `--no-errorcapture`: disable stderr silencing;
 * `--no-knownfail`: disable special treatment of `KnownFailureTest` exceptions, which will then be reported as regular failures.
 * `--no-mda_cleanup`: do not delete the offset cache files (see [#669](https://github.com/MDAnalysis/mdanalysis/issues/669) and [#732](https://github.com/MDAnalysis/mdanalysis/pull/732)).
+* `--no-open-files`: do not list open file handles upon test failures and at the end of the test suite (see [#874](https://github.com/MDAnalysis/mdanalysis/pull/874).
 
 Additionally, `MDAnalysis.tests.test()` [no longer calls numpy's test wrapper](#compatibility-with-numpys-test-wrapper), the default of which was to request all stdout to be printed (resulting in quite noisy tests). To enable stdout output with `mda_nosetests` use the standard nose flag `-s`.
 
@@ -233,6 +234,10 @@ The simulation data used in tests are all released under the same license as MDA
   * _adk\_oplsaa_    Ten frames from the first 1 ns of a equilibrium trajectory of AdK in water with Na+ counter ions. The OPLS/AA forcefield is used with the TIP4P water model. The simulation was run with [Gromacs](http://www.gromacs.org) 4.0.2.
 * contributions from developers and users
 * Protein Databank
+
+## Purposely failing test ##
+
+It is sometime convenient to have a failing test. This is helpful, for instance, when testing a plugin for nosetests, or to make sure a script catches failure as expected. The `test_failure` test in `test_failure.py` can be made to fail by setting the `MDA_FAILURE_TEST` environment variable.
 
 ### References ###
 

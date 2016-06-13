@@ -204,7 +204,7 @@ Extra flags are available for the plugins:
 * `--no-errorcapture`: disable stderr silencing;
 * `--no-knownfail`: disable special treatment of `KnownFailureTest` exceptions, which will then be reported as regular failures.
 * `--no-mda_cleanup`: do not delete the offset cache files (see [#669](https://github.com/MDAnalysis/mdanalysis/issues/669) and [#732](https://github.com/MDAnalysis/mdanalysis/pull/732)).
-* `--no-open-files`: do not list open file handles upon test failures and at the end of the test suite (see [#874](https://github.com/MDAnalysis/mdanalysis/pull/874).
+* `--no-open-files`: do not list open file handles upon test failures and at the end of the test suite (see [#874](https://github.com/MDAnalysis/mdanalysis/pull/874)).
 
 Additionally, `MDAnalysis.tests.test()` [no longer calls numpy's test wrapper](#compatibility-with-numpys-test-wrapper), the default of which was to request all stdout to be printed (resulting in quite noisy tests). To enable stdout output with `mda_nosetests` use the standard nose flag `-s`.
 

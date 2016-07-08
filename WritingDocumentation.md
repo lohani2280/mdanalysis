@@ -32,8 +32,11 @@ The module doc string can be a short sentence describing what the module does or
 ## Location of documentation ##
   * Code is documented through Python doc strings (see [PEP 257](http://www.python.org/dev/peps/pep-0257/) for good conventions); thus each Python file should contain some documentation.
   * The [Online Documentation](http://docs.mdanalysis.org/index.html) is generated from [reStructuredText](http://docutils.sourceforge.net/rst.html) in [doc/sphinx/source/documentation\_pages](https://github.com/MDAnalysis/mdanalysis/tree/develop/package/doc/sphinx/source/documentation_pages).
-  * As outlined in the [[Style Guide]], we use NumPy format for the reST strings
   * The wiki should not duplicate documentation; if it's important for a user of the library then it has to be in the docs.
+
+## Format: NumPy style
+As outlined in the [[Style Guide|Style-Guide#writing-docstrings]], we use [NumPy-style](https://github.com/numpy/numpy/blob/master/doc/HOWTO_DOCUMENT.rst.txt) format for the reST strings.
+
 
 # Online Docs format: sphinx reStructuredText #
 

@@ -17,7 +17,7 @@ Then look at (in no particular order)
 * [Trying the development branch](https://github.com/MDAnalysis/mdanalysis/wiki/DevelopmentBranch)  
 
 ## Developer docs:  ##
-* [Online docs (development branch)](http://www.mdanalysis.org/mdanalysis/package/doc/html/)
+* [Online docs (development branch)](http://www.mdanalysis.org/mdanalysis/)
 * [Trajectory API](http://pythonhosted.org/MDAnalysis/documentation_pages/coordinates/init.html?highlight=trajectory%20api#trajectory-api)  
 * [Writing a new topology reader](https://github.com/MDAnalysis/mdanalysis/wiki/Writing-a-Topology-Reader)
 * [Guide to new topology format](https://github.com/MDAnalysis/mdanalysis/wiki/Guide-to-new-Topology-format)

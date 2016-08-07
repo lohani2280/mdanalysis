@@ -6,11 +6,11 @@ The Style Guide evolves through a community-driven process of [[proposals|https:
 
 
 1. [[Coding Style|Style-Guide#coding-style]]
-1. [[Importing modules|Style-Guide#importing-modules]]
-1. [[Writing Docstrings|Style-Guide#writing-docstrings]]  
-1. [[Code organization|Style-Guide#code-organization]]
-1. [[Version control|Style-Guide#version-control]]
-1. [[Tests|Style-Guide#tests]]
+2. [[Importing modules|Style-Guide#importing-modules]]
+3. [[Writing Docstrings|Style-Guide#writing-docstrings]]  
+4. [[Code organization|Style-Guide#code-organization]]
+5. [[Version control|Style-Guide#version-control]]
+6. [[Tests|Style-Guide#tests]]
 
 (For background and history see [Issue #404](/MDAnalysis/mdanalysis/issues/404), which contains the original discussion on the Style Guide.)
 
@@ -128,6 +128,18 @@ def func(arg1, arg2):
     """
     return True
 ```
+### Writing docs for abstract Base Classes
+
+MDAnalysis contains a number of abstract base classes like `analysis.base.AnalysisBase`. The API of a
+base class is only indented for developers should follow these rules. Background see [Issue #919](https://github.com/MDAnalysis/mdanalysis/issues/919)
+
+ Document Base class APIs in the class doc string.
+
+- The class doc-string needs to contain a list of methods that can be overwritten by inheritance from the base class. Distinguish and document methods as required or optional.
+- The class doc-string should contain a minimal example for how to derive this class. (This demonstrates best practices, documents ideas and intentions behind the specific choices in the API, helps to promote a unified code base and is useful for developers as a concise summary of the API).
+- A more detailed description of methods should come in the method doc-string with a note specifying if the method is required or optional to overwrite.
+
+As an example see `analysis.base.AnalysisBase`
 
 ## Code organization
 ### Package and test suite

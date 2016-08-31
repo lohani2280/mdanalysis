@@ -75,7 +75,7 @@ u = Universe("system.pqr")
 u.atoms.write("system.pdb")
 ```
 
-In order to **convert trajectories** you obtain a trajectory Writer for the desired output, loop through the input trajectory frame by frame, and write each frame to the output (see [dcd2xtc.py](https://github.com/MDAnalysis/mdanalysis/package/examples/dcd2xtc.py) for the conversion from DCD to XTC. The core of this short script is:
+In order to **convert trajectories** you obtain a trajectory Writer for the desired output, loop through the input trajectory frame by frame, and write each frame to the output (see [dcd2xtc.py](https://github.com/MDAnalysis/MDAnalysisCookbook/blob/master/examples/dcd2xtc.py) for the conversion from DCD to XTC. The core of this short script is:
 ```python
 from MDAnalysis import Universe, Writer
 u = Universe("system.psf", "system.dcd")

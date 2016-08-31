@@ -79,7 +79,7 @@ In order to **convert trajectories** you obtain a trajectory Writer for the desi
 ```python
 from MDAnalysis import Universe, Writer
 u = Universe("system.psf", "system.dcd")
-w = Writer("system.xtc", u.trajectory.numatoms)
+w = Writer("system.xtc", u.trajectory.n_atoms)
 for ts in u.trajectory:
     w.write(ts)
 w.close_trajectory()

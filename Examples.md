@@ -79,10 +79,9 @@ In order to **convert trajectories** you obtain a trajectory Writer for the desi
 ```python
 from MDAnalysis import Universe, Writer
 u = Universe("system.psf", "system.dcd")
-w = Writer("system.xtc", u.trajectory.n_atoms)
-for ts in u.trajectory:
-    w.write(ts)
-w.close()
+with Writer("system.xtc", u.trajectory.n_atoms) as w:
+    for ts in u.trajectory:
+        w.write(ts)
 ```
 (You might also want to write a PDB file to be used together with the XTC.)
 

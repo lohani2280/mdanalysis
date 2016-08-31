@@ -82,7 +82,7 @@ u = Universe("system.psf", "system.dcd")
 w = Writer("system.xtc", u.trajectory.n_atoms)
 for ts in u.trajectory:
     w.write(ts)
-w.close_trajectory()
+w.close()
 ```
 (You might also want to write a PDB file to be used together with the XTC.)
 

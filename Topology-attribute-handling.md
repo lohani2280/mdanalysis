@@ -1,7 +1,7 @@
 As per the discussion started in [#942](https://github.com/MDAnalysis/mdanalysis/issues/942), missing attributes from a topology will be handled according to different categories (a few more categories were added in this page). These are:
 
-Classes
--------
+Categories of topology attributes
+---------------------------------
 
 1. Left out of the Topology, with a general `AttributeError` on accession;
 2. Left out of the Topology, but with a specific `MDAnalysis.MissingTopologyAttributeError` on accession, perhaps suggesting how to set/guess values;

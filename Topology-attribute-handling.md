@@ -15,7 +15,7 @@ As per the discussion started in [#942](https://github.com/MDAnalysis/mdanalysis
 
 # Poll
 
-We need to decide which attributes go into which category. This will be implemented as part of the topology refactor ([#363](https://github.com/MDAnalysis/mdanalysis/issues/363)). Please edit the table below to vote your opinion, and if needed add your justification to [#942](https://github.com/MDAnalysis/mdanalysis/issues/942). Factors you might want to take into account are
+We need to decide which attributes go into which category. This will be implemented as part of the topology refactor ([#363](https://github.com/MDAnalysis/mdanalysis/issues/363)). Please edit the table below to vote your opinion, and add any comments below. Factors you might want to take into account are
 - consistency,
 - ease for the user in case of missing attributes,
 - little boilerplate for the most common cases,

@@ -29,7 +29,7 @@ We need to decide which attributes go into which category. This will be implemen
 |resindices   |   7   |   7     | 7             |
 |segindices   |   7   |   7     | 7             |
 |ids          |   3   |   3     | 1             |
-|names        |   6   |   2     | 2             |
+|names        |   2   |   2     | 2             |
 |types        |   1   |   2     | 2             |
 |elements     |   5   |   5     | 2             |
 |radii        |   5   |   2     | 2             |
@@ -70,3 +70,12 @@ Bond guessing is currently not optimised for large systems, so guessing this by 
 I'm not sure how an Atom id is different from an Atom index?  I understand that **some** systems may number irregularly, but this isn't necessary everywhere.
 
 Maybe it's just my background, but I'd like things to work with coarse-grained systems just as well, so things like element, resnum and other atomistic based things aren't mandatory there.
+
+## @mnmelo
+My rationale was to have a few attributes with VIP status, like mass, charge, and element, which we can expect in a format-independent manner. These are either guessed or left missing if guessing fails. Bond guessing also follows this.
+
+VIP attributes could also be made to be always present as an object, even if guessing fails. This way `u.atoms.masses` is always a present TopologyAttr, albeit one that can raise a `MissingTopologyAttributeError` on access if it couldn't be obtained from the topology nor guessed. 
+
+Most other attributes can either be safely set to defaults, or, for the more format-specific ones, left missing.
+
+I was under the impression that atom names are central to our machinery. I'm happy to demote them to **2.**

@@ -26,6 +26,9 @@ So if you want to introduce yourself, discuss ideas or your application feel fre
 
 [Project Ideas](https://github.com/MDAnalysis/mdanalysis/wiki/GSoC-2017-Project-Ideas)
 
+**Previous Years**
+
+[Project Ideas 2016](https://github.com/MDAnalysis/mdanalysis/wiki/GSoC-2017-Project-Ideas)
 
 # Who are we?
 

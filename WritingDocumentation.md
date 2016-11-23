@@ -71,6 +71,8 @@ python setup.py build_sphinx
 ```
 might just work.
 
+Beware that you'll most likely need to use the python 2.7 version of sphinx, against MDAnalysis installed also under python 2.7. Using the wrong version of sphinx (say, for pyhton 3) can give strange errors, especially if you also happen to have MDAnalysis installed for that python version.
+
 #### Checking ####
 You should point your browser to the file `../html/index.html` and look through the docs, in particular any pages that you tinkered with.
 

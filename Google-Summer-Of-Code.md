@@ -22,9 +22,9 @@ You are more than welcome to contact us before submitting your application, we w
 
 So if you want to introduce yourself, discuss ideas or your application feel free to write a mail to either the [Discussion](http://groups.google.com/group/mdnalysis-discussion) mailing list or the [Development](http://groups.google.com/group/mdnalysis-devel) mailing list.
 
-# Project Ideas 2016
+# Project Ideas 2017
 
-[Project Ideas](https://github.com/MDAnalysis/mdanalysis/wiki/GSoC-2016-Project-Ideas)
+[Project Ideas](https://github.com/MDAnalysis/mdanalysis/wiki/GSoC-2017-Project-Ideas)
 
 
 # Who are we?

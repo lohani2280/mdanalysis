@@ -17,7 +17,7 @@ The project ideas can be roughly categorized as
 
 **Difficulty**: Hard
 
-**Mentors**: 
+**Mentors**: Max, Richard, Manuel, Jonathan
 
 Molecular simulation trajectories are very often analyzed frame-by-frame. This is frequently an embarrassingly parallel procedure, in which work can be efficiently divided simply by splitting the trajectory and letting each worker process one of the chunks. The goal of this project is to implement a parallelization framework that automates all the trajectory splitting, work distribution, and eventual result collection.
 
@@ -33,7 +33,7 @@ Implementing parallelization in Python code can be done in [many ways](https://w
 
 **Difficulty**: Hard
 
-**Mentors**: 
+**Mentors**: Max, Richard, Manuel, Jonathan
 
 To analyze molecular simulations it is often helpful which atoms are close to each other. For this we calculate distance matrices where the distances between every atom pair is calculated. This is a very expensive operation that grows quadratic with the number of atoms involved.
 
@@ -50,7 +50,7 @@ In this project you would integrate the cell grid algorithm into MDAnalysis.
 
 **Dificulty**: Medium
 
-**Mentors**: 
+**Mentors**: Max, Richard, Manuel, Jonathan
 
 One of the strengths of MDAnalysis is its ability to support a wide range of different MD-formats. But we are still missing some like the new [TNG file format](http://onlinelibrary.wiley.com/doi/10.1002/jcc.23495/abstract) from Gromacs , [H5MD](https://github.com/pdebuyl/pyh5md) or the [HALMD](http://halmd.org/) format. Alternatively, you can also add a format that you want to use personally in MDAnalysis.
 This project will familiarize you with working with and connecting different APIs,
@@ -63,7 +63,7 @@ as well as giving insight into how modern portable data storage file formats wor
 
 **Difficulty**: Easy
 
-**Mentors**: 
+**Mentors**: Max, Richard, Manuel, Jonathan
 
 Python 3 is getting adopted by a wider range of users and unix distributions are starting to switch.
 MDAnalysis can't run right now under Python 3 mostly due to it's [C/Cython extensions](https://github.com/MDAnalysis/mdanalysis/wiki/List-of-extensions), we currently try to move our C-extensions to cython which supports Python 2 and 3 with one source. See also [#260](https://github.com/MDAnalysis/mdanalysis/issues/260).

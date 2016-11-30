@@ -21,24 +21,7 @@ for ts in u.trajectory:     # iterate through all frames
 
 ## Availability and Installing ##
 
-### From Source ###
-Find the latest source release
-
-* on the [python package index (MDAnalysis)](http://pypi.python.org/pypi/MDAnalysis) or
-* obtain the [development version from the git repository](https://github.com/MDAnalysis/mdanalysis/tree/develop/package).
-
-Note that that MDAnalysis is still considered experimental software (although a growing number of people have been [using it successfully for published work](http://scholar.google.com/scholar?cites=14957293613081676111&as_sdt=805&sciodt=0,3&hl=en)). Please report problems through the [Issue Tracker](https://github.com/MDAnalysis/mdanalysis/issues).
-
-The file [INSTALL](https://github.com/MDAnalysis/mdanalysis/blob/master/package/INSTALL) in the package itself and the wiki pages [Install](Install) and [InstallRecipes](InstallRecipes) should help you compiling and installing MDAnalysis.
-
-### Python packages ###
-
-The package is also [listed on PyPI](http://pypi.python.org/pypi/MDAnalysis) (the Python package index) and should be installable with [pip](http://www.pip-installer.org/en/latest/index.html), e.g.
-
-```
-pip install MDAnalysis
-```
-
+See [Installation Quick Start](http://www.mdanalysis.org/pages/installation_quick_start/).
 
 ## Learning MDAnalysis ##
 
@@ -51,34 +34,14 @@ MDAnalysis also comes with [example scripts](https://github.com/MDAnalysis/mdana
 Finally, you can also ask for advice or help on the [mdnalysis-discussion](http://groups.google.com/group/mdnalysis-discussion) mailing list. If you find **bugs** or want to **request enhancements** please [file a report](ReportingProblems) in the [Issue Tracker](https://github.com/MDAnalysis/mdanalysis/issues).
 
 ## Citation ##
-When using MDAnalysis in published work, please cite
 
-* N. Michaud-Agrawal, E. J. Denning, T. B. Woolf, and O. Beckstein. MDAnalysis: A Toolkit for the Analysis of Molecular Dynamics Simulations. _J. Comput. Chem._ **32** (2011), 2319-2327, doi:[10.1002/jcc.21787](http://dx.doi.org/10.1002/jcc.21787). PMCID:[PMC3144279](http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3144279/) 
-
-  (If you are reading the [HTML version of the paper](http://onlinelibrary.wiley.com/doi/10.1002/jcc.21787/full), have a look at the [PaperErrata](PaperErrata). The free PubmedCentral manuscript [PMC3144279](http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3144279/) has correct code, which can be copied and pasted.)
-
-### Included algorithms ###
-If you use the [RMSD alignment code](https://pythonhosted.org/MDAnalysis/documentation_pages/analysis/align.html) that uses the [QCProt module](https://pythonhosted.org/MDAnalysis/documentation_pages/core/qcprot.html) please also cite
-
-* Douglas L. Theobald. Rapid calculation of RMSD using a quaternion-based characteristic polynomial. Acta Crystallographica A **61** (2005), 478-480.
-* Pu Liu, Dmitris K. Agrafiotis, and Douglas L. Theobald. Fast determination of the optimal rotational matrix for macromolecular superpositions. J. Comput. Chem. **31** (2010), 1561–1563.
-
-If you use the helix analysis algorithm HELANAL in [MDAnalysis.analysis.helanal](https://pythonhosted.org/MDAnalysis/documentation_pages/analysis/helanal.html) please cite
-
-* Bansal M, Kumar S, Velavan R. HELANAL - A program to characterise helix geometry in proteins. J. Biomol. Struct. Dyn. **17** (2000), 811–819
-
-If you use the GNM trajectory analysis code in [MDAnalysis.analysis.gnm](https://pythonhosted.org/MDAnalysis/documentation_pages/analysis/gnm.html) please cite
-
-* Benjamin A. Hall, Samantha L. Kaye, Andy Pang, Rafael Perera, and Philip C. Biggin. Characterization of Protein Conformational States by Normal-Mode Frequencies. JACS **129** (2007), 11394–11401.
-
-Thanks!
-
+See [citing MDAnalysis](http://www.mdanalysis.org/pages/citations/).
 
 ## Historical, Technical and Artistic Remarks ##
 
 MDAnalysis was originally inspired by the Schulten Group's [MDTools](http://www.ks.uiuc.edu/Development/MDTools/) for Python, and the DCD reading code is derived from VMD's [catdcd](http://www.ks.uiuc.edu/Development/MDTools/catdcd/). MDAnalysis is GPL licensed, except for some 3rd party code that is included under GPL-compatible licenses; for instance the dcd reading code is under the [UIUC Open Source Licence](http://www.ks.uiuc.edu/Development/MDTools/catdcd/license.html). See the files [AUTHORS](https://github.com/MDAnalysis/mdanalysis/blob/master/package/AUTHORS) and [LICENSE](https://github.com/MDAnalysis/mdanalysis/blob/master/package/LICENSE) in the distribution for details.
 
-Some time-critical routines are written in C or [cython](http://cython.org) and require a working C compiler. The minimum required version of Python is 2.6. MDAnalysis has been successfully used on Linux and Mac OS X.
+Some time-critical routines are written in C or [cython](http://cython.org) and require a working C compiler. The minimum required version of Python is 2.7. MDAnalysis has been successfully used on Linux and Mac OS X.
 
 The **MDAnalysis 'Atom' Logo** was designed by **Christian Beckstein** and is licensed under a [Creative Commons Attribution-NoDerivs 3.0 Unported License](http://creativecommons.org/licenses/by-nd/3.0/).
 

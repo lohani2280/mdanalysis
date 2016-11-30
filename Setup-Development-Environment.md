@@ -1,6 +1,25 @@
 # Virtual Environments
 
-We recommend using [virtual environments](https://pypi.python.org/pypi/virtualenv) with [virtualenvwrapper](http://virtualenvwrapper.readthedocs.org/en/latest/). Since MDAnalysis is split into the actual package and a testsuite you need to install both modules in development mode.
+We highly recommend using [virtual environments](https://pypi.python.org/pypi/virtualenv) with [virtualenvwrapper](http://virtualenvwrapper.readthedocs.org/en/latest/).
+This allows you to have multiple experimental development versions of MDAnalysis which do not interfere with each other or your own stable version.
+Since MDAnalysis is split into the actual package and a testsuite you need to install both modules in development mode.
+
+# Checking out and installing MDAnalysis
+
+Firstly, a copy of the raw source files needs to be downloaded from the code repository.  From the command line in a suitable directory run:
+
+```
+git clone https://github.com/MDAnalysis/mdanalysis.git
+```
+In the future, if you want to update your copy of the code to the latest version, this can be done by running these commands from within the source directory:
+
+```
+git fetch origin
+
+git pull origin develop
+```
+
+To install this version of the code, run the following commands: 
 
 ```
 cd <to where ever you checked out MDAnalysis>

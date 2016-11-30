@@ -1,6 +1,7 @@
 MDAnalysis is supported on
-* Linux
-* Mac OS X/macOS
+- **Linux**
+- **Mac OS X**
+
 and the instructions below are for supported operating systems.
 
 However, some users also had success with installing on Windows. This is not currently officially supported but hints on how to make it work are listed under [[MDAnalysis on Windows]].

@@ -1,17 +1,18 @@
-<img src="https://developers.google.com/open-source/gsoc/images/gsoc2016-sun-373x373.png" title="Google Summer of Code 2016" alt="Google Summer of Code 2016" align="right"/>
-MDAnalysis is hosting  **[Google Summer of Code 2016](https://developers.google.com/open-source/gsoc/) students**. In short (more details below — please read the whole page if you are interested!):
+<img src="https://developers.google.com/open-source/gsoc/images/gsoc2016-sun-373x373.png" title="Google Summer of Code 2016" alt="Google Summer of Code 2017" align="right"/>
+MDAnalysis is hosting  **[Google Summer of Code 2017](https://developers.google.com/open-source/gsoc/) students**. In short (more details below — please read the whole page if you are interested!):
 
 * The student will be mentored by at least one experienced MDAnalysis core developer and also receive support from Google. 
 * The student will contribute code to MDAnalysis.
 
-Start by reading the [MDAnalysis GSoC blog post](http://www.mdanalysis.org/2016/03/08/gsoc2016/).
+<!-- uncomment once we are accepted again -->
+<!-- Start by reading the [MDAnalysis GSoC blog post](http://www.mdanalysis.org/2016/03/08/gsoc2016/). -->
 
-The application window closes on **March 25, 2016 at 12:00 (PDT)**.
+The application window closes on **March 20, 2017 at 12:00 (PDT)**.
 
 # Eligibility
 Eligibility requirements are described in the [GSoC FAQ](https://developers.google.com/open-source/gsoc/faq): 
 * You must be at least 18 years of age.
-* You must be a **full or part-time student** at an [accredited university](https://developers.google.com/open-source/gsoc/faq#accredited) (or have been accepted as of April 22, 2016).
+* You must be a **full or part-time student** at an [accredited university](https://developers.google.com/open-source/gsoc/faq#accredited) (or have been accepted as of May 1, 2017).
 * You must be eligible to work in the country you will reside in during the program.
 * You have not already participated as a Student in GSoC more than twice.
 * You must reside in a country that is not currently embargoed by the United States. See [Program Rules](https://developers.google.com/open-source/gsoc/rules) for more information.
@@ -39,10 +40,10 @@ We will take your work with respect and appreciate the time that you will spend 
 
 The following devs have expressed interest in mentoring for GSoC:
 
-- [Max](https://github.com/kain88-de)
 - [Manuel](https://github.com/mnmelo)
 - [Richard](https://github.com/richardjgowers)
 - [Jonathan](https://github.com/jbarnoud)
+- [Jan](https://github.com/jandom)
 
 # Am I experienced enough?
 
@@ -82,7 +83,7 @@ Firstly, think about your choice of project carefully, you're going to be doing 
 Overall, your application should make us believe that you are capable of completing the project and delivering the functionality to our users. If you aren't sure about anything, get in touch with us, we're happy to advise you.
 
 ### Requirements for an Application
-
+<!--
 We are a taking part in GSoC as under the [Python software foundation](https://www.python.org/psf/) umbrella. This means next to the 
 requirements listed here the [requirements of the PSF](https://wiki.python.org/moin/SummerOfCode/2016#How_do_I_Apply.3F) apply.
 
@@ -96,7 +97,7 @@ requirements listed here the [requirements of the PSF](https://wiki.python.org/m
   * update our documentation
 
   Talk to us on the [mailing list](https://groups.google.com/forum/#!forum/mdnalysis-devel) if you need suggestions.
-
+-->
 ### Dividing your project
 
 We require that all of our students have at least one commit in our `develop` branch before the end of the summer. The best way to achieve this is to divide your project into small self contained subprojects and plan to merge at least one of them around midterm. 

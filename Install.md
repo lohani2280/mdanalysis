@@ -11,7 +11,7 @@ To install the latest stable release, use [pip](http://www.pip-installer.org/en/
 ```
 pip install MDAnalysis
 ```
-To run the test cases and examples, also install the [unit tests](UnitTests) (about 20 MiB in size):
+To run the test cases and examples, also install the [unit tests](UnitTests) (about 70 MiB in size):
 ```
 pip install MDAnalysisTests
 ```
@@ -23,5 +23,7 @@ If you have questions with the installation, please ask on the [mdnalysis-discus
 
 # Developers #
 Read the [[Guide for Developers]], which includes special installation instructions.
+
+There also special instructions for [[installing the development branch|DevelopmentBranch]], i.e., the *develop* branch where new features and bug fixes appear before they are officially released.
 
 

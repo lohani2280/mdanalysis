@@ -51,6 +51,14 @@ The MDAnalysis [source code repository](Source) contains the actual MDAnalysis l
 
 The following uses `python setup.py install` to mean "install the package in whichever way you normally do". (In particular, as a developer `python setup.py develop` is often a very handy way to work on the code as it it takes changes to the code immediately into account.)
 
+## Pre-requisites for development ##
+In order to build from develop you need
+* working C/C++ compiler
+* Python 2.7.x
+* Python packages already installed
+  * `cython`
+  * `numpy`
+
 ## Install the MDAnalysis library ##
 The library lives in the [mdanalysis/package](https://github.com/MDAnalysis/mdanalysis/tree/develop/package) directory.
 ```
@@ -70,12 +78,12 @@ python setup.py install
 More details can be found under [[UnitTests]]. In order to run _all tests_ (which takes 5-10 Minutes on a single core) you would do (after installing library and test cases):
 ```
 cd testsuite/MDAnalysisTests
-nosetests -v
+./mda_nosetests -v
 ```
 
 To run individual tests (e.g. you're only interested in the latest addition of the AMBER netcdf trajectory format)
 ```
-nosetests -v test_coordinates:TestNCDFReader  test_coordinates:TestTRJReader test_coordinates:TestNCDFWriter
+./mda_nosetests -v test_coordinates:TestNCDFReader  test_coordinates:TestTRJReader test_coordinates:TestNCDFWriter
 ```
 
 You want to see all tests pass and no ERROR or FAIL (unless the test is marked with "knownfailure").

@@ -17,7 +17,7 @@ The project ideas can be roughly categorized as
 
 **Difficulty**: Hard
 
-**Mentors**: 
+**Mentors**: Manuel
 
 Molecular simulation trajectories are very often analyzed frame-by-frame. This is frequently an embarrassingly parallel procedure, in which work can be efficiently divided simply by splitting the trajectory and letting each worker process one of the chunks. The goal of this project is to implement a parallelization framework that automates all the trajectory splitting, work distribution, and eventual result collection.
 
@@ -33,7 +33,7 @@ Implementing parallelization in Python code can be done in [many ways](https://w
 
 **Difficulty**: Hard
 
-**Mentors**: 
+**Mentors**: Manuel
 
 To analyze molecular simulations it is often helpful which atoms are close to each other. For this we calculate distance matrices where the distances between every atom pair is calculated. This is a very expensive operation that grows quadratic with the number of atoms involved.
 
@@ -68,7 +68,7 @@ as well as giving insight into how modern portable data storage file formats wor
 Python 3 is getting adopted by a wider range of users and unix distributions are starting to switch.
 MDAnalysis can't run right now under Python 3 mostly due to it's [C/Cython extensions](https://github.com/MDAnalysis/mdanalysis/wiki/List-of-extensions), we currently try to move our C-extensions to cython which supports Python 2 and 3 with one source. See also [#260](https://github.com/MDAnalysis/mdanalysis/issues/260).
 
-Missing here right now is the DCD trajectory readers. There exists an [incomplete work](https://github.com/MDAnalysis/mdanalysis/pull/682) to enable Python 2/3 of the DCD reader. In this project you would finish this work by either writing finishing this work or by rewriting the DCD interface in cython.
+Missing here right now is the DCD trajectory reader. There is an [incomplete work](https://github.com/MDAnalysis/mdanalysis/pull/682) to enable Python 2/3 of the DCD reader. In this project you would finish this work by either writing finishing this work or by rewriting the DCD interface in cython.
 
 The second part of this project is to remove all other incompatibilities with Python 3 we currently have. For this you should work that our test-suite passes on Python 3. 
 

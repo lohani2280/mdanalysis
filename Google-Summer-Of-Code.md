@@ -43,7 +43,7 @@ The following devs have expressed interest in mentoring for GSoC:
 - [Manuel](https://github.com/mnmelo)
 - [Richard](https://github.com/richardjgowers)
 - [Jonathan](https://github.com/jbarnoud)
-- [Jan](https://github.com/jandom)
+- [Max](https://github.com/kain88-de)
 
 # Am I experienced enough?
 

@@ -33,7 +33,7 @@ Implementing parallelization in Python code can be done in [many ways](https://w
 
 **Difficulty**: Hard
 
-**Mentors**: Manuel
+**Mentors**: Manuel, Richard
 
 To analyze molecular simulations it is often helpful which atoms are close to each other. For this we calculate distance matrices where the distances between every atom pair is calculated. This is a very expensive operation that grows quadratic with the number of atoms involved.
 

@@ -35,10 +35,10 @@ Implementing parallelization in Python code can be done in [many ways](https://w
 
 **Mentors**: Manuel, Richard
 
-To analyze molecular simulations it is often helpful which atoms are close to each other. For this we calculate distance matrices where the distances between every atom pair is calculated. This is a very expensive operation that grows quadratic with the number of atoms involved.
+Analysis of molecular dynamics simulations typically involves calculations of based upon atoms which are spatially close to each other.  For example a radial distribution function is often only interesting up to distances of around 1.6 nm.
+The naive approach to calculate this is to calculate the distance between each pair of atoms, however as the size of the system grows the number of useful pair distances decreases while the computational cost scales as N^2.
 
-Since we are only interested in atoms that are close to each other we can use some algorithms run faster
-after some initial analysis of the coordinates. One class of these algorithms are domain-decomposition algorithms. The basic idea of this type of algorithms is to decompose the volume occupied by the atoms into different cells and then only calculate distances for atoms in neighboring cells. If atoms are not in neighboring cells we already know that the distance is to big for us to be interesting. A theoretical description of these algorithm can be found in [this book Appendix F](http://www.amazon.de/Understanding-Molecular-Simulation-Applications-Computational/dp/0122673514%3FSubscriptionId%3DAKIAILSHYYTFIVPWUY6Q%26tag%3Dduckduckgo-ffnt-de-21%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3D0122673514)
+To greatly improve the efficiency of this operation, we can first decompose the total simulation volume into smaller cells.  We can then calculate the distances between atom pairs in neighbouring cells. If atoms are not in neighbouring cells we already know that the distance is to large to be interesting. A theoretical description of this algorithm can be found in [this book Appendix F](http://www.amazon.de/Understanding-Molecular-Simulation-Applications-Computational/dp/0122673514%3FSubscriptionId%3DAKIAILSHYYTFIVPWUY6Q%26tag%3Dduckduckgo-ffnt-de-21%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3D0122673514)
 
 One domain decomposition algorithm is [cell grids](https://github.com/richardjgowers/cellgrid).
 

@@ -46,7 +46,7 @@ In this project you would integrate the cell grid algorithm into MDAnalysis.
 
 **Dificulty**: Medium
 
-**Mentors**: Richard
+**Mentors**: Richard, Jonathan
 
 One of the strengths of MDAnalysis is its ability to support a wide range of different MD-formats. But we are still missing some like the new [TNG file format](http://onlinelibrary.wiley.com/doi/10.1002/jcc.23495/abstract) from Gromacs , [H5MD](https://github.com/pdebuyl/pyh5md) or the [HALMD](http://halmd.org/) format. Alternatively, you can also add a format that you want to use personally in MDAnalysis.
 

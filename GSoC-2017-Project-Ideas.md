@@ -6,7 +6,6 @@ The current proposed projects are:
 1. [[Implement efficient parallel analysis of trajectories|GSoC-2017-Project-Ideas#Implement-efficient-parallel-analysis-of-trajectories]]
 2. [[Improve distance search|GSoC-2017-Project-Ideas#Improve-distance-search]]
 3. [[Add new MD-Formats|GSoC-2017-Project-Ideas#Add-new-MD-Formats]]
-4. [[Help port MDAnalysis to Python 3|GSoC-2017-Project-Ideas#Help-port-MDAnalysis-to-Python-3]]
 
 **Or work on your your own idea!** Get in contact with us to propose an idea and we will work with you to flesh it out into a full project. Raise an issue in the [Issue Tracker](/MDAnalysis/mdanalysis/issues) or contact us via the [developer Google group](http://developers.mdanalysis.org).
 
@@ -56,18 +55,4 @@ as well as giving insight into how modern portable data storage file formats wor
 It is vitally important that data is read correctly, otherwise analysis will fail at the very first step.
 For this reason, there will be a heavy emphasis on the testing for any code written,
 and so the project will also teach good practice in software testing.
-
-# Help port MDAnalysis to Python 3
-
-**Difficulty**: Easy
-
-**Mentors**: 
-
-Python 3 is getting adopted by a wider range of users and unix distributions are starting to switch.
-MDAnalysis can't run right now under Python 3 mostly due to it's [C/Cython extensions](https://github.com/MDAnalysis/mdanalysis/wiki/List-of-extensions), we currently try to move our C-extensions to cython which supports Python 2 and 3 with one source. See also [#260](https://github.com/MDAnalysis/mdanalysis/issues/260).
-
-Missing here right now is the DCD trajectory reader. There is an [incomplete work](https://github.com/MDAnalysis/mdanalysis/pull/682) to enable Python 2/3 of the DCD reader. In this project you would finish this work by either writing finishing this work or by rewriting the DCD interface in cython.
-
-The second part of this project is to remove all other incompatibilities with Python 3 we currently have. For this you should work that our test-suite passes on Python 3. 
-
 

@@ -32,6 +32,15 @@ pip install -e testsuite/
 
 The `-e` flag will cause pip to call setup with the `develop` option. This means that any changes on the source code will immediately be reflected in your virtual environment. 
 
+## macOS specific instructions
+One more step is required on macOS because of the number of files that a process can open simultaneously is quite low (256). So to increase the number of files that can be accessed, run the following command:
+
+`ulimit -n 4096`
+
+This sets the number of files to 4096.
+
+
+
 # Testing
 
 * To run the unit-tests

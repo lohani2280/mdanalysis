@@ -47,11 +47,15 @@ In this project you would integrate the cell grid algorithm into MDAnalysis.
 
 **Dificulty**: Medium
 
-**Mentors**: 
+**Mentors**: Richard
 
 One of the strengths of MDAnalysis is its ability to support a wide range of different MD-formats. But we are still missing some like the new [TNG file format](http://onlinelibrary.wiley.com/doi/10.1002/jcc.23495/abstract) from Gromacs , [H5MD](https://github.com/pdebuyl/pyh5md) or the [HALMD](http://halmd.org/) format. Alternatively, you can also add a format that you want to use personally in MDAnalysis.
+
 This project will familiarize you with working with and connecting different APIs,
 as well as giving insight into how modern portable data storage file formats work.
+It is vitally important that data is read correctly, otherwise analysis will fail at the very first step.
+For this reason, there will be a heavy emphasis on the testing for any code written,
+and so the project will also teach good practice in software testing.
 
 # Help port MDAnalysis to Python 3
 

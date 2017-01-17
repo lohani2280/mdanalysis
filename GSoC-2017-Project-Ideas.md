@@ -3,9 +3,9 @@ A list of projects ideas for [[Google Summer of Code 2017|Google-Summer-Of-Code]
 
 The current proposed projects are:
 
-1. [[Implement efficient parallel analysis of trajectories|GSoC-2017-Project-Ideas#Implement-efficient-parallel-analysis-of-trajectories]]
-2. [[Improve distance search|GSoC-2017-Project-Ideas#Improve-distance-search]]
-3. [[Add new MD-Formats|GSoC-2017-Project-Ideas#Add-new-MD-Formats]]
+1. [[Implement efficient parallel analysis of trajectories|GSoC-2017-Project-Ideas#implement-efficient-parallel-analysis-of-trajectories]]
+2. [[Improve distance search|GSoC-2017-Project-Ideas#improve-distance-search]]
+3. [[Add new MD-Formats|GSoC-2017-Project-Ideas#add-new-md-formats]]
 
 **Or work on your your own idea!** Get in contact with us to propose an idea and we will work with you to flesh it out into a full project. Raise an issue in the [Issue Tracker](/MDAnalysis/mdanalysis/issues) or contact us via the [developer Google group](http://developers.mdanalysis.org).
 

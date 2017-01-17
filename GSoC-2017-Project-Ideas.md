@@ -1,19 +1,18 @@
 <img src="https://developers.google.com/open-source/gsoc/images/gsoc2016-sun-373x373.png" title="Google Summer of Code 2017" alt="Google Summer of Code 2017" align="right"/>
 A list of projects ideas for [[Google Summer of Code 2017|Google-Summer-Of-Code]].
 
-The project ideas can be roughly categorized as
+The current proposed projects are:
 
-2. [[Increasing performance|GSoC-2017-Project-Ideas#increasing-performance]]
-3. [[New input formats|GSoC-2017-Project-Ideas#new-input-formats]]
-6. [[Improve the library core|GSoC-2017-Project-Ideas#improve-the-library-core]]
+1. [[Implement efficient parallel analysis of trajectories|GSoC-2017-Project-Ideas#Implement-efficient-parallel-analysis-of-trajectories]]
+2. [[Improve distance search|GSoC-2017-Project-Ideas#Improve-distance-search]]
+3. [[Add new MD-Formats|GSoC-2017-Project-Ideas#Add-new-MD-Formats]]
+4. [[Help port MDAnalysis to Python 3|GSoC-2017-Project-Ideas#Help-port-MDAnalysis-to-Python-3]]
 
 **Or work on your your own idea!** Get in contact with us to propose an idea and we will work with you to flesh it out into a full project. Raise an issue in the [Issue Tracker](/MDAnalysis/mdanalysis/issues) or contact us via the [developer Google group](http://developers.mdanalysis.org).
 
 ------
 
-# Increasing performance
-
-## Implement efficient parallel analysis of trajectories 
+# Implement efficient parallel analysis of trajectories 
 
 **Difficulty**: Hard
 
@@ -29,7 +28,7 @@ Implementing parallelization in Python code can be done in [many ways](https://w
 - In an analysis context, being able to write results to shared memory will improve the memory usage footprint and simplify result collection;
 - GPU parallelization is attractive for its wide availability (though possibly more complex to implement in a meaningful way).
 
-## Improve distance search 
+# Improve distance search 
 
 **Difficulty**: Hard
 
@@ -44,9 +43,7 @@ One domain decomposition algorithm is [cell grids](https://github.com/richardjgo
 
 In this project you would integrate the cell grid algorithm into MDAnalysis. 
 
-# New input formats
-
-## Add new MD-Formats
+# Add new MD-Formats
 
 **Dificulty**: Medium
 
@@ -56,10 +53,7 @@ One of the strengths of MDAnalysis is its ability to support a wide range of dif
 This project will familiarize you with working with and connecting different APIs,
 as well as giving insight into how modern portable data storage file formats work.
 
-
-# Increase platform availability
-
-## Help port MDAnalysis to Python 3
+# Help port MDAnalysis to Python 3
 
 **Difficulty**: Easy
 

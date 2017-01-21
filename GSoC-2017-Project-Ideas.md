@@ -13,8 +13,6 @@ The current proposed projects are:
 
 # Implement efficient parallel analysis of trajectories 
 
-**Difficulty**: Hard
-
 **Mentors**: Manuel
 
 Molecular simulation trajectories are very often analyzed frame-by-frame. This is frequently an embarrassingly parallel procedure, in which work can be efficiently divided simply by splitting the trajectory and letting each worker process one of the chunks. The goal of this project is to implement a parallelization framework that automates all the trajectory splitting, work distribution, and eventual result collection.
@@ -29,8 +27,6 @@ Implementing parallelization in Python code can be done in [many ways](https://w
 
 # Improve distance search 
 
-**Difficulty**: Hard
-
 **Mentors**: Manuel, Richard
 
 Analysis of molecular dynamics simulations typically involves calculations of based upon atoms which are spatially close to each other.  For example a radial distribution function is often only interesting up to distances of around 1.6 nm.
@@ -44,8 +40,6 @@ In this project you would integrate the cell grid algorithm into MDAnalysis.
 
 # Add new MD-Formats
 
-**Dificulty**: Medium
-
 **Mentors**: Richard, Jonathan
 
 One of the strengths of MDAnalysis is its ability to support a wide range of different MD-formats. But we are still missing some like the new [TNG file format](http://onlinelibrary.wiley.com/doi/10.1002/jcc.23495/abstract) from Gromacs , [H5MD](https://github.com/pdebuyl/pyh5md) or the [HALMD](http://halmd.org/) format. Alternatively, you can also add a format that you want to use personally in MDAnalysis.
@@ -56,3 +50,15 @@ It is vitally important that data is read correctly, otherwise analysis will fai
 For this reason, there will be a heavy emphasis on the testing for any code written,
 and so the project will also teach good practice in software testing.
 
+# Port tests to Pytest
+
+**Mentors**: Richard
+
+**Related Issue**: [#884](https://github.com/MDAnalysis/mdanalysis/issues/884)
+
+Software testing is extremely important to the MDAnalysis project, so that users of the package can be confident in the results of their analysis.
+With the current test package [nose, ceasing to be developed](http://nose.readthedocs.io/en/latest/#note-to-users) we have decided to move to using [py.test.](http://doc.pytest.org/en/latest/)
+
+In this project, you will help migrate our existing test package to use py.test.
+You will learn about functional and unit testing in application to a modern scientific analysis framework.
+In addition you will learn how to use the py.test package, including the use of fixtures and plugins.

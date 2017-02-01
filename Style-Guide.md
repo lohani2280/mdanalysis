@@ -54,11 +54,13 @@ We are striving to keep module dependencies small and lightweight (i.e., easily 
 * Imports must all happen at the start of a module (not inside classes or functions).  
 * Modules must be imported in the following order:
   - [future](https://docs.python.org/2/library/__future__.html) (`from __future__ import absolute_import, print_function, division`)
+  - Compatibility imports (eg six)
   - global imports (installed packages)
   - local imports (MDAnalysis modules)
 * use **absolute imports** in the library (i.e. relative imports must be explicitly indicated), e.g.,
   ```python
   from __future__ import absolute_import
+  from six.moves import range
 
   import numpy as np
 

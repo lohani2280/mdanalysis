@@ -6,14 +6,18 @@ The current proposed projects are:
 1. [[Implement efficient parallel analysis of trajectories|GSoC-2017-Project-Ideas#implement-efficient-parallel-analysis-of-trajectories]]
 2. [[Improve distance search|GSoC-2017-Project-Ideas#improve-distance-search]]
 3. [[Add new MD-Formats|GSoC-2017-Project-Ideas#add-new-md-formats]]
+3. [[Start using Pytest|GSoC-2017-Project-Ideas#Port-tests-to-Pytest]]
 
 **Or work on your your own idea!** Get in contact with us to propose an idea and we will work with you to flesh it out into a full project. Raise an issue in the [Issue Tracker](/MDAnalysis/mdanalysis/issues) or contact us via the [developer Google group](http://developers.mdanalysis.org).
+
+You can find the list of all available mentors for MDAnalysis [here](https://github.com/MDAnalysis/mdanalysis/wiki/Google-Summer-Of-Code#available-mentors).
 
 ------
 
 # Implement efficient parallel analysis of trajectories 
 
 **Mentors**: Manuel
+**Intensity**: Hard
 
 Molecular simulation trajectories are very often analyzed frame-by-frame. This is frequently an embarrassingly parallel procedure, in which work can be efficiently divided simply by splitting the trajectory and letting each worker process one of the chunks. The goal of this project is to implement a parallelization framework that automates all the trajectory splitting, work distribution, and eventual result collection.
 
@@ -28,6 +32,7 @@ Implementing parallelization in Python code can be done in [many ways](https://w
 # Improve distance search 
 
 **Mentors**: Manuel, Richard
+**Intensity**: Hard
 
 Analysis of molecular dynamics simulations typically involves calculations of based upon atoms which are spatially close to each other.  For example a radial distribution function is often only interesting up to distances of around 1.6 nm.
 The naive approach to calculate this is to calculate the distance between each pair of atoms, however as the size of the system grows the number of useful pair distances decreases while the computational cost scales as N^2.
@@ -41,6 +46,7 @@ In this project you would integrate the cell grid algorithm into MDAnalysis.
 # Add new MD-Formats
 
 **Mentors**: Richard, Jonathan
+**Intensity**: Moderate
 
 One of the strengths of MDAnalysis is its ability to support a wide range of different MD-formats. But we are still missing some like the new [TNG file format](http://onlinelibrary.wiley.com/doi/10.1002/jcc.23495/abstract) from Gromacs , [H5MD](https://github.com/pdebuyl/pyh5md) or the [HALMD](http://halmd.org/) format. Alternatively, you can also add a format that you want to use personally in MDAnalysis.
 
@@ -53,6 +59,7 @@ and so the project will also teach good practice in software testing.
 # Port tests to Pytest
 
 **Mentors**: Richard
+**Intensity**: Moderate
 
 **Related Issue**: [#884](https://github.com/MDAnalysis/mdanalysis/issues/884)
 

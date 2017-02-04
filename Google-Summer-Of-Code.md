@@ -7,7 +7,7 @@ MDAnalysis is hosting  **[Google Summer of Code 2017](https://developers.google.
 <!-- uncomment once we are accepted again -->
 <!-- Start by reading the [MDAnalysis GSoC blog post](http://www.mdanalysis.org/2016/03/08/gsoc2016/). -->
 
-The application window closes on **March 20, 2017 at 12:00 (PDT)**.
+The application window opens on **March 20, 2017 at 12:00 (PDT)**.
 
 # Eligibility
 Eligibility requirements are described in the [GSoC FAQ](https://developers.google.com/open-source/gsoc/faq): 

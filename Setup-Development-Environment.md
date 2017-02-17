@@ -46,7 +46,7 @@ This sets the number of files to 4096.
 * To run the unit-tests
 
 ```
-cd testsuite/MDAnalsysisTests
+cd testsuite/MDAnalysisTests
 ./mda_nosetests
 ```
 
